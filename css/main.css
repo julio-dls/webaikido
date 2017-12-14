@@ -1,17 +1,3 @@
-/*
-Theme Name: Restaurant
-Theme URI: http://themewagon.com/demo/Restaurant/
-Author: ThemeWagon
-Author URI: http://themewagon.com/
-Description: 
-Version: 1.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: restaurant
-*/
-/*========================
-GLOBAL
-=========================*/
 h1 {
     font-size: 37px;
     font-weight: 900;
@@ -38,7 +24,7 @@ p.desc-text{
 }
 
 *, *:before, *:after {
-    -moz-box-sizing: border-box;  
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
@@ -79,7 +65,7 @@ p.desc-text{
 
 .icon-github:before {
     content: "\e601";
-}  
+}
 
 .icon-twitter:before {
     content: "\e602";
@@ -92,10 +78,10 @@ p.desc-text{
 .carousel-slide{
     float: right !important;
     margin-right: -15px;
-} 
+}
 
 li.item{
-    position: relative; 
+    position: relative;
     width: 100%; /* for IE 6 */
 
     background: rgba(211, 15, 34, 1);
@@ -111,7 +97,7 @@ li.item{
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
-     
+
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     -o-transition-property: -o-transform;
@@ -201,20 +187,24 @@ INTRO CONTAINER
     background: url('../images/templo-en-japon-con-flores-de-cerezo-temple-grounds.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    background-position: center;  
+    background-position: center;
 }
  #boton_personalizado{
     text-decoration: none;
-    padding: 15px 60px;
+    padding: 7px 60px;
     font-weight: 600;
     font-size: 20px;
+    font-family: 'pigmo-01';
     color:rgba(255, 255, 255, 0.8);
     border-radius: 45px;
     border: 2px solid #000;
-    background: rgba(229, 81, 7, 0.6);
+    background: rgba(204, 0, 1, 0.6);
     cursor: pointer;
     display: inline-block;
-     margin-bottom: 10px;
+    margin-bottom: 10px;
+    /* height: 150px;  Alto del botón
+    width: 150px; */
+    /* word-wrap: break-word; */
   }
 #text-enmedio {
     background: rgba(0, 0, 0, 0.6);
@@ -239,9 +229,9 @@ INTRO CONTAINER
     font-weight: 400;
  }
 .second-title {
-    font-weight: lighter; 
-    font-size: 30px; 
-    font-style: italic; 
+    font-weight: lighter;
+    font-size: 30px;
+    font-style: italic;
     text-transform: capitalize;
 }
 
@@ -281,46 +271,84 @@ INTRO CONTAINER
 }
 
 .videos.background_content{ /*videos*/
-    background: url('../images/japon.jpg') no-repeat center center; 
+    background: url('../images/japon.jpg') no-repeat center center;
     background-size: cover;
     background-position: 70% 100%;
-    max-height: 350px;
+    max-height: 300px;
 }
 iframe {
     /*max-width: 100%;
     max-height: 100%;*/
 }
-/*.bread.background_content{ 
-    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center; 
+/*.bread.background_content{
+    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center;
     background-size: cover;
     background-position: 70% 50%;
     }*/
  .contact.background_content{/*contacto*/
-    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center; 
+    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     max-height: 400px;
 }
  /*.pricing.background_content{
-    background: url('../images/pricing.jpg') no-repeat center center; 
+    background: url('../images/pricing.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 .reservation.background_content{
-    background: url('../images/reservation-seat.jpg') no-repeat center center; 
+    background: url('../images/reservation-seat.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }*/
 .bread.background_content{ /*eventos*/
-    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center; 
+    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     max-height: 400px;
 }
+/*CARUSEL MULTI ITEMS*/
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+
+/*FIN CARUSEL MULTI ITEMS*/
 /*========================
 DESCRIPTION BODY CONTENT
 =========================*/
@@ -332,7 +360,7 @@ DESCRIPTION BODY CONTENT
     z-index: 99;
     position: relative;
     background: white;
-    text-align: center; 
+    text-align: center;
 }
 .description_body {
     margin: 45px auto;
@@ -373,7 +401,7 @@ FIRST FOOTER CONTENT
     text-align: center;
     margin: 40px 0 0 0;
 }
-.social_info, 
+.social_info,
 .social_icons {
     margin: 18px 0 50px 0;
 }
@@ -514,7 +542,7 @@ p.sub-footer-text a{
     height: 200px;
     max-height: 200px;
     max-width: 100%;
-} 
+}
 /* Generic Button Styles */
 .button{
     padding:8px 12px;
@@ -614,21 +642,21 @@ MEDIA QUERIES TABLET
 =========================*/
 
 
-    @media (min-width: 400px) { 
+    @media (min-width: 400px) {
     .starter_container {
         height: 100%;
     }
     .background_content h1 {
       top: 33%;
-    }  
+    }
 }
 
 /*========================
 MEDIA QUERIES TABLET
 =========================*/
 
-    @media (min-width: 660px) { 
-  
+    @media (min-width: 660px) {
+
         .starter_container {
             height: 100%;
         }
@@ -693,8 +721,8 @@ MEDIA QUERIES TABLET
         border: 5px solid rgba(0,0,0,0);
         display: inline-block;
         width: 45px;
-        height: 45px;  
-        background-size: 30px; 
+        height: 45px;
+        background-size: 30px;
     }
     .direction a:hover {
         border: 5px solid #6D903C;
@@ -779,7 +807,7 @@ MEDIA QUERIES TABLET
         display: inline-block;
         margin: 0 auto;
         width: 325px;
-    } 
+    }
 
 } /*END OF MEDIA QUERY*/
 
@@ -787,7 +815,7 @@ MEDIA QUERIES TABLET
 MEDIA QUERIE DESKTOP
 =========================*/
 
-@media (min-width: 1100px) { 
+@media (min-width: 1100px) {
 
     .starter_container {
         background-attachment: fixed;
