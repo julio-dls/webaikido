@@ -93,7 +93,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="col-12 col-md-3 col-sm-6">
         <div class="thumbnail">
           <a title="Image 1" href="#"><img class="thumb img-responsive" id="image-1" src="http://dummyimage.com/600x350/ccc/969696&amp;text=0xD10x810xD00xB50xD10x800xD10x8B0xD00xB9"></a>
@@ -196,6 +196,7 @@
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Imprimir</button>
         </div>
       </div>
     </div>
@@ -244,12 +245,12 @@
       interval: false
     });
 
-    /* change modal title when slide changes */
+    /* cambiar el título modal cuando cambia la diapositiva */
     $("#modal-carousel").on("slid.bs.carousel", function() {
       $(".modal-title").html($(this).find(".active img").attr("title"));
     })
 
-    /* when clicking a thumbnail */
+    /*al hacer clic en una thumbnail */
     $(".row .thumb").click(function() {
       var content = $(".carousel-inner");
       var title = $(".modal-title");

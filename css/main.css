@@ -276,10 +276,7 @@ INTRO CONTAINER
     background-position: 70% 100%;
     max-height: 300px;
 }
-iframe {
-    /*max-width: 100%;
-    max-height: 100%;*/
-}
+
 /*.bread.background_content{
     background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center;
     background-size: cover;
@@ -310,6 +307,10 @@ iframe {
     background-position: center;
     background-attachment: fixed;
     max-height: 240px;
+}
+.img-section img{
+  cursor: pointer;
+  border: 2px solid #000;
 }
 /*CARUSEL MULTI ITEMS*/
 .multi-item-carousel{
@@ -635,6 +636,10 @@ MEDIA QUERIES MOBILE
         margin: 0px auto;
         /* display: block; */
     }
+    iframe {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 /*========================
 MEDIA QUERIES TABLET
@@ -647,6 +652,10 @@ MEDIA QUERIES TABLET
     }
     .background_content h1 {
       top: 33%;
+    }
+    iframe {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -778,6 +787,10 @@ MEDIA QUERIES TABLET
         padding: 0;
         border-bottom: 10px solid #fff;
     }
+    iframe {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
     /*========================
     Social Connect
@@ -905,5 +918,9 @@ MEDIA QUERIE DESKTOP
 
     .social_icons li a {
         font-size: 30px;
+    }
+    iframe {
+        max-width: 100%;
+        max-height: 100%;
     }
 }

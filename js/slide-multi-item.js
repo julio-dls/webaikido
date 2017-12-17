@@ -2,6 +2,7 @@
 $("#theCarousel").carousel({
   interval: false
 });
+
 $('.carousel[data-type="multi"] .item').each(function(){
   var next = $(this).next();
   if (!next.length) {
