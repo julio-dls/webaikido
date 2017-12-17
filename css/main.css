@@ -274,9 +274,10 @@ INTRO CONTAINER
     background: url('../images/japon.jpg') no-repeat center center;
     background-size: cover;
     background-position: 70% 100%;
-    max-height: 300px;
 }
-
+iframe{
+  cursor: pointer;
+}
 /*.bread.background_content{
     background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center;
     background-size: cover;
@@ -287,7 +288,6 @@ INTRO CONTAINER
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    max-height: 240px;
 }
  /*.pricing.background_content{
     background: url('../images/pricing.jpg') no-repeat center center;
@@ -306,7 +306,6 @@ INTRO CONTAINER
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    max-height: 240px;
 }
 .img-section img{
   cursor: pointer;

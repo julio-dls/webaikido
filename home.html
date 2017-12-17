@@ -108,16 +108,15 @@
   <!-- ============ FIN SOBRE AIKIDO ============= -->
 
   <!-- ============ VIDEOS ============= -->
-  <section id="videos" class="">
+  <section id="videos">
     <div class="videos background_content">
       <h1>Ultimos <span>Videos</span></h1>
     </div>
     <div class="container">
-      <h1 class="">Videos<small></small></h1>
+      <h1 class="text-center">Videos<small></small></h1>
       <div class="row">
-
         <div class="col-md-6">
-          <iframe class="img-fluid" width="560" height="315" src="https://www.youtube.com/embed/SjM6x-BMemM" frameborder="0" allowfullscreen></iframe>
+          <iframe class="img-fluid iframe-primario" width="560" height="315" src="https://www.youtube.com/embed/SjM6x-BMemM" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="col-md-6">
@@ -135,40 +134,35 @@
       </div>
       <!-- /.row -->
 
-      <!-- Related Projects Row -->
-      <h3 class="my-4">Related Projects</h3>
-
+      <!-- ==== videos recientes ==== -->
+      <h3 class="my-4">Video Recientes</h3>
       <div class="row description_content thumbnail">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a href="#">
-            <iframe class="img-fluid thumbnail" src="https://www.youtube.com/embed/7K3AnXfz5AY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <iframe class="img-fluid thumbnail iframe-secundario" src="https://www.youtube.com/embed/7K3AnXfz5AY" frameborder="1" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a href="#">
-            <iframe class="img-fluid thumbnail" src="https://www.youtube.com/embed/H0VU2b0hLcM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <iframe class="img-fluid thumbnail iframe-secundario" src="https://www.youtube.com/embed/H0VU2b0hLcM" frameborder="1" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12 iframe-secundario">
+          <a href="#">
+            <iframe class="img-fluid thumbnail iframe-secundario" src="https://www.youtube.com/embed/7K3AnXfz5AY" frameborder="1" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a href="#">
-            <iframe class="img-fluid thumbnail" src="https://www.youtube.com/embed/7K3AnXfz5AY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <a href="#">
-            <iframe class="img-fluid thumbnail" src="https://www.youtube.com/embed/H0VU2b0hLcM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <iframe class="img-fluid thumbnail iframe-secundario" src="https://www.youtube.com/embed/H0VU2b0hLcM" frameborder="1" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
           </a>
         </div>
       </div>
-      <!-- /.row -->
-
+      <!-- ==== fin videos recientes ==== -->
     </div>
-    <!-- /.container -->
-    <!-- /.row -->
-
     <!-- /.container -->
     <!-- <div class="text-content container">
       <div class="col-md-6 embed-responsive-item">
@@ -200,7 +194,6 @@
       </div>
     </div> -->
   </section>
-
   <!-- ============ VIDEOS ============= -->
 
   <!-- ============ EVENTOS  ============= -->
@@ -390,6 +383,14 @@
       $('html, body').stop().animate({
         scrollTop: $($(this).attr('href')).offset().top
       }, 1000);
+    });
+
+    $("iframe .iframe-secundario").on('click', function() {
+      // $this = $(this);
+      var segundo = this.atrr("src").value;
+      $("iframe .iframe-primario").on('click', function() {
+        this.attr("src",segundo);
+      });
     });
   </script>
 </body>
