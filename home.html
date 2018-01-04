@@ -25,25 +25,29 @@
     <div class="container">
       <div class="row">
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <div class="col-md-3">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-          <a class="navbar-brand" href="#">Aikido</a>
+            <img class="img-fluid img-responsive" src="images/Fondo_navbar/logo-web-aikido.jpg" alt="">
+            <!-- <a class="navbar-brand" href="#">Juana Ryu Art</a> -->
+          </div>
         </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav main-nav  clear navbar-right ">
-            <li><a class="navactive color_animation scroll-lento" href="#home.html">BIENVENIDOS</a></li>
-            <li><a class="color_animation scroll-lento" href="#poses">POSES</a></li>
-            <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
-            <li><a class="color_animation" href="gallery.html">RETRATO</a></li>
-            <li><a class="color_animation scroll-lento" href="#eventos">EVENTOS</a></li>
-            <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
-          </ul>
+        <div class="col-md-9">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav main-nav  clear navbar-right ">
+              <li><a class="navactive color_animation scroll-lento" href="#home.html">BIENVENIDOS</a></li>
+              <li><a class="color_animation scroll-lento" href="#poses">POSES</a></li>
+              <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
+              <li><a class="color_animation" href="gallery.html">RETRATO</a></li>
+              <li><a class="color_animation scroll-lento" href="#eventos">EVENTOS</a></li>
+              <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -52,7 +56,7 @@
   <div id="top" class="starter_container bg">
     <div class="follow_container">
       <div id="text-enmedio" class="col-md-6 col-md-offset-3">
-        <h2 class="top-title">Aikido</h2>
+        <!-- <h2 class="top-title">Aikido</h2> -->
         <h2 class="white second-title">" Tu espíritu es el verdadero escudo "</h2>
         <hr>
         <a id="boton_personalizado" href="#poses">ver mas</a>
@@ -70,7 +74,7 @@
         <p class="desc-text">El Aikido es un arte marcial de origen japonés, un arte de combate que permite defenderse sin armas ante uno o varios adversarios, armados o desarmados. Más que derrotarlos, busca disuadirlos y neutralizar su intención agresiva. El practicante
           de Aikido utiliza técnicas de proyección e inmovilización para desequilibrar o dominar a su adversario; también puede emplear atemis (golpes en determinados puntos vitales del cuerpo) y el ejercicio incluye la práctica con distintos tipos de
           armas. No existe competición en el Aikido. Es un arte marcial dirigido a todo el mundo; cada cual puede practicarlo a su conveniencia en función de su edad, su sexo y sus posibilidades físicas. Se podría traducir la palabra AIKIDO como el camino
-          (DO) de la armonía (AI) del espíritu (KI
+          (DO) de la armonía (AI) del espíritu (KI).
           <tenetur class="lorem"></tenetur>
         </p>
       </div>
@@ -78,7 +82,6 @@
         <div class="img-section">
           <img class="img-rounded" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/imgPoses/kamaekata1.jpg" width="250" height="220">
           <img class="img-rounded" id="image-2" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/imgPoses/martial-arts-kimono.jpg" width="250" height="220">
-
           <div class="img-section-space"></div>
 
           <img class="img-rounded" id="image-3" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/imgPoses/Tanto-No-Kata.jpg" width="250" height="220">
@@ -389,7 +392,7 @@
       // $this = $(this);
       var segundo = this.atrr("src").value;
       $("iframe .iframe-primario").on('click', function() {
-        this.attr("src",segundo);
+        this.attr("src", segundo);
       });
     });
   </script>
