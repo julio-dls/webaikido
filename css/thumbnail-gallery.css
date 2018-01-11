@@ -1,55 +1,55 @@
-        body {
-            padding-top: 70px;
-        }
+body {
+    padding-top: 70px;
+}
 
-        @media (min-width: 992px) {
-            body {
-                padding-top: 70px;
-            }
-        }
+@media (min-width: 992px) {
+    body {
+        padding-top: 70px;
+    }
+}
 
-        .grid {
-            width: 100%;
-            margin: auto;
-            border: 1px solid #f2f2f2;
-            overflow: hidden;
-            padding: 0em 0em 2em 0em;
-        }
+.grid {
+    width: 100%;
+    margin: auto;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+    padding: 0em 0em 2em 0em;
+}
 
-        /* ---- grid-item ---- */
+/* ---- grid-item ---- */
 
-        .grid-item {
-            float: left;
-            background: #f2f2f2;
-            width: 24%;
-            margin: 0em 0.5% 0.5em 0.5%;
-            border: 2px solid #333;
-            border-radius: 5px;
-        }
+.grid-item {
+    float: left;
+    background: #f2f2f2;
+    width: 24%;
+    margin: 0em 0.5% 0.5em 0.5%;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
 
-        .grid-item:hover {
-            border-color: white;
-            cursor: pointer;
-        }
+.grid-item:hover {
+    border-color: white;
+    cursor: pointer;
+}
 
-        .thumbnail {
-            margin-bottom: 6px;
-        }
+.thumbnail {
+    margin-bottom: 6px;
+}
 
-        .carousel-control.left,
-        .carousel-control.right {
-            background-image: none;
-            margin-top: 10%;
-            width: 5%;
-        }
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+    margin-top: 10%;
+    width: 5%;
+}
 
-        /* ======= GALLERY POSES ====== */
+/* ======= GALLERY POSES ====== */
 
-        .thumb {
-            position: relative;
-            margin-bottom: 1em !important;
-            padding: 0 !important;
-        }
+.thumb {
+    position: relative;
+    margin-bottom: 1em !important;
+    padding: 0 !important;
+}
 
 
         /* ======= FIN GALLERY POSES ====== */
