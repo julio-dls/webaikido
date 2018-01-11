@@ -52,7 +52,15 @@
                                 </ul>
                             </li>
                             <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
-                            <li><a class="color_animation" href="retrato.html">RETRATO</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">RETRATOS <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-left">
+                                    <li><a href="saito.html">Familia Saito</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="retrato.html">Varios</a></li>
+                                    <li role="separator" class="divider"></li>
+                                </ul>
+                            </li>
                             <li><a class="color_animation scroll-lento" href="#eventos">EVENTOS</a></li>
                             <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
                         </ul>
@@ -142,32 +150,32 @@
             <h3 class="my-4">Video Recientes</h3>
             <div class="row description_content thumbnail">
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <a href="#">
-                        <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/7K3AnXfz5AY" frameborder="1" gesture="media" allow="encrypted-media"></iframe>
+                    <a class="aIframeVideoSeleccionado" href="#">
+                        <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/7K3AnXfz5AY?rel=0&showinfo=0&controls=1" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
                 </a>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <a href="#">
-                        <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/H0VU2b0hLcM" frameborder="1" gesture="media" allow="encrypted-media"></iframe>
+                        <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/H0VU2b0hLcM?rel=0&showinfo=0&controls=1" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
                 </a>
                 </div>
 
-                <div class="col-md-3 col-sm-6 col-xs-12 iframe-secundario">
+                <div class="col-md-3 col-sm-6 col-xs-12 iframeSeleccionado">
                     <a href="#">
-                        <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/7K3AnXfz5AY" frameborder="1" gesture="media" allow="encrypted-media"></iframe>
+                        <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/7K3AnXfz5AY?rel=0&showinfo=0&controls=1" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
                 </a>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <a href="#">
-                    <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/H0VU2b0hLcM" frameborder="1"         gesture="media" allow="encrypted-media"></iframe>
+                    <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/H0VU2b0hLcM?rel=0&showinfo=0&controls=1" frameborder="1"  gesture="media" allow="encrypted-media" scrolling="no"></iframe>
                     </a>
                 </div>
-          
+
             </div>
             <div class="col-md-4 col-md-offset-4">
-              <button type="button" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Ver Mas ...</button>
+                <button type="button" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Ver Mas ...</button>
             </div>
             <!-- ==== fin videos recientes ==== -->
         </div>
@@ -382,6 +390,14 @@
             });
             /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */
 
+            /* ====== SELECTOR DE VIDEO  ====== */
+            $('.iframeSeleccionado').on('click', function() {
+                //player.stopVideo():Void
+                $this = $(this);
+                var srcVideo = $this.atrr("src");
+                $('.iframePrindipal').attr("src", srcVideo);
+            });
+            /* ====== FIN SELECTOR DE VIDEO  ====== */
         });
 
         $('nav .scroll-lento').click(function(e) {
@@ -391,15 +407,9 @@
             }, 1000);
         });
 
-        /* ====== SELECTOR DE VIDEO  ====== */
-        $('.iframeSeleccionado').on('click', function() {
-            $this = $(this);
-            var srcVideo = $this.atrr("src");
-            $('.iframePrindipal').attr("src", srcVideo);
-        });
+
 
         /* ====== FIN DE SELECTOR DE VIDEO ====== */
-
     </script>
 </body>
 

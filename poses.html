@@ -19,33 +19,54 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top nav" role="navigation">
         <div class="container">
             <div class="row">
 
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <div class="col-md-3">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                    <a class="navbar-brand" href="#">Aikido</a>
+                        <img class="img-fluid img-responsive" src="images/Fondo_navbar/logo-web-aikido.jpg" alt="">
+                        <!-- <a class="navbar-brand" href="#">Juana Ryu Art</a> -->
+                    </div>
                 </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                        <li><a class="navactive color_animation scroll-lento" href="home.html">BIENVENIDOS</a></li>
-                        <li><a class="color_animation scroll-lento" href="poses.html">POSES</a></li>
-                        <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
-                        <li><a class="color_animation" href="gallery.html">RETRATO</a></li>
-                        <li><a class="color_animation scroll-lento" href="#eventos">EVENTOS</a></li>
-                        <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
-                    </ul>
+                <div class="col-md-9">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav main-nav  clear navbar-right">
+                            <li><a class="navactive color_animation scroll-lento" href="#home.html">BIENVENIDOS</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">POSES <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-left">
+                                    <li><a href="poses.html">Manos Simples</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="poses.html">Pies Simples</a></li>
+                                    <li role="separator" class="divider"></li>
+                                </ul>
+                            </li>
+                            <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">RETRATOS <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-left">
+                                    <li><a href="saito.html">Familia Saito</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="retrato.html">Varios</a></li>
+                                    <li role="separator" class="divider"></li>
+                                </ul>
+                            </li>
+                            <li><a class="color_animation scroll-lento" href="#eventos">EVENTOS</a></li>
+                            <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
+
 
     <!-- ==== Page Content ==== -->
     <div class="container">
