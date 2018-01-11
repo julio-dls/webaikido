@@ -216,16 +216,16 @@
   <script src="js/masonry.pkgd.min.js"></script>
   <script>
     $(document).ready(function() {
-      $('.grid').masonry({
-        // options
-        //itemSelector: $theGrid,
-        //columnWidth: grid-item
-      });
-
+      myMasonry = function() {
+        $('.grid').masonry({
+          // options
+          //itemSelector: $theGrid,
+          //columnWidth: grid-item
+        })
+      };
+      $(window).on('load', myMasonry);
     });
   </script>
 </body>
-
-
 
 </html>
