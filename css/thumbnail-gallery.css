@@ -2,18 +2,13 @@ body {
     padding-top: 70px;
 }
 
-@media (min-width: 992px) {
-    body {
-        padding-top: 70px;
-    }
-}
-
 .grid {
     width: 100%;
     margin: auto;
     border: 1px solid #f2f2f2;
     overflow: hidden;
     padding: 0em 0em 2em 0em;
+
 }
 
 /* ---- grid-item ---- */
@@ -33,7 +28,7 @@ body {
 }
 
 .thumbnail {
-    margin-bottom: 6px;
+    margin-bottom: 0px;
 }
 
 .carousel-control.left,
@@ -51,5 +46,47 @@ body {
     padding: 0 !important;
 }
 
+/* ======= FIN GALLERY POSES ====== */
 
-        /* ======= FIN GALLERY POSES ====== */
+@media only screen and (max-width: 375px) {
+    body {
+        padding-top: 100px;
+    }
+    h3 {
+        font-size: 9px;
+        margin-top: 0px !important;
+    }
+    p {
+        font-size: 5px;
+        text-align: justify;
+    }
+    .btn {
+        padding: 2px 4px !important;
+        margin-bottom: 2px !important;
+    }
+}
+
+@media only screen and (width: 412px) {
+    body {
+        padding-top: 100px;
+    }
+    h3 {
+        font-size: 11px;
+        margin-top: 0px !important;
+    }
+    p {
+        font-size: 10px;
+        text-align: justify;
+        margin: 0 0 10px;
+    }
+    .btn {
+        padding: 2px 4px !important;
+        margin-bottom: 2px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 70px;
+    }
+}
