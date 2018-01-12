@@ -331,11 +331,6 @@ iframe {
     cursor: pointer;
 }
 
-/*.bread.background_content{
-    background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center;
-    background-size: cover;
-    background-position: 70% 50%;
-    }*/
 
 .contact.background_content {
     /*contacto*/
@@ -344,20 +339,8 @@ iframe {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    max-height: 350px;
 }
-
-/*.pricing.background_content{
-    background: url('../images/pricing.jpg') no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-.reservation.background_content{
-    background: url('../images/reservation-seat.jpg') no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}*/
 
 .bread.background_content {
     /*eventos*/
@@ -366,6 +349,7 @@ iframe {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    max-height: 350px;
 }
 
 .img-section img {
@@ -374,28 +358,67 @@ iframe {
 }
 
 /*CARUSEL MULTI ITEMS*/
-.carousel-control 			 { width:  4%; }
-.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+
+.carousel-control {
+    width: 4%;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    margin-left: 15px;
+    background-image: none;
+}
+
 @media (max-width: 767px) {
-	.carousel-inner .active.left { left: -100%; }
-	.carousel-inner .next        { left:  100%; }
-	.carousel-inner .prev		 { left: -100%; }
-	.active > div { display:none; }
-	.active > div:first-child { display:block; }
+    .carousel-inner .active.left {
+        left: -100%;
+    }
+    .carousel-inner .next {
+        left: 100%;
+    }
+    .carousel-inner .prev {
+        left: -100%;
+    }
+    .active > div {
+        display: none;
+    }
+    .active > div:first-child {
+        display: block;
+    }
 
 }
-@media (min-width: 767px) and (max-width: 992px ) {
-	.carousel-inner .active.left { left: -50%; }
-	.carousel-inner .next        { left:  50%; }
-	.carousel-inner .prev		 { left: -50%; }
-	.active > div { display:none; }
-	.active > div:first-child { display:block; }
-	.active > div:first-child + div { display:block; }
+
+@media (min-width: 767px) and (max-width: 992px) {
+    .carousel-inner .active.left {
+        left: -50%;
+    }
+    .carousel-inner .next {
+        left: 50%;
+    }
+    .carousel-inner .prev {
+        left: -50%;
+    }
+    .active > div {
+        display: none;
+    }
+    .active > div:first-child {
+        display: block;
+    }
+    .active > div:first-child + div {
+        display: block;
+    }
 }
-@media (min-width: 992px ) {
-	.carousel-inner .active.left { left: -25%; }
-	.carousel-inner .next        { left:  25%; }
-	.carousel-inner .prev		 { left: -25%; }	
+
+@media (min-width: 992px) {
+    .carousel-inner .active.left {
+        left: -25%;
+    }
+    .carousel-inner .next {
+        left: 25%;
+    }
+    .carousel-inner .prev {
+        left: -25%;
+    }
 }
 
 /*FIN CARUSEL MULTI ITEMS*/
