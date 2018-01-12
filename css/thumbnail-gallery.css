@@ -2,6 +2,8 @@ body {
     padding-top: 70px;
 }
 
+/* ===== grid-item ===== */
+
 .grid {
     width: 100%;
     margin: auto;
@@ -10,8 +12,6 @@ body {
     padding: 0em 0em 2em 0em;
 
 }
-
-/* ---- grid-item ---- */
 
 .grid-item {
     float: left;
@@ -27,9 +27,7 @@ body {
     cursor: pointer;
 }
 
-.thumbnail {
-    margin-bottom: 0px;
-}
+/* ===== FIN GRID ITEM ===== */
 
 .carousel-control.left,
 .carousel-control.right {
@@ -39,6 +37,10 @@ body {
 }
 
 /* ======= GALLERY POSES ====== */
+
+.thumbnail {
+    margin-bottom: 0px;
+}
 
 .thumb {
     position: relative;

@@ -9,7 +9,7 @@ $("#modal-carousel").on("slid.bs.carousel", function() {
 })
 
 /*al hacer clic en una thumbnail */
-$(".row .thumb").click(function() {
+$(".thumb").click(function() {
   var content = $(".carousel-inner");
   var title = $(".modal-title");
 
