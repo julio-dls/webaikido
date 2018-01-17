@@ -35,14 +35,14 @@
                           <span class="icon-bar"></span>
                       </button>
 
-          <a class="navbar-brand" href="#">Juana Ryu Art</a>
+          <a class="navbar-brand" href="Home.html">Juana Ryu Art</a>
           <img class="icon-personalizado img-fluid" src="images/logo/logo.png" alt="logo">
         </div>
         <!-- FIN LOGO -->
         <!-- MENU -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav main-nav  clear navbar-right">
-            <li><a class="navactive color_animation scroll-lento" href="#home.html">BIENVENIDOS</a></li>
+            <li><a class="navactive color_animation scroll-lento" href="home.html">BIENVENIDOS</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">POSES <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
@@ -58,15 +58,15 @@
               <ul class="dropdown-menu dropdown-menu-left">
                 <li><a href="saito.html">Familia Saito</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="retrato.html">Varios</a></li>
+                <li><a href="retrato.php">Varios</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
-            <li><a class="color_animation scroll-lento" href="#eventos">KAMIDAMAS</a></li>
-            <li><a class="color_animation scroll-lento" href="#eventos">HANMI</a></li>
-            <li><a class="color_animation scroll-lento" href="#eventos">EXTRAS</a></li>
+            <li><a class="color_animation scroll-lento" href="#">KAMIDAMAS</a></li>
+            <li><a class="color_animation scroll-lento" href="#">HANMI</a></li>
+            <li><a class="color_animation scroll-lento" href="#">EXTRAS</a></li>
             <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
-            <li><a class="color_animation scroll-lento" href="#videos">PORYECTOS</a></li>
+            <li><a class="color_animation scroll-lento" href="#">PROYECTOS</a></li>
             <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
           </ul>
         </div>
@@ -120,7 +120,7 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
+        <img class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
       </div>
     </div>
   </div>
@@ -192,7 +192,8 @@
 
   <!-- ============ EVENTOS  ============= -->
   <section id="eventos" class=" description_content">
-    <div class="bread background_content text-center">
+    <div class="bread  text-center">
+      <!-- background_content -->
       <!-- <h1>Ultimos <span>Eventos</span></h1> -->
     </div>
     <div class="text-content container">
@@ -246,7 +247,8 @@
   <!-- ============ Contact  ============= -->
 
   <section id="contact" class="description_content">
-    <div class="contact background_content">
+    <div class="contact">
+       <!-- background_content -->
       <!-- <h1>Enviame un <span>Comentario</span><span></span> </h1> -->
     </div>
     <div class="text-content container">
@@ -267,7 +269,7 @@
 
             <div class="carousel-inner">
               <div class="item active">
-                <img src="images/kamidana/kamidana_brasse.jpg" class="img-responsive" alt="...">
+                <img src="#" class="img-responsive" alt="...">
                 <div class="carousel-caption">
 
                 </div>
@@ -355,43 +357,7 @@
   <script type="text/javascript" src="js/slide-multi-item.js"></script>
   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-  <script>
-    /*tutorial crear scroll lento jquery http://pixelar.me/smooth-scrolling-con-2-lineas-de-jquery/*/
-    $(document).ready(function() {
-      $("#boton_personalizado").click(function(e) {
-        e.preventDefault();
-        $("html, body").animate({
-          scrollTop: $("#poses").offset().top
-        }, 1000);
-      });
-
-      /* ====== SELECTOR DE IMAGEN MODAL POSES ====== */
-      $('.selectorImg').on('click', function() {
-        $this = $(this);
-        var srcImg = $this.attr('src');
-        $(".selectorImgModal").attr("src", srcImg);
-      });
-      /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */
-
-      /* ====== SELECTOR DE VIDEO  ====== */
-      $('.iframeSeleccionado').on('click', function() {
-        //player.stopVideo():Void
-        $this = $(this);
-        var srcVideo = $this.atrr("src");
-        $('.iframePrindipal').attr("src", srcVideo);
-      });
-      /* ====== FIN SELECTOR DE VIDEO  ====== */
-    });
-
-    $('nav .scroll-lento').click(function(e) {
-      e.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: $($(this).attr('href')).offset().top
-      }, 1000);
-    });
-    
-    /* ====== FIN DE SELECTOR DE VIDEO ====== */
-  </script>
+  <script src="js/ui/selectoresYotros.js"></script>
 </body>
 
 </html>

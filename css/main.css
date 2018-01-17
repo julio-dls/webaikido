@@ -327,8 +327,9 @@ INTRO CONTAINER
 .videos.background_content {
   /*videos*/
   background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: contain;
   background-position: 70% 100%;
+
 }
 
 iframe {
