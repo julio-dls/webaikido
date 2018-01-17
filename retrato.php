@@ -10,9 +10,9 @@
     <hr>
     <div class="grid">
     <?php
-    $path = 'Web_Aikido/images/Retratos/Varios';//.$rows['producto_id'];
+    $path = '/images/Retratos/Varios';//.$rows['producto_id'];
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
-
+    echo "ruta1" .$carpeta;
     if($dir = opendir($carpeta)){
       while(($archivo = readdir($dir)) !== false) {
         echo "ruta" .$archivo;
