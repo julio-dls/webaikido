@@ -10,18 +10,19 @@
     <hr>
     <div class="grid">
     <?php
-    $path = 'images/Retratos/Varios';//.$rows['producto_id'];
+    $path = 'images/Retratos/Varios';//'Web_Aikido\images\Retratos\Varios';.$rows['producto_id'];
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
-
+    $count=0;
     if($dir = opendir($carpeta)){
       while(($archivo = readdir($dir)) !== false) {
 
-        if($archivo != '.' && $archivo != '..'){ ?>
+        if($archivo != '.' && $archivo != '..'){
+          $count++; ?>
 
             <div class="grid-item">
               <div class="thumbnail">
-                <div id="img-repo">
-                  <a title="Image 1" href="#"><img class="thumb img-responsive  selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/Retratos/Varios/<?=str_replace(' ','_',$archivo)?>"></a>
+                <div id="img-repo<?=$count?>">
+                  <a title="Image 1" href="#"><img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/Retratos/Varios/<?=str_replace(' ','_',$archivo)?>"></a>
                 </div>
                 <div class="caption col-sx-3">
                   <h3>Thumbnail 1</h3>
@@ -31,7 +32,7 @@
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
                     <input type="submit" class="btn btn-sm btn-primary" role="button" value="Donar" border="0" name="submit">
-                    <a href="#" class="btn btn-sm btn-success" role="button"onclick="printDiv('img-repo')">Imprimir</a>
+                    <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
                     </form>
 
                   </p>
