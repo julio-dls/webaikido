@@ -329,7 +329,6 @@ INTRO CONTAINER
   background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
   background-size: contain;
   background-position: 70% 100%;
-
 }
 
 iframe {
@@ -359,6 +358,10 @@ iframe {
 .img-section img {
   cursor: pointer;
   border: 2px solid #000;
+}
+
+#btnModal {
+  margin-top: 10px !important;
 }
 
 /*CARUSEL MULTI ITEMS*/

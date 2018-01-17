@@ -10,11 +10,11 @@
     <hr>
     <div class="grid">
     <?php
-    $path = 'images/Retratos/Varios';//'Web_Aikido\images\Retratos\Varios';.$rows['producto_id'];
+    $path = 'Web_Aikido\images\Retratos\Varios';//'images/Retratos/Varios';.$rows['producto_id'];
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
     $count=0;
     if($dir = opendir($carpeta)){
-      while(($archivo = readdir($dir)) !== false) {
+      while(($archivo = readdir($dir)) !== false && stristr($archivo,'.tif') == false) {
 
         if($archivo != '.' && $archivo != '..'){
           $count++; ?>
@@ -55,6 +55,10 @@
       <div class="modal-content">
         <img class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
       </div>
+      <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
+          <button type="button" id="btnModal" class="btn btn-success btn-xs btn-block" data-dismiss="modal">Volver</button>
+      </div>
+    </div>
     </div>
   </div>
 
