@@ -1,6 +1,6 @@
 
 <!-- paginacion  -->
-<!-- <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
       <ul class="pagination">
@@ -18,7 +18,7 @@
       </ul>
     </div>
   </div>
-</div> -->
+</div>
 <!-- ==== fin de paginacion ==== -->
 <!-- ==== Footer ==== -->
 <!-- ==== Footer ==== -->
