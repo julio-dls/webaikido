@@ -14,7 +14,7 @@
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
     $count=0;
     if($dir = opendir($carpeta)){
-      while(($archivo = readdir($dir)) !== false && stristr($archivo,'.tif') == false) {
+      while(($archivo = readdir($dir)) !== false && stristr($archivo,'.jpg') !== false) {
 
         if($archivo != '.' && $archivo != '..'){
           $count++; ?>
