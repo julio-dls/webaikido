@@ -10,7 +10,7 @@
     <hr>
     <div class="grid">
     <?php
-    $path = 'Web_Aikido\images\Retratos\Varios';//'images/Retratos/Varios';.$rows['producto_id'];
+    $path = 'images/Retratos/Varios';//'Web_Aikido\images\Retratos\Varios';.$rows['producto_id'];
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
     $count=0;
     if($dir = opendir($carpeta)){
