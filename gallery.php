@@ -22,9 +22,7 @@
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
 
     $count=0;
-    $dir = opendir($carpeta);
     if($dir = opendir($carpeta)){
-      ($archivo = readdir($dir);
       while(($archivo = readdir($dir)) !== false) {
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
           $count++; ?>
