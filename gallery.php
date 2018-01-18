@@ -23,7 +23,6 @@
 
     $count=0;
     if($dir = opendir($carpeta)){
-      echo "abrio archivo";
       while(($archivo = readdir($dir)) !== false) {
 
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
@@ -32,7 +31,7 @@
             <div class="grid-item">
               <div class="thumbnail">
                 <div id="img-repo<?=$count?>">
-                  <a title="Image 1" href="#"><img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=$archivo?>"></a>
+                  <a title="Image 1" href="#"><img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$carpeta?>/<?=$archivo?>"></a>
                 </div>
                 <div class="caption col-sx-3">
                   <h3>Thumbnail 1</h3>
