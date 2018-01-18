@@ -21,9 +21,6 @@
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
-    $ficheros1  = scandir($carpeta);
-    print_r($ficheros1);
-
     $count=0;
 
     if($directorio = opendir($carpeta)){
