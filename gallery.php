@@ -20,18 +20,20 @@
     $path = 'images/'.$categoria;//'Web_Aikido/images/' .$categoria;'.$rows['producto_id'];
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
-
+    echo $carpeta;
     $count=0;
     if($dir = opendir($carpeta)){
       while(($archivo = readdir($dir)) !== false) {
-
+        echo $archivo;
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
           $count++; ?>
 
             <div class="grid-item">
               <div class="thumbnail">
                 <div id="img-repo<?=$count?>">
-                  <a title="Image 1" href="#"><img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=$archivo?>"></a>
+                  <a title="Image 1" href="#">
+                    <img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=$archivo?>">
+                  </a>
                 </div>
                 <div class="caption col-sx-3">
                   <h3>Thumbnail 1</h3>
