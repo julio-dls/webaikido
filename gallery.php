@@ -23,6 +23,8 @@
 
     $count=0;
     if($dir = opendir($carpeta)){
+      $ficheros1  = scandir($directorio);
+      print_r($ficheros1);
       while(($archivo = readdir($dir)) !== false) {
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
           $count++; ?>
