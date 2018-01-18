@@ -10,8 +10,18 @@
     <hr>
     <div class="grid">
     <?php
-    $path = 'images/Retratos/Varios';//'Web_Aikido\images\Retratos\Varios';.$rows['producto_id'];
+    if(isset($_GET['categoria'])){
+      //$sqlCat = ("SELECT nombre FROM estacion where estacion_id = '".$_GET['est']."' ");
+      //$nameGaleria = $con->query($sqlCat)->fetch();
+      //$catGalery[0] = $nameGaleria[0];
+      $categoria = $_GET['categoria'];
+
+    }
+
+    $path = 'images/'.$categoria;//'Web_Aikido/images/' .$categoria;'.$rows['producto_id'];
+    trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
+
     $count=0;
     if($dir = opendir($carpeta)){
       while(($archivo = readdir($dir)) !== false) {
@@ -22,7 +32,7 @@
             <div class="grid-item">
               <div class="thumbnail">
                 <div id="img-repo<?=$count?>">
-                  <a title="Image 1" href="#"><img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/Retratos/Varios/<?=str_replace(' ','_',$archivo)?>"></a>
+                  <a title="Image 1" href="#"><img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=$archivo?>"></a>
                 </div>
                 <div class="caption col-sx-3">
                   <h3>Thumbnail 1</h3>

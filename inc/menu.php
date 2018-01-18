@@ -24,9 +24,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">POSES <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="poses.html">Manos Simples</a></li>
+                <li><a href="gallery.php?categoria=poses/manos_simples">Manos Simples</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="poses.html">Pies Simples</a></li>
+                <li><a href="gallery.php?categoria=poses/pies_simples">Pies Simples</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
@@ -34,18 +34,18 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">AIKIDOKAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="saito.html">Familia Saito</a></li>
+                <li><a href="gallery.php?categoria=aikidokas/Flia_saito">Familia Saito</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="retrato.php">Varios</a></li>
+                <li><a href="gallery.php?categoria=aikidokas/Varios">aikidokas</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
-            <li><a class="color_animation scroll-lento" href="#">KAMIDAMAS</a></li>
+            <li><a class="color_animation" href="gallery.php?categoria=kamidana">KAMIDAMAS</a></li>
             <li><a class="color_animation scroll-lento" href="#">HANMI</a></li>
             <li><a class="color_animation scroll-lento" href="#">EXTRAS</a></li>
             <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
-            <li><a class="color_animation scroll-lento" href="#">PROYECTOS</a></li>
-            <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
+            <li><a class="color_animation" href="home.html#proyectos">PROYECTOS</a></li>
+            <li><a class="color_animation " href="home.html#contact">CONTACT</a></li>
           </ul>
         </div>
         <!-- FIN DE MENU -->

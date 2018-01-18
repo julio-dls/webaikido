@@ -219,15 +219,19 @@ INTRO CONTAINER
 =========================*/
 
 .starter_container {
-  margin-top: 21px;
-  margin-bottom: -21px;
-  padding: 0;
-  min-width: 100%;
+  /* margin-top: -21px;  */
+  /* padding: 0; */
+  /* min-width: 100%; */
   height: 100%;
-  background: url('../images/Home/fondo_entrada.jpg') no-repeat center center;
+  background: url('../images/Home/fondo_entradaWeb.jpg') no-repeat center center;
   background-size: cover;
   text-align: center;
   background-position: center;
+  /* position: relative; */
+  background-position: center center;
+  /* background-attachment: fixed; */
+  padding: 7.5em 0 2em 0;
+  cursor: default;
 }
 
 #boton_personalizado {
