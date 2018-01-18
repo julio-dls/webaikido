@@ -15,7 +15,7 @@
       //$nameGaleria = $con->query($sqlCat)->fetch();
       //$catGalery[0] = $nameGaleria[0];
       $categoria = $_GET['categoria'];
-
+      echo "categorias: " .$categoria;
     }
 
     $path = 'images/'.$categoria;//'Web_Aikido/images/' .$categoria;'.$rows['producto_id'];
