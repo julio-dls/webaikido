@@ -15,19 +15,18 @@
       //$nameGaleria = $con->query($sqlCat)->fetch();
       //$catGalery[0] = $nameGaleria[0];
       $categoria = $_GET['categoria'];
-      echo "categorias: " .$categoria;
     }
 
     $path = 'images/'.$categoria;//'Web_Aikido/images/' .$categoria;'.$rows['producto_id'];
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
-
+    echo "ruta: " .$carpeta;
     $count=0;
     if($dir = opendir($carpeta)){
       while(($archivo = readdir($dir)) !== false) {
 
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
-          $count++; ?>
+          $count++; echo "llego hasta qui";?>
 
             <div class="grid-item">
               <div class="thumbnail">
