@@ -17,14 +17,15 @@
       $categoria = $_GET['categoria'];
     }
 
-    $path = 'images/'.$categoria;//'Web_Aikido/images/' .$categoria;//'.$rows['producto_id'];
+    $path = 'Web_Aikido/images/' .$categoria;//'.$rows['producto_id'];'images/'.$categoria;//
     trim($path);
-    $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
-
+    $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
+    $ficheros1  = scandir($carpeta);
+    print_r($ficheros1);
     $count=0;
-    if($dir = opendir($carpeta)){
+    if($directorio = opendir($carpeta)){
 
-      while(($archivo = readdir($dir)) !== false) {
+      while(($archivo = readdir($directorio)) !== false) {
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
           $count++; ?>
 
