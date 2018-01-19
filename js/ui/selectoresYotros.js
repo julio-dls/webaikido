@@ -23,13 +23,39 @@ $(document).ready(function() {
     $('.iframePrindipal').attr("src", srcVideo);
   });
   /* ====== FIN SELECTOR DE VIDEO  ====== */
-});
 
-$('nav .scroll-lento').click(function(e) {
-  e.preventDefault();
-  $('html, body').stop().animate({
-    scrollTop: $($(this).attr('href')).offset().top
-  }, 1000);
+  $('nav .scroll-lento').click(function(e) {
+    e.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 1000);
+  });
+  // BOTON SIEMPRE VISIBLE
+  $('.btn-subir').click(function() {
+    $('body, html').animate({
+      scrollTop: '0px'
+    }, 1000);
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+      $('.btn-subir').slideDown(300);
+    } else {
+      $('.btn-subir').slideUp(300);
+    }
+  });
+  // http://www.anerbarrena.com/jquery-mousemove-4814/
+  $(document).mousemove(function(event) {
+    $('.social').css({'margin-left': '0%'});
+    $('.social').css({'transition': '1s'});
+    // $('.social').hide(300);
+    $('.social').delay(8000).hide(300);
+    $(document).on('click', function() {
+      $('.social').show();
+    });
+
+  });
+  // FIN BOTON SIEMPE VISIBLE
 });
 
 /* ====== FIN DE SELECTOR DE VIDEO ====== */

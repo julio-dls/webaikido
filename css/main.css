@@ -11,7 +11,7 @@ h1 {
 }
 
 p.desc-text {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 35px;
   text-align: justify;
 }
@@ -165,11 +165,11 @@ h1, h2, p, span, a {
 
 .dropdown-menu {
   margin-left: -30px !important;
-  background: #6e583a !important;
+  background: #66563c !important;
 }
 
 .dropdown-menu a:hover {
-  background: #6e583a !important;
+  background: #66563c !important;
   color: #9BE86F !important;
 }
 
@@ -251,6 +251,37 @@ INTRO CONTAINER
     width: 150px; */
   /* word-wrap: break-word; */
 }
+
+/* BOTON SUBIR Y BOTON DONACIONES*/
+
+.btn-subir {
+  background-color: #636363 !important;
+  border-color: #636363 !important;
+  display: none;
+  width: 70px !important;
+  height: 70px !important;
+  padding: 10px 16px !important;
+  border-radius: 35px !important;
+  font-size: 34px !important;
+  position: fixed !important;
+  bottom: 20px;
+  right: 20px;
+  line-height: 1.33 !important;
+}
+
+.btn-donaciones {
+  display: none;
+  padding: 20px;
+  background: #024959;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* FIN DE BOTON SUBIR Y DONACIONES */
 
 #text-enmedio {
   /*background: rgba(0, 0, 0, 0.6); */
@@ -334,6 +365,7 @@ INTRO CONTAINER
   background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
   background-size: contain;
   background-position: 70% 100%;
+  z-index: -1;
 }
 
 iframe {
@@ -343,7 +375,6 @@ iframe {
 .contact.background_content {
   /*contacto*/
   background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
-  /* background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center; */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -368,6 +399,50 @@ iframe {
 #btnModal {
   margin-top: 10px !important;
 }
+
+/* SIDEBAR REDES SOCIALES */
+
+.social {
+  position: fixed;
+  left: 0;
+  z-index: 2000;
+  transition: 1s;
+  margin-left: -100%;
+}
+
+.social ul li a:hover {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.instagram-icon-sidebar {
+  background-color: #000 !important;
+  border-color: #000 !important
+}
+
+.pinterest-icon-sidebar {
+  background-color: #ae181f !important;
+}
+
+.social {
+  position: fixed;
+  left: 0;
+  top: 200px;
+  z-index: 2000;
+  transition: 1s;
+  margin-left: -100%;
+}
+
+.sidebar-social {
+  width: 50px !important;
+  height: 50px !important;
+  padding: 10px 14px !important;
+  border-radius: 25px !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  line-height: 1.33 !important;
+}
+
+/* FIN DE SIDEBAR REDES SOCIALES */
 
 /*CARUSEL MULTI ITEMS*/
 
@@ -442,7 +517,7 @@ DESCRIPTION BODY CONTENT
   width: 100%;
   background: #fff;
   margin: 0 auto 0 auto;
-  z-index: 99;
+  z-index: -1;
   position: relative;
   background: white;
   text-align: center;
@@ -990,5 +1065,39 @@ MEDIA QUERIE DESKTOP
   iframe {
     max-width: 100%;
     max-height: 100%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 992px) {
+  .background_content {
+    height: 150px;
+  }
+  .nav {
+    font-size: 12px !important;
+    padding-right: 5px !important;
+  }
+  .navbar-brand {
+    font-size: 30px !important;
+    -webkit-text-stroke: 1px #9d9275;
+  }
+  .btn-subir {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 4px 6px !important;
+    border-radius: 35px !important;
+    font-size: 15px !important;
+    z-index: 2000;
+  }
+  .social {
+    top: 200px;
+  }
+  .sidebar-social {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 8px 6px !important;
+    border-radius: 35px !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    line-height: 1.33 !important;
   }
 }

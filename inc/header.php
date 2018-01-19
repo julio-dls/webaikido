@@ -18,5 +18,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link href="css/thumbnail-gallery.css" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 
 </head>
