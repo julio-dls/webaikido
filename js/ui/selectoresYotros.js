@@ -2,9 +2,7 @@
 $(document).ready(function() {
   $("#boton_personalizado").click(function(e) {
     e.preventDefault();
-    $("html, body").animate({
-      scrollTop: $("#poses").offset().top
-    }, 1000);
+    $("html, body").animate({scrollTop: $("#poses").offset().top}, 1000);
   });
 
   /* ====== SELECTOR DE IMAGEN MODAL POSES ====== */
@@ -32,9 +30,7 @@ $(document).ready(function() {
   });
   // BOTON SIEMPRE VISIBLE
   $('.btn-subir').click(function() {
-    $('body, html').animate({
-      scrollTop: '0px'
-    }, 1000);
+    $('body, html').animate({scrollTop: '0px'}, 1000);
   });
 
   $(window).scroll(function() {
