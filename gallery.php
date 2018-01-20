@@ -13,13 +13,10 @@
     <div class="grid">
     <?php
     if(isset($_GET['categoria'])){
-      //$sqlCat = ("SELECT nombre FROM estacion where estacion_id = '".$_GET['est']."' ");
-      //$nameGaleria = $con->query($sqlCat)->fetch();
-      //$catGalery[0] = $nameGaleria[0];
       $categoria = $_GET['categoria'];
     }
 
-    $path =  //'images/'.$categoria; //'Web_Aikido/images/' .$categoria; 
+    $path = 'images/'.$categoria; //  'Web_Aikido/images/' .$categoria; //
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
