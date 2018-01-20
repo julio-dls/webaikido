@@ -19,7 +19,7 @@
       $categoria = $_GET['categoria'];
     }
 
-    $path = 'images/'.$categoria; 
+    $path =  'Web_Aikido/images/' .$categoria; //'images/'.$categoria; //
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
@@ -91,13 +91,13 @@
           <h4 class="modal-title" id="exampleModalLabel">Buscar</h4>
         </div>
         <div class="modal-body">
-          <form class="form-inline">
-            <div class="form-group">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search">
+          <form class="navbar-form" role="search">
+            <div class="input-group">
+              <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
           </form>
         </div>
         <div class="modal-footer">

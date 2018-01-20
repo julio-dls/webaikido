@@ -70,9 +70,9 @@ body {
     text-align: justify;
   }
   .btn {
-    padding: 2px 4px;
+    /* padding: 2px 4px;
     margin-bottom: 2px !important;
-    font-size: 9px;
+    font-size: 9px; */
   }
 }
 
