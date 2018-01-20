@@ -19,7 +19,7 @@
       $categoria = $_GET['categoria'];
     }
 
-    $path = 'images/'.$categoria; // 'Web_Aikido/images/' .$categoria; //
+    $path = 'images/'.$categoria; 
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
