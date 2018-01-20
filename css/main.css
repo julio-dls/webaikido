@@ -263,16 +263,19 @@ INTRO CONTAINER
   line-height: 1.33 !important;
 }
 
-.btn-donaciones {
+.btn-buscar {
+  background-color: #636363 !important;
+  border-color: #636363 !important;
   display: none;
-  padding: 20px;
-  background: #024959;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
-  position: fixed;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 8px 13px !important;
+  border-radius: 35px !important;
+  font-size: 25px !important;
+  position: fixed !important;
   bottom: 20px;
   right: 20px;
+  line-height: 1.33 !important;
 }
 
 /* FIN DE BOTON SUBIR Y DONACIONES */
@@ -795,7 +798,7 @@ MEDIA QUERIES MOBILE
     width: 80%;
     font-size: 2.5em;
   }
-  .form-btn {
+  .form- {
     margin: 0px auto;
     /* display: block; */
   }
@@ -1082,6 +1085,17 @@ MEDIA QUERIE DESKTOP
     font-size: 15px !important;
     z-index: 2000;
   }
+  .btn-buscar {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 4px 6px !important;
+    border-radius: 35px !important;
+    font-size: 15px !important;
+    z-index: 2000;
+  }
+  .boton_personalizado {
+    margin-bottom: 10px;
+  }
   .social {
     top: 200px;
   }
@@ -1093,5 +1107,8 @@ MEDIA QUERIE DESKTOP
     text-align: center !important;
     font-size: 10px !important;
     line-height: 1.33 !important;
+  }
+  h1 {
+    font-size: xx-large;
   }
 }

@@ -5,8 +5,10 @@
 ?>
   <!-- ==== Page Content ==== -->
   <div class="container">
-
-    <h1>Retratos</h1><!-- ucwords($nameGaleria) -->
+    <div class="col-xs-6">
+      <h1>AIKIDOKAS</h1>
+    </div>
+    <!-- ucwords($nameGaleria) -->
     <hr>
     <div class="grid">
     <?php
@@ -17,7 +19,7 @@
       $categoria = $_GET['categoria'];
     }
 
-    $path = 'images/'.$categoria; //'Web_Aikido/images/' .$categoria; //
+    $path = 'Web_Aikido/images/' .$categoria; //'images/'.$categoria; //
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
@@ -76,4 +78,33 @@
 
   <!-- ==== FIN DE MODAL ==== -->
 
+  <!-- ==== BOTON BUSCAR ==== -->
+  <div>
+    <a class="btn btn-danger btn-buscar" data-toggle="modal" data-target="#boton-buscar">
+      <i class="fa fa-search" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="modal fade" id="boton-buscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Buscar</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-inline">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ==== FIN DE BOTON BUSCAR ==== -->
 <?php include_once ('inc/footer.php'); ?>

@@ -6,11 +6,17 @@
 6-el fondo intermedio da bien en pc....pero queda mal cortad en celular....no me da la idea de algo pensado...sino de algo automatico que acomoda como venga.
 y esa no es la idea que quiero dar-
 7-la zona de videos debera  estar con : en construccion...hasta que pueda tener permisos de los videos
-8-en el banner superiro debe estar siempre presente un corazon o algo que te envie como boton de donaciones.
+#8-en el banner superiro debe estar siempre presente un corazon o algo que te envie como boton de donaciones.
 9-cuando entrro a retratos( que no es ese el titulo sino aikidokas. ! en general se ve bien...como un Pinterest...pero no me convence lo poco que hay y tener que sumar 2/3/4/5...
-10- cuando selecciono el retrato deberia tener NOMBRE del aikidoka bandera del pais... y opcion a imprimir...esos dos botones uno puede ser eso y el otro donacion
-11-en esa seccion tendria que tener la opcion de buscar a alguien ....
+#10- cuando selecciono el retrato deberia tener NOMBRE del aikidoka bandera del pais... y opcion a imprimir...esos dos botones uno puede ser eso y el otro donacion
+#11-en esa seccion tendria que tener la opcion de buscar a alguien ....
 #12-en la seccion de NOVEDADES! que no se� cual es la onda...y como pensaste eso... !!??!!. supongo que es lo ultimo que hice ...no se el criterio de esto.
 13- en retratos, la version en celular se ve mas prolijo...lo que no entiendo es porque las diferentes alturas....deberiamos normalizar eso...
 #14- en celular me da la opcion impresion....pero no me lo muestra...solo dice 300x350....pixel?......esa no seria buena resolucion para imprimir...
 ...bueno hasta aca� veo esto....
+15 - lo de los video no se´....los bajo o solo el link?
+16 - la cuenta ya la saqué...que dato paso?
+17 - proyecto= van ilustraciones de un cortometraje...aun no te los pase
+      extra= dibujos que no tienen relacion directa con aikido aun no te los pase´
+      hanmi= son las posiciones de PIES
+18 - en la seccion aikidoka....dividi en akidokas y flia saito. elimina la palabra VARIOS

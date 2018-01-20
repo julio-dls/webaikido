@@ -1,8 +1,11 @@
 /*tutorial crear scroll lento jquery http://pixelar.me/smooth-scrolling-con-2-lineas-de-jquery/*/
 $(document).ready(function() {
-  $("#boton_personalizado").click(function(e) {
+
+  $('.boton_personalizado').click(function(e) {
     e.preventDefault();
-    $("html, body").animate({scrollTop: $("#poses").offset().top}, 1000);
+    $("html, body").animate({
+      scrollTop: $("#poses").offset().top
+    }, 2000);
   });
 
   /* ====== SELECTOR DE IMAGEN MODAL POSES ====== */
@@ -26,11 +29,14 @@ $(document).ready(function() {
     e.preventDefault();
     $('html, body').stop().animate({
       scrollTop: $($(this).attr('href')).offset().top
-    }, 1000);
+    }, 2000);
   });
+
   // BOTON SIEMPRE VISIBLE
   $('.btn-subir').click(function() {
-    $('body, html').animate({scrollTop: '0px'}, 1000);
+    $('body, html').animate({
+      scrollTop: '0px'
+    }, 2000);
   });
 
   $(window).scroll(function() {
@@ -39,11 +45,21 @@ $(document).ready(function() {
     } else {
       $('.btn-subir').slideUp(300);
     }
+    if ($(this).scrollTop() > 0) {
+      $('.btn-buscar').slideDown(300);
+    } else {
+      $('.btn-buscar').slideUp(300);
+    }
   });
+
   // http://www.anerbarrena.com/jquery-mousemove-4814/
   $(document).mousemove(function(event) {
-    $('.social').css({'margin-left': '0%'});
-    $('.social').css({'transition': '1s'});
+    $('.social').css({
+      'margin-left': '0%'
+    });
+    $('.social').css({
+      'transition': '1s'
+    });
     // $('.social').hide(300);
     $('.social').delay(8000).hide(300);
     $(document).on('click', function() {
@@ -53,5 +69,3 @@ $(document).ready(function() {
   });
   // FIN BOTON SIEMPE VISIBLE
 });
-
-/* ====== FIN DE SELECTOR DE VIDEO ====== */
