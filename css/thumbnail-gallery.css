@@ -70,8 +70,8 @@ body {
     text-align: justify;
   }
   .btn {
-    padding: 2px 4px;
-    margin-bottom: 2px !important;
+    padding: 3px 5px;
+    /* margin-bottom: 2px !important; */
     font-size: 9px;
   }
 }

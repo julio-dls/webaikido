@@ -1045,9 +1045,9 @@ MEDIA QUERIE DESKTOP
     z-index: 2000;
   }
   .boton_personalizado {
-    height: 60px;
-    width: 60px;
-    padding: 6px 8px !important;
+    height: 50px;
+    width: 50px;
+    padding: 1px 7px !important;
   }
   .social {
     top: 200px;
@@ -1066,5 +1066,8 @@ MEDIA QUERIE DESKTOP
   }
   h2 {
     margin-top: -21px !important;
+  }
+  .second-title {
+    font-size: 16px;
   }
 }
