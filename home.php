@@ -31,7 +31,7 @@
   <div id="top" class="starter_container bg">
     <div class="follow_container">
       <div class="col-md-6 col-md-offset-3">
-        <h2 class="white second-title">"El progreso llega a aquellos que se adiestran ininterrumpidamente". Morihei Ueshiba</h2>
+        <h2 class="white second-title">"El progreso llega a aquellos que se adiestran ininterrumpidamente". <br>Morihei Ueshiba</h2>
         <hr>
         <a class="btn btn-danger boton_personalizado" href="#poses" data-toggle="tooltip" data-placement="right" title="Bajar">
           <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -182,7 +182,7 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
         <?php
-        $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/'; 
+        $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/';
         trim($path);
         $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
         ?>
