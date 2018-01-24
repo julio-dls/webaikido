@@ -1,4 +1,4 @@
-<!-- https://webaikido.herokuapp.com/home.html -->
+<!-- https://webaikido.herokuapp.com/home.php -->
 <!-- boton donaciones https://www.youtube.com/watch?v=jXQmho-zxFY  -->
 <!DOCTYPE html>
 <html lang="es">
