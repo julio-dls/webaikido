@@ -182,7 +182,7 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
         <?php
-        $path = 'Web_Aikido/images/proyecto_cortometraje/'; // 'images/proyecto_cortometraje/'; //
+        $path = // 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/'; 
         trim($path);
         $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
         ?>
