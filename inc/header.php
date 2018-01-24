@@ -11,8 +11,8 @@
 
   <title>Iwama Ryu Art</title>
   <link rel="icon" href="images/logo/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.min.css">

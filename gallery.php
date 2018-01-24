@@ -16,7 +16,7 @@
       $categoria = $_GET['categoria'];
     }
 
-    $path = 'images/'.$categoria; //  'Web_Aikido/images/' .$categoria; //
+    $path = 'Web_Aikido/images/' .$categoria; //'images/'.$categoria; //
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
@@ -36,16 +36,25 @@
                 </div>
                 <div class="caption col-sx-3">
                   <h3>Thumbnail 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eligendi.</p>
-                  <p>
+                  <?php
+                    list($width, $height, $type, $attr) = getimagesize("images/".$categoria."/".$archivo."");
+                  ?>
+                    <p>Ancho de imagen: <?=$width?>px <br> Alto de imagen: <?=$height?>px <br> Tipo de imagen:
+                      <?=image_type_to_extension($type)?> <br> </p>
+
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
-                    <input type="submit" class="btn btn-sm btn-primary" role="button" value="Donar" border="0" name="submit">
+                    <?php if (($_GET['categoria'] != 'aikidokas/Varios') and ($_GET['categoria'] != 'aikidokas/Flia_saito')) {
+                      ?>
+                      <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                            <i class="fa fa-heart" aria-hidden="true"></i></a>
+                      <?php
+                    } ?>
+
                     <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
                     </form>
 
-                  </p>
                 </div>
               </div>
             </div>

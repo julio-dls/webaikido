@@ -92,7 +92,7 @@ li.item {
   background: rgba(211, 15, 34, 1);
 }
 
-.icon_knife {
+/* .icon_knife {
   width: 40px;
   height: 20px;
   margin: 30px auto;
@@ -112,7 +112,7 @@ li.item {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-}
+} */
 
 body, html {
   margin: 0;
@@ -131,6 +131,10 @@ h1, h2, p, span, a {
   color: #2f2e2f;
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  margin-top: 27px !important;
 }
 
 .limit {
@@ -197,8 +201,8 @@ div#bs-example-navbar-collapse-1 {
   font-family: 'SouthernAire_Personal_Use_Only';
   font-size: 43px !important;
   text-decoration: none;
-  color: black !important;
-  -webkit-text-stroke: 1px 1px #9d9275;
+  color: white !important;
+  /* -webkit-text-stroke: 1px 1px #9d9275; */
 }
 
 nav {
@@ -236,14 +240,12 @@ INTRO CONTAINER
 
 .boton_personalizado {
   border-radius: 45px !important;
-  cursor: pointer;
   margin-bottom: 10px !important;
   height: 70px;
   width: 70px;
   padding: 10px 16px !important;
   font-size: 37px !important;
   line-height: 1.33 !important;
-  text-align: center;
 }
 
 /* BOTON SUBIR Y BOTON DONACIONES*/
@@ -287,7 +289,8 @@ INTRO CONTAINER
 .icon-personalizado {
   width: 20px !important;
   height: 20px !important;
-  border: 2px solid #9d9275;
+  border: 2px solid #fff;
+  /* #9d9275 */
   margin-top: 21px;
   margin-left: 21px;
 }
@@ -316,10 +319,9 @@ INTRO CONTAINER
 
 .second-title {
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 20px;
   font-style: italic;
   text-transform: capitalize;
-  font-family: SouthernAire_Personal_Use_Only, borde;
 }
 
 .white {
@@ -359,10 +361,11 @@ INTRO CONTAINER
 
 .videos.background_content {
   /*videos*/
-  background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
+  background: url('../images/fondos_intermedio/banners_intermedios1.jpg') no-repeat center center;
   background-size: contain;
-  background-position: 70% 100%;
+  /* background-position: 70% 100%; */
   z-index: -1;
+  filter: grayscale(60%);
 }
 
 iframe {
@@ -370,22 +373,27 @@ iframe {
 }
 
 .contact.background_content {
-  /*contacto*/
-  background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  max-height: 350px;
+  background: url('../images/fondos_intermedio/banners_intermedios3.jpg') no-repeat center center;
+  background-size: contain;
+  /* background-position: 70% 100%; */
+  z-index: -1;
+  filter: grayscale(60%);
 }
 
 .bread.background_content {
-  /*eventos*/
-  background: url('../images/Fondo_videos/banners_intermedios1.jpg') no-repeat center center;
-  /* background: url('../images/Nihonbashi_bridge_in_Edo.jpg') no-repeat center center; */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  max-height: 350px;
+  background: url('../images/fondos_intermedio/banners_intermedios4.jpg') no-repeat center center;
+  background-size: contain;
+  /* background-position: 70% 100%; */
+  z-index: -1;
+  filter: grayscale(60%);
+}
+
+.extras.background_content {
+  background: url('../images/fondos_intermedio/banners_intermedios5.jpg') no-repeat center center;
+  background-size: contain;
+  /* background-position: 70% 100%; */
+  z-index: -1;
+  filter: grayscale(60%);
 }
 
 .img-section img {
@@ -439,71 +447,11 @@ iframe {
   line-height: 1.33 !important;
 }
 
-/* FIN DE SIDEBAR REDES SOCIALES */
+/* ========== FIN DE SIDEBAR REDES SOCIALES ========== */
 
-/*CARUSEL MULTI ITEMS*/
+/* ========== CARUSEL MULTI ITEMS ========== */
 
-.carousel-control {
-  width: 4%;
-}
-
-.carousel-control.left, .carousel-control.right {
-  margin-left: 15px;
-  background-image: none;
-}
-
-@media (max-width: 767px) {
-  .carousel-inner .active.left {
-    left: -100%;
-  }
-  .carousel-inner .next {
-    left: 100%;
-  }
-  .carousel-inner .prev {
-    left: -100%;
-  }
-  .active>div {
-    display: none;
-  }
-  .active>div:first-child {
-    display: block;
-  }
-}
-
-@media (min-width: 767px) and (max-width: 992px) {
-  .carousel-inner .active.left {
-    left: -50%;
-  }
-  .carousel-inner .next {
-    left: 50%;
-  }
-  .carousel-inner .prev {
-    left: -50%;
-  }
-  .active>div {
-    display: none;
-  }
-  .active>div:first-child {
-    display: block;
-  }
-  .active>div:first-child+div {
-    display: block;
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-inner .active.left {
-    left: -25%;
-  }
-  .carousel-inner .next {
-    left: 25%;
-  }
-  .carousel-inner .prev {
-    left: -25%;
-  }
-}
-
-/*FIN CARUSEL MULTI ITEMS*/
+/* ========== FIN CARUSEL MULTI ITEMS ========== */
 
 /*========================
 DESCRIPTION BODY CONTENT
@@ -791,9 +739,9 @@ MEDIA QUERIES MOBILE
   .top-title {
     font-size: 67px;
   }
-  .second-title {
+  /* .second-title {
     font-size: 21px;
-  }
+  } */
   .background_content h1 {
     width: 80%;
     font-size: 2.5em;
@@ -847,8 +795,8 @@ MEDIA QUERIES TABLET
     font-family: 'SouthernAire_Personal_Use_Only';
     font-size: 43px !important;
     text-decoration: none;
-    color: black !important;
-    -webkit-text-stroke: 1px #9d9275;
+    color: white !important;
+    /* -webkit-text-stroke: 1px #9d9275; */
   }
   nav {
     position: fixed;
@@ -1069,13 +1017,16 @@ MEDIA QUERIE DESKTOP
   .background_content {
     height: 150px;
   }
+  .background_content h1 {
+    font-size: 36px !important;
+  }
   .nav {
     font-size: 12px !important;
     padding-right: 5px !important;
   }
   .navbar-brand {
     font-size: 30px !important;
-    -webkit-text-stroke: 1px #9d9275;
+    /* -webkit-text-stroke: 1px #9d9275; */
   }
   .btn-subir {
     width: 30px !important;
@@ -1094,7 +1045,9 @@ MEDIA QUERIE DESKTOP
     z-index: 2000;
   }
   .boton_personalizado {
-    margin-bottom: 10px;
+    height: 60px;
+    width: 60px;
+    padding: 6px 8px !important;
   }
   .social {
     top: 200px;
@@ -1109,6 +1062,9 @@ MEDIA QUERIE DESKTOP
     line-height: 1.33 !important;
   }
   h1 {
-    font-size: xx-large;
+    font-size: large!important;
+  }
+  h2 {
+    margin-top: -21px !important;
   }
 }
