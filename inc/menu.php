@@ -45,7 +45,7 @@
             <li><a class="color_animation scroll-lento" href="#extras">EXTRAS</a></li>
             <li><a class="color_animation scroll-lento" href="#videos">VIDEOS</a></li>
             <li><a class="color_animation scroll-lento" href="#proyectos">PROYECTOS</a></li>
-            <li><a class="color_animation scroll-lento" href="#contact">CONTACT</a></li>
+            <li><a class="color_animation scroll-lento" href="#contacts">CONTACT</a></li>
           </ul>
         </div>
         <!-- FIN DE MENU -->

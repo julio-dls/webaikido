@@ -1048,6 +1048,7 @@ MEDIA QUERIE DESKTOP
     height: 50px;
     width: 50px;
     padding: 1px 7px !important;
+    margin-top: -9px;
   }
   .social {
     top: 200px;
