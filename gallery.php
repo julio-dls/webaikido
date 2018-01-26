@@ -31,17 +31,21 @@
               <div class="thumbnail">
                 <div id="img-repo<?=$count?>">
                   <a title="Image 1" href="#">
-                    <img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=$archivo?>">
+                    <img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
                   </a>
                 </div>
                 <div class="caption col-sx-3">
-                  <h3>Thumbnail 1</h3>
+                  <?php $nombres = basename($archivo, ".jpg");
+                  $nombres = str_replace('_',' ',$nombres);
+                  $nombres = str_replace('-',' ',$nombres);
+                  $nombres = ucwords($nombres);
+                  ?>
+                  <h3><?=utf8_encode($nombres)?></h3>
                   <?php
                     list($width, $height, $type, $attr) = getimagesize("images/".$categoria."/".$archivo."");
+                    $ancho =$width;
+                    $alto=$height
                   ?>
-                    <p>Ancho de imagen: <?=$width?>px <br> Alto de imagen: <?=$height?>px <br> Tipo de imagen:
-                      <?=image_type_to_extension($type)?> <br> </p>
-
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
@@ -73,9 +77,9 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
+        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="Imagenes de modal">
       </div>
-      <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
+      <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
           <button type="button" id="btnModal" class="btn btn-success btn-xs btn-block" data-dismiss="modal">Volver</button>
       </div>
     </div>

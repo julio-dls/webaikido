@@ -42,10 +42,12 @@
   <!-- ============ FIN BOTON IR ABAJO ============ -->
 
   <!-- ============ SOBRE AIKIDO ============= -->
-  <section class="description_content" id="poses">
+  <section class="description_content">
     <div class="text-content container">
-      <div class="col-md-6">
+      <div id="poses">
         <h1 class="my-4 text-center text-lg-left">Acerca de Iwama Ryu Art.</h1>
+      </div>
+      <div class="col-md-6">
         <div class="text-fondo-gris">
           <p class="desc-text">Bienvenidos!! Iwama Ryu Art es una pagina de arte independiente. Lo que usted verá a continuacion son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japon, fue en el año 2013. Mi
             estadia fue maravillosa, casi diria magica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algun modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes
@@ -57,7 +59,6 @@
       </div>
       <div class="col-md-6">
         <div class="img-section">
-          <div class="img-section-space"></div>
           <img class="img-rounded selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/nikkio.jpg" width="250">
           <img class="img-rounded selectorImg" id="image-2" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_enrico.jpg" width="250">
           <div class="img-section-space"></div>
@@ -76,11 +77,15 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
+        <img class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
       </div>
-      <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
-        <button type="button" id="btnModal" class="btn btn-success btn-xs btn-block" data-dismiss="modal">Volver</button>
-        <a href="gallery.php?categoria=poses/manosSimples" id="btnModal" class="btn btn-info btn-xs btn-block">Ir a galeria</a>
+      <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-md-offset-2">
+            <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
+          </div>
+          <div class="col-md-4">
+            <a href="gallery.php?categoria=poses/manosSimples" id="btnModal" class="btn btn-danger btn-xs btn-block">Galeria</a>
+          </div>
       </div>
     </div>
   </div>
@@ -104,7 +109,7 @@
       <h1><span>Videos</span></h1>
     </div>
     <div class="container text-center">
-      <h1 class="text-center">Ultimos Videos<small></small></h1>
+      <!-- <h1 class="text-center">Ultimos Videos<small></small></h1> -->
       <div class="row">
         <div class="col-md-6">
           <iframe class="img-fluid iframePrindipal" width="560" height="315" src="https://www.youtube.com/embed/SjM6x-BMemM" frameborder="0" allowfullscreen></iframe>
@@ -163,7 +168,7 @@
   <!-- ============ PROYECTOS  ============= -->
   <section id="proyectos" class=" description_content">
     <div class="bread  background_content text-center">
-      <h1><span>Proyectos</span></h1>
+      <h1><span>Proyecto</span></h1>
     </div>
     <div class="text-content container">
       <div class="col-md-12 text-center">
@@ -179,35 +184,37 @@
   <div class="container bs-docs-container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
 
-        <?php
-        $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/';
-        trim($path);
-        $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
-        ?>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="images/proyecto_cortometraje/templo_iwama concep.jpg" alt="...">
-            <div class="carousel-caption">
-              ...
+            <?php
+            $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/';//
+            trim($path);
+            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
+            if($directorio = opendir($carpeta)){
+              $active="active";
+              while(($archivo = readdir($directorio)) !== false) {
+                if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
+
+                    <div class="item <?=$active?>">
+                        <img src="images/proyecto_cortometraje/<?=utf8_encode($archivo)?>" alt="...">
+                        <div class="carousel-caption">
+                          <?php
+                            $nombres = basename($archivo, ".jpg");
+                            $nombres = str_replace('_',' ',$nombres);
+                            $nombres = str_replace('-',' ',$nombres);
+                            $nombres = ucwords($nombres);
+                            echo utf8_encode($nombres);
+                           ?>
+                        </div>
+                    </div>
+              <?php
+                $active="";
+                }
+              }
+              closedir($directorio);
+              } ?>
             </div>
-          </div><?php
-        if($directorio = opendir($carpeta)){
-          while(($archivo = readdir($directorio)) !== false) {
-            if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
-              <div class="item">
-                  <img src="images/proyecto_cortometraje/<?=$archivo?>" alt="...">
-                  <div class="carousel-caption">
-                    ...
-                  </div>
-              </div>
-          <?php  }
-          }
-          closedir($directorio);
-        } ?>
-        Aqui puede ir un nombre
-      </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -227,11 +234,11 @@
   <!-- ============ EVENTOS  ============= -->
   <section class="description_content">
     <div id="extras" class="extras background_content">
-      <h1><span>Extras</span><span></span> </h1>
+      <h1><span>Extra</span><span></span> </h1>
     </div>
     <div class="text-content container">
       <div class="col-md-12 text-center">
-        <h1>Extras</h1>
+        <!-- <h1>Extras</h1> -->
         <div class="text-fondo-gris">
           <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi qui ab accusantium reprehenderit cupiditate ipsam adipisci officia facere quidem esse aut, rem sapiente odio temporibus natus expedita nam quos sint.</p>
         </div>
@@ -316,7 +323,7 @@
     </div>
     <div class="text-content container">
       <div class="col-md-6">
-        <h1>Lorem ipsum dolor sit amet!</h1>
+        <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
 
         <p class="desc-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, recusandae doloribus repudiandae quis tempore culpa eos, repellat facilis autem delectus ex et saepe accusantium distinctio rerum accusamus voluptatem nihil ut.</p>
 

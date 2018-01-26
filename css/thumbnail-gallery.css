@@ -47,7 +47,7 @@ body {
 }
 
 .modal {
-  top: 5%;
+  top: -6%;
   z-index: 3000;
 }
 

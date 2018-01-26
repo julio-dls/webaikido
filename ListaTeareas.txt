@@ -1,22 +1,25 @@
-#1-al inicio-banner superiror...el texto de la pagina no se ve nitido y los item no son los que te habia pasado
-#2-la imagen de fondo se ve pixelada. y el texto y el supuesto boton queda tapando..se deberia buscar otra ubicacion y otro boton...
-#3-cuando se entra a la primera seccion hay diferencias de formatos...En la pec hay que rollear imagen porque es muy grande, en celular da ok...deberiamos normalizar.
-#4-al tocar y agrandar : ok pero no me da la opcion de poder ir a imprimir. Ademas no me permite volver
-#5-los espacion de calado con fondo fijo atras...no va....
-6-el fondo intermedio da bien en pc....pero queda mal cortad en celular....no me da la idea de algo pensado...sino de algo automatico que acomoda como venga.
-y esa no es la idea que quiero dar-
-7-la zona de videos debera  estar con : en construccion...hasta que pueda tener permisos de los videos
-#8-en el banner superiro debe estar siempre presente un corazon o algo que te envie como boton de donaciones.
-9-cuando entrro a retratos( que no es ese el titulo sino aikidokas. ! en general se ve bien...como un Pinterest...pero no me convence lo poco que hay y tener que sumar 2/3/4/5...
-#10- cuando selecciono el retrato deberia tener NOMBRE del aikidoka bandera del pais... y opcion a imprimir...esos dos botones uno puede ser eso y el otro donacion
-#11-en esa seccion tendria que tener la opcion de buscar a alguien ....
-#12-en la seccion de NOVEDADES! que no se� cual es la onda...y como pensaste eso... !!??!!. supongo que es lo ultimo que hice ...no se el criterio de esto.
-13- en retratos, la version en celular se ve mas prolijo...lo que no entiendo es porque las diferentes alturas....deberiamos normalizar eso...
-#14- en celular me da la opcion impresion....pero no me lo muestra...solo dice 300x350....pixel?......esa no seria buena resolucion para imprimir...
-...bueno hasta aca� veo esto....
+
 15 - lo de los video no se´....los bajo o solo el link?
 16 - la cuenta ya la saqué...que dato paso?
 17 - proyecto= van ilustraciones de un cortometraje...aun no te los pase
       extra= dibujos que no tienen relacion directa con aikido aun no te los pase´
       hanmi= son las posiciones de PIES
 18 - en la seccion aikidoka....dividi en akidokas y flia saito. elimina la palabra VARIOS
+--------
+# 1- en la intro de la web, bajar texto para que no se superponga sobre mariposa
+# 2-el boton Bienvenido debe habilitar = acerca de iwama Ryu Art
+# 3-la linea verde debajo de bienvenido debe deslizarse segun el boton seleccionado
+# 4-cambiar el orden del boton extra por contacto
+#5-en banners intermedios desaturados , sacarle la linea al titulo de cada seccion
+6-los mismos banners intermedios ampliar para la version celular.
+#7-en[acerca de iwama ryu art] bajar las imagenes a la altura de texto
+
+8-la seccion POSES = se dividen en manos/solo/parejas
+9-estas imahgenes mostrara=nombre/boton imprimir/boton donar
+
+10-al ampliar tendra linea color igual al banners superiro y letras volver /ir a galeria en color correspondiente. datos de medidas solo px
+11-aikidokas= igual que el anteriro y considerar ampliar mas en version web
+#12-corregir KAMINAMAS por KAMIDANAS!! (N)
+13-hanmi= llevara nombre /boton donar/boton imprimir. el resto similar a los anteriores
+#14-corregir titulos en las secciones en cada pagina
+15-proyectos= cambiar texto(te lo envio) y subir nuevas imagenes(te aviso cuando las corrijo)

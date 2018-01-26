@@ -6,7 +6,7 @@ h1 {
   border: 1px solid rgba(47, 46, 47, 0.59);
 }
 
-.navactive {
+.navactive:hover {
   border-bottom: 1px solid #96E16B;
 }
 
@@ -134,7 +134,7 @@ h1, h2, p, span, a {
 }
 
 h2 {
-  margin-top: 27px !important;
+  margin-top: 35px !important;
 }
 
 .limit {
@@ -240,12 +240,12 @@ INTRO CONTAINER
 
 .boton_personalizado {
   border-radius: 45px !important;
-  margin-bottom: 10px !important;
   height: 70px;
   width: 70px;
   padding: 10px 16px !important;
   font-size: 37px !important;
   line-height: 1.33 !important;
+  margin-top: -9px;
 }
 
 /* BOTON SUBIR Y BOTON DONACIONES*/
@@ -356,7 +356,7 @@ INTRO CONTAINER
 
 .background_content h1 span {
   color: white;
-  border-bottom: 8px solid #fff;
+  /* border-bottom: 8px solid #fff; */
 }
 
 .videos.background_content {
@@ -890,7 +890,7 @@ MEDIA QUERIES TABLET
   .background_content h1 span {
     color: white;
     padding: 0;
-    border-bottom: 10px solid #fff;
+    /* border-bottom: 10px solid #fff; */
   }
   iframe {
     max-width: 100%;
@@ -956,7 +956,7 @@ MEDIA QUERIE DESKTOP
   .background_content h1 span {
     color: white;
     padding: 0;
-    border-bottom: 12px solid #fff;
+    /* border-bottom: 12px solid #fff; */
   }
   /*========================
     DESCRIPTION BODY CONTENT
