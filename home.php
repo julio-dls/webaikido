@@ -79,7 +79,8 @@
       <div class="modal-content">
         <img class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
       </div>
-      <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-xs-12">
+        <hr>
           <div class="col-md-4 col-md-offset-2">
             <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
           </div>

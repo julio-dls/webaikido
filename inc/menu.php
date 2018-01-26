@@ -26,6 +26,8 @@
               <ul class="dropdown-menu dropdown-menu-left">
                 <li><a href="gallery.php?categoria=poses/manosSimples">Manos</a></li>
                 <li role="separator" class="divider"></li>
+                <li><a href="#">Solo</a></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=poses/posesSimples">Parejas</a></li>
                 <li role="separator" class="divider"></li>
               </ul>

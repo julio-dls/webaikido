@@ -54,7 +54,9 @@ body {
 #btnModal {
   margin-top: 10px !important;
 }
-
+label {
+  color: #fff;
+}
 /* ======= FIN GALLERY POSES ====== */
 
 @media only screen and (max-width: 375px) {
@@ -72,7 +74,7 @@ body {
   .btn {
     padding: 3px 5px;
     /* margin-bottom: 2px !important; */
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 

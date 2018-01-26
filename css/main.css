@@ -402,9 +402,13 @@ iframe {
 }
 
 #btnModal {
-  margin-top: 10px !important;
+  /* margin-top: 10px !important;
+  color: #66563 !important; */
 }
-
+.modal {
+  top: -6%;
+  z-index: 3000;
+}
 /* SIDEBAR REDES SOCIALES */
 
 .social {
@@ -1070,5 +1074,23 @@ MEDIA QUERIE DESKTOP
   }
   .second-title {
     font-size: 16px;
+  }
+  .videos.background_content {
+    background-size: cover;
+    background-position: 23% 100%;
+    z-index: -1;
+    filter: grayscale(60%);
+    height: 170px;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .bread.background_content, .extras.background_content, .contact.background_content {
+    background-size: cover;
+    background-position: 53% 100%;
+    z-index: -1;
+    filter: grayscale(60%);
+    height: 170px;
+    margin-bottom: 10%;
+    margin-top: 10%;
   }
 }

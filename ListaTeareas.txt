@@ -1,25 +1,25 @@
 
 15 - lo de los video no se´....los bajo o solo el link?
 16 - la cuenta ya la saqué...que dato paso?
-17 - proyecto= van ilustraciones de un cortometraje...aun no te los pase
+# 17 - proyecto= van ilustraciones de un cortometraje...aun no te los pase
       extra= dibujos que no tienen relacion directa con aikido aun no te los pase´
       hanmi= son las posiciones de PIES
-18 - en la seccion aikidoka....dividi en akidokas y flia saito. elimina la palabra VARIOS
+# 18 - en la seccion aikidoka....dividi en akidokas y flia saito. elimina la palabra VARIOS
 --------
 # 1- en la intro de la web, bajar texto para que no se superponga sobre mariposa
 # 2-el boton Bienvenido debe habilitar = acerca de iwama Ryu Art
 # 3-la linea verde debajo de bienvenido debe deslizarse segun el boton seleccionado
 # 4-cambiar el orden del boton extra por contacto
-#5-en banners intermedios desaturados , sacarle la linea al titulo de cada seccion
-6-los mismos banners intermedios ampliar para la version celular.
-#7-en[acerca de iwama ryu art] bajar las imagenes a la altura de texto
+# 5-en banners intermedios desaturados , sacarle la linea al titulo de cada seccion
+# 6-los mismos banners intermedios ampliar para la version celular.
+# 7-en[acerca de iwama ryu art] bajar las imagenes a la altura de texto
 
-8-la seccion POSES = se dividen en manos/solo/parejas
-9-estas imahgenes mostrara=nombre/boton imprimir/boton donar
+# 8-la seccion POSES = se dividen en manos/solo/parejas
+#9-estas imahgenes mostrara=nombre/boton imprimir/boton donar
 
-10-al ampliar tendra linea color igual al banners superiro y letras volver /ir a galeria en color correspondiente. datos de medidas solo px
-11-aikidokas= igual que el anteriro y considerar ampliar mas en version web
+#10-al ampliar tendra linea color igual al banners superiro y letras volver /ir a galeria en color correspondiente. datos de medidas solo px
+#11-aikidokas= igual que el anteriro y considerar ampliar mas en version web
 #12-corregir KAMINAMAS por KAMIDANAS!! (N)
-13-hanmi= llevara nombre /boton donar/boton imprimir. el resto similar a los anteriores
+#13-hanmi= llevara nombre /boton donar/boton imprimir. el resto similar a los anteriores
 #14-corregir titulos en las secciones en cada pagina
 15-proyectos= cambiar texto(te lo envio) y subir nuevas imagenes(te aviso cuando las corrijo)

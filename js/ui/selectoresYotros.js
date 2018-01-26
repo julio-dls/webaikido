@@ -13,6 +13,8 @@ $(document).ready(function() {
     $this = $(this);
     var srcImg = $this.attr('src');
     $(".selectorImgModal").attr("src", srcImg);
+    // LAGEL modal
+    $('#label-modal').text($this.attr('data-medidas'));
   });
   /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */
 

@@ -19,19 +19,18 @@
     $path = 'images/'.$categoria; //'Web_Aikido/images/' .$categoria; //
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
-
     $count=0;
-
     if($directorio = opendir($carpeta)){
       while(($archivo = readdir($directorio)) !== false) {
         if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
-          $count++; ?>
-
+          $count++;
+          list($width, $height, $type, $attr) = getimagesize("images/".$categoria."/".$archivo."");
+          $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
             <div class="grid-item">
               <div class="thumbnail">
                 <div id="img-repo<?=$count?>">
                   <a title="Image 1" href="#">
-                    <img class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
+                    <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
                   </a>
                 </div>
                 <div class="caption col-sx-3">
@@ -41,11 +40,6 @@
                   $nombres = ucwords($nombres);
                   ?>
                   <h3><?=utf8_encode($nombres)?></h3>
-                  <?php
-                    list($width, $height, $type, $attr) = getimagesize("images/".$categoria."/".$archivo."");
-                    $ancho =$width;
-                    $alto=$height
-                  ?>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
@@ -80,7 +74,8 @@
         <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="Imagenes de modal">
       </div>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
-          <button type="button" id="btnModal" class="btn btn-success btn-xs btn-block" data-dismiss="modal">Volver</button>
+        <label id="label-modal" or="#"></label>
+          <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
       </div>
     </div>
     </div>
