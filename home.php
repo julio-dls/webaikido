@@ -198,7 +198,7 @@
 
                     <div class="item <?=$active?>">
                         <img src="images/proyecto_cortometraje/<?=utf8_encode($archivo)?>" alt="...">
-                        <div class="carousel-caption">
+                        <div>
                           <?php
                             $nombres = basename($archivo, ".jpg");
                             $nombres = str_replace('_',' ',$nombres);

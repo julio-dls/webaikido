@@ -28,12 +28,6 @@ body {
 
 /* ===== FIN GRID ITEM ===== */
 
-.carousel-control.left, .carousel-control.right {
-  background-image: none;
-  margin-top: 10%;
-  width: 5%;
-}
-
 /* ======= GALLERY POSES ====== */
 
 .thumbnail {
@@ -64,32 +58,19 @@ h3 {
   margin-top: 0px;
 }
 
-}
-
 /* ======= FIN GALLERY POSES ====== */
 
-@media only screen and (max-width: 375px) {
-  body {
-    padding-top: 100px;
+@media (min-width: 299px) and (max-width: 992px) {
+  .grid-item {
+    float: left;
+    background: #f2f2f2;
+    width: 30%;
+    margin: 0em 1% 1.5em 2%;
+    border: 2px solid #333;
+    border-radius: 5px;
   }
-  h3 {
-    font-size: 9px;
-    margin-top: 0px !important;
-  }
-  p {
-    font-size: 5px;
-    text-align: justify;
-  }
-  .btn {
-    padding: 3px 5px;
-    /* margin-bottom: 2px !important; */
-    font-size: 10px;
-  }
-}
-
-@media only screen and (width: 412px) {
-  body {
-    padding-top: 100px;
+  h1 {
+    font-size: xx-large;
   }
   h3 {
     font-size: 11px;
@@ -100,25 +81,8 @@ h3 {
     text-align: justify;
     margin: 0 0 10px;
   }
-  .btn {
+  form .btn {
     padding: 2px 4px !important;
     margin-bottom: 2px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 70px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 992px) {
-  h1 {
-    font-size: xx-large;
-  }
-  p {
-    font-size: 10px;
-    text-align: justify;
-    margin: 0 0 10px;
   }
 }

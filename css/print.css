@@ -4,7 +4,7 @@
 
 /* http://jsfiddle.net/mturjak/2wk6Q/1949/ */
 
-@page {
+/* @page {
   size: A4;
   margin: 0;
   page-break-before: avoid;
@@ -24,5 +24,5 @@
     margin-top: 0px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-  }
+  } */
 }

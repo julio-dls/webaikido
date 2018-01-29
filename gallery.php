@@ -37,27 +37,27 @@
                 </div>
 
                 <div class="caption col-sx-3">
-                  <?php $nombres = basename($archivo, ".jpg");
-                  $nombres = str_replace('_',' ',$nombres);
-                  $nombres = str_replace('-',' ',$nombres);
-                  $nombres = ucwords($nombres);
-                  ?>
-                  <h3><?=utf8_encode($nombres)?></h3>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
-                    
-                    <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
-                      ?>
-                      <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                            <i class="fa fa-heart" aria-hidden="true"></i></a>
-                      <?php
-                    } ?>
-
-                    <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
-                    </form>
-
+                <?php $nombres = basename($archivo, ".jpg");
+                $nombres = str_replace('_',' ',$nombres);
+                $nombres = str_replace('-',' ',$nombres);
+                $nombres = ucwords($nombres);
+                ?>
+                <h3><?=utf8_encode($nombres)?></h3>
                 </div>
+
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
+
+                <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
+                  ?>
+                  <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                        <i class="fa fa-heart" aria-hidden="true"></i></a>
+                  <?php
+                } ?>
+
+                <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
+                </form>
               </div>
             </div>
 
