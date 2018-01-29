@@ -7,16 +7,17 @@
   <div class="container">
     <div class="col-xs-6">
       <h1>AIKIDOKAS</h1>
+      <hr>
     </div>
     <!-- ucwords($nameGaleria) -->
-    <hr>
+
     <div class="grid">
     <?php
     if(isset($_GET['categoria'])){
       $categoria = $_GET['categoria'];
     }
 
-    $path = 'images/'.$categoria; //'Web_Aikido/images/' .$categoria; //
+    $path = 'Web_Aikido/images/' .$categoria; //'images/'.$categoria; //
     trim($path);
     $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
     $count=0;
@@ -28,11 +29,13 @@
           $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
             <div class="grid-item">
               <div class="thumbnail">
-                <div id="img-repo<?=$count?>">
+                <div id="img-repo<?=$count?>" class="div-print">
                   <a title="Image 1" href="#">
-                    <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
+                    <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
+                    data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
                   </a>
                 </div>
+
                 <div class="caption col-sx-3">
                   <?php $nombres = basename($archivo, ".jpg");
                   $nombres = str_replace('_',' ',$nombres);
@@ -43,7 +46,8 @@
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
-                    <?php if (($_GET['categoria'] != 'aikidokas/Varios') and ($_GET['categoria'] != 'aikidokas/Flia_saito')) {
+                    
+                    <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
                       ?>
                       <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
                             <i class="fa fa-heart" aria-hidden="true"></i></a>

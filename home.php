@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -113,7 +112,7 @@
       <!-- <h1 class="text-center">Ultimos Videos<small></small></h1> -->
       <div class="row">
         <div class="col-md-6">
-          <iframe class="img-fluid iframePrindipal" width="560" height="315" src="https://www.youtube.com/embed/SjM6x-BMemM" frameborder="0" allowfullscreen></iframe>
+          <iframe class="img-fluid iframePrindipal" width="560" height="315" src="https://www.youtube.com/embed/O-WKYaTCum4" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="col-md-6">
@@ -136,25 +135,25 @@
       <div class="description_content">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a class="aIframeVideoSeleccionado" href="#">
-              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/7K3AnXfz5AY?rel=0&showinfo=0&controls=1" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
+              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/IH3ooH-RUC8" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
             </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a href="#">
-              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/H0VU2b0hLcM?rel=0&showinfo=0&controls=1" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
+              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/CoUlKdN-kgQ" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
             </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12 iframeSeleccionado">
           <a href="#">
-            <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/7K3AnXfz5AY?rel=0&showinfo=0&controls=1" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
+            <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/KiUj-F7sIrw" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
             </a>
         </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a href="#">
-              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/H0VU2b0hLcM?rel=0&showinfo=0&controls=1" frameborder="1"  gesture="media" allow="encrypted-media" scrolling="no"></iframe>
+              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/ywePqfgOlFc" frameborder="1"  gesture="media" allow="encrypted-media" scrolling="no"></iframe>
             </a>
         </div>
 
@@ -189,7 +188,7 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/';//
+            $path = 'Web_Aikido/images/proyecto_cortometraje/'; //'images/proyecto_cortometraje/'; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
@@ -232,91 +231,6 @@
 
   <!-- ============ FIN PROYECTOS  ============= -->
 
-  <!-- ============ EVENTOS  ============= -->
-  <section class="description_content">
-    <div id="extras" class="extras background_content">
-      <h1><span>Extra</span><span></span> </h1>
-    </div>
-    <div class="text-content container">
-      <div class="col-md-12 text-center">
-        <!-- <h1>Extras</h1> -->
-        <div class="text-fondo-gris">
-          <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi qui ab accusantium reprehenderit cupiditate ipsam adipisci officia facere quidem esse aut, rem sapiente odio temporibus natus expedita nam quos sint.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row text-center text-lg-left">
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-xs-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-        </a>
-      </div>
-    </div>
-
-  </div>
-  <!-- /.container -->
-
-  <!-- ============ FIN EVENTOS ============ -->
-
   <!-- ============ FORM CONTACTO ============ -->
   <section class="description_content">
     <div id="contacts" class="contact background_content">
@@ -326,7 +240,7 @@
       <div class="col-md-6">
         <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
 
-        <p class="desc-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, recusandae doloribus repudiandae quis tempore culpa eos, repellat facilis autem delectus ex et saepe accusantium distinctio rerum accusamus voluptatem nihil ut.</p>
+        <p class="desc-text ">Gracias por su Visita! Si usted necesita algún archivo en algun formato especial o algo que desea solicitar fuera de tema aikido, no dude en comunicarse ,especifique qué necesita. A la brevedad responderé su inquietud. <br>Gracias por comuncarse!</p>
 
       </div>
       <div class="col-md-6">

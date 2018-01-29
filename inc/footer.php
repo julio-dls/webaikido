@@ -54,16 +54,14 @@
         $('#modal').modal('hide');
       });
     });
-    https://es.stackoverflow.com/questions/43444/bot%C3%B3n-para-imprimir-solo-el-contenido-de-un-div-conservando-estilos
+    // https://es.stackoverflow.com/questions/43444/bot%C3%B3n-para-imprimir-solo-el-contenido-de-un-div-conservando-estilos
     function printDiv(nombreDiv) {
          var contenido= document.getElementById(nombreDiv).innerHTML;
-         var contenidoOriginal= document.body.innerHTML;
-
-         document.body.innerHTML = contenido;
-
+         var contenidoOriginal = document.body.innerHTML;
+         document.body.innerHTML = contenido; //imprime lo que hemos selecconado
          window.print();
+         document.body.innerHTML = contenidoOriginal; //copia el body del dom y lo muestra
 
-         document.body.innerHTML = contenidoOriginal;
     }
   </script>
 </body>

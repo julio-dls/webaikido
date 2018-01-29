@@ -1,0 +1,28 @@
+/* http://desarrolloweb.dlsi.ua.es/libros/html-css/como-crear-una-hoja-de-estilo-para-impresion */
+
+/* https://escss.blogspot.com.ar/2012/05/estilos-css-para-imprimir-la-regla-page.html */
+
+/* http://jsfiddle.net/mturjak/2wk6Q/1949/ */
+
+@page {
+  size: A4;
+  margin: 0;
+  page-break-before: avoid;
+  page-break-after: avoid;
+  vertical-align: top;
+}
+
+@page: blank {
+  visibility: hidden;
+  page-break-inside: avoid;
+}
+
+@page: first {}
+
+@media print {
+  html, body {
+    margin-top: 0px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+}

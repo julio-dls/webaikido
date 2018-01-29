@@ -44,9 +44,19 @@
             </li>
             <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
             <li><a class="navactive color_animation " href="gallery.php?categoria=hanmi">HANMI</a></li>
+            <li class="dropdown">
+              <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">EXTRAS <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-menu-left">
+                <li><a href="gallery.php?categoria=extras/moldes">Models</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="gallery.php?categoria=extras/tarjetas">Tarjetas</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="gallery.php?categoria=extras/varios">Varios</a></li>
+                <li role="separator" class="divider"></li>
+              </ul>
+            </li>
             <li><a class="navactive color_animation scroll-lento" href="#videos">VIDEOS</a></li>
             <li><a class="navactive color_animation scroll-lento" href="#proyectos">PROYECTOS</a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#extras">EXTRAS</a></li>
             <li><a class="navactive color_animation scroll-lento" href="#contacts">CONTACT</a></li>
           </ul>
         </div>
