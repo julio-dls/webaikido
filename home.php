@@ -108,7 +108,7 @@
     <div id="videos" class="videos background_content">
       <h1><span>Videos</span></h1>
     </div>
-    <div class="container text-center">
+    <div class="container ">
       <!-- <h1 class="text-center">Ultimos Videos<small></small></h1> -->
       <div class="row">
         <div class="col-md-6">
@@ -132,7 +132,7 @@
       <!-- /.row -->
 
       <h3 class="my-4">Video Recientes</h3>
-      <div class="description_content">
+      <div class="row description_content">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a class="aIframeVideoSeleccionado" href="#">
               <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/IH3ooH-RUC8" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
@@ -247,32 +247,35 @@
         <ul class="image_box_story2">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+            <div class="carousel-inner" role="listbox">
 
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="#" class="img-responsive" alt="...">
-                <div class="carousel-caption">
+            <?php
+            $path = 'Web_Aikido/images/contacto/'; //'images/proyecto_cortometraje/'; //
+            trim($path);
+            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
+            if($directorio = opendir($carpeta)){
+              $active="active";
+              while(($archivo = readdir($directorio)) !== false) {
+                if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
 
-                </div>
-              </div>
-              <div class="item">
-                <img src="#" class="img-responsive" alt="...">
-                <div class="carousel-caption">
-
-                </div>
-              </div>
-              <div class="item">
-                <img src="#" class="img-responsive" alt="...">
-                <div class="carousel-caption">
-
-                </div>
-              </div>
-            </div>
+                    <div class="item <?=$active?> thumbnail">
+                        <img class="img-responsive" src="images/contacto/<?=utf8_encode($archivo)?>" width="360px" max-height="260px" alt="...">
+                        <div>
+                          <?php
+                            // $nombres = basename($archivo, ".jpg");
+                            // $nombres = str_replace('_',' ',$nombres);
+                            // $nombres = str_replace('-',' ',$nombres);
+                            // $nombres = ucwords($nombres);
+                            // echo utf8_encode($nombres);
+                           ?>
+                        </div>
+                    </div>
+              <?php
+                $active="";
+                }
+              }
+              closedir($directorio);
+              } ?>
           </div>
         </ul>
       </div>
