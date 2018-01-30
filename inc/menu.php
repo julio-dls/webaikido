@@ -15,7 +15,8 @@
 
           <a class="navbar-brand" href="home.php">Juana Ryu Art</a>
           <img class="icon-personalizado img-fluid" src="images/logo/logo.png" alt="logo">
-          <a class="heart" href="#"><i id="heart-beating" class="fa fa-heart btn btn-corazon-latido" aria-hidden="true"></i></a>
+          <a class="heart" href="#"></i></a>
+          <!-- <i id="heart-beating" class="fa fa-heart btn btn-corazon-latido" aria-hidden="true"> -->
         </div>
         <!-- FIN LOGO -->
         <!-- MENU -->

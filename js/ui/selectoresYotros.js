@@ -77,18 +77,15 @@ $(document).ready(function() {
 
   $('#heart-beating').remove();
 
-  $(window).resize(function() {
+  $(window).resize(function clonar() {
     if ($(window).width() <= 992) {
       $('.heart').append(clon);
       $('#icon-latiendo-btn').remove();
     } else {
       if ($('#icon-latiendo-btn').length > 0) {
         $('#icon-latiendo-btn').remove();
-        $('.btn-latiendo').append(clonSidebar);
-      } else {
-        $('.btn-latiendo').append(clonSidebar);
       }
-
+      $('.btn-latiendo').append(clonSidebar);
       $('#heart-beating').remove();
     }
   });
