@@ -82,7 +82,13 @@ $(document).ready(function() {
       $('.heart').append(clon);
       $('#icon-latiendo-btn').remove();
     } else {
-      $('.btn-latiendo').append(clonSidebar);
+      if ($('#icon-latiendo-btn').length > 0) {
+        $('#icon-latiendo-btn').remove();
+        $('.btn-latiendo').append(clonSidebar);
+      } else {
+        $('.btn-latiendo').append(clonSidebar);
+      }
+
       $('#heart-beating').remove();
     }
   });
