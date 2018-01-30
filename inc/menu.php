@@ -15,9 +15,11 @@
 
           <a class="navbar-brand" href="home.php">Juana Ryu Art</a>
           <img class="icon-personalizado img-fluid" src="images/logo/logo.png" alt="logo">
+          <a  class="heart" href="#"><i id="heart-beating" class="fa fa-heart btn btn-corazon-latido" aria-hidden="true"></i></a>
         </div>
         <!-- FIN LOGO -->
         <!-- MENU -->
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav main-nav  clear navbar-right">
             <li><a class="navactive color_animation scroll-lento" href="#poses">BIENVENIDOS</a></li>
@@ -42,8 +44,6 @@
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
-            <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
-            <li><a class="navactive color_animation " href="gallery.php?categoria=hanmi">HANMI</a></li>
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">EXTRAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
@@ -55,6 +55,8 @@
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
+            <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
+            <li><a class="navactive color_animation " href="gallery.php?categoria=hanmi">HANMI</a></li>
             <li><a class="navactive color_animation scroll-lento" href="#videos">VIDEOS</a></li>
             <li><a class="navactive color_animation scroll-lento" href="#proyectos">PROYECTOS</a></li>
             <li><a class="navactive color_animation scroll-lento" href="#contacts">CONTACT</a></li>

@@ -405,10 +405,12 @@ iframe {
   /* margin-top: 10px !important;
   color: #66563 !important; */
 }
+
 .modal {
   top: -6%;
   z-index: 3000;
 }
+
 /* SIDEBAR REDES SOCIALES */
 
 .social {
@@ -444,11 +446,36 @@ iframe {
 .sidebar-social {
   width: 50px !important;
   height: 50px !important;
-  padding: 10px 14px !important;
+  padding: 9px 13px !important;
   border-radius: 25px !important;
   text-align: center !important;
   font-size: 24px !important;
   line-height: 1.33 !important;
+}
+
+.sidebar-social-latidos {
+  animation: latidos .5s infinite;
+  transform-origin: center;
+}
+
+@keyframes latidos {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.btn-corazon-latido {
+  font-size: 30px !IMPORTANT;
+  text-shadow: 0 0 10px #222, 1px 1px 0 #450505;
+  color: red;
+  animation: latidos .5s infinite;
+  transform-origin: center;
 }
 
 /* ========== FIN DE SIDEBAR REDES SOCIALES ========== */
@@ -1092,5 +1119,8 @@ MEDIA QUERIE DESKTOP
     height: 170px;
     margin-bottom: 10%;
     margin-top: 10%;
+  }
+  .heart{
+    margin-top: 5%;
   }
 }

@@ -285,7 +285,7 @@
         <div class="col-md-12">
           <div class="inner contact">
             <div class="contact-form">
-              <form id="contact-us" method="post" action="contact.php">
+              <form id="contact-us" method="post" action="#">
                 <div class="col-md-6 ">
                   <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
                   <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />

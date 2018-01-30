@@ -1,11 +1,11 @@
 
   <div class="social">
     <ul class="nav">
-      <!-- <li>
-        <a class="btn btn-danger sidebar-social" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-          <i class="fa fa-heart" aria-hidden="true"></i>
+      <li class="btn-latiendo">
+        <a id="icon-latiendo-btn" class="btn btn-danger sidebar-social" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+          <i class="fa fa-heart sidebar-social-latidos" aria-hidden="true"></i>
         </a>
-      </li> -->
+      </li>
       <li>
         <a href="http://www.facebook.com.ar" class="btn btn-primary sidebar-social" data-toggle="tooltip" data-placement="right" title="Facebook">
           <i class="fa fa-facebook" aria-hidden="true"></i>

@@ -70,4 +70,19 @@ $(document).ready(function() {
 
   });
   // FIN BOTON SIEMPE VISIBLE
+  var clon = $('<i id="heart-beating" class="fa fa-heart btn btn-corazon-latido" aria-hidden="true">').clone();
+  var clonSidebar = $('<a id="icon-latiendo-btn" class="btn btn-danger sidebar-social" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion"><i class="fa fa-heart sidebar-social-latidos" aria-hidden="true"></i></a>').clone();
+
+  $('#heart-beating').remove();
+
+  $(window).resize(function() {
+    if ($(window).width() <= 992) {
+      $('.heart').append(clon);
+      $('#icon-latiendo-btn').remove();
+    } else {
+      $('.btn-latiendo').append(clonSidebar);
+      $('#heart-beating').remove();
+    }
+  });
+  // FIN AGREGAR Y ELIMINAR ELEMENTO
 });
