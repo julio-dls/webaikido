@@ -260,15 +260,6 @@
 
                     <div class="item <?=$active?> ">
                         <img class="img-responsive img-slide-contacto" src="images/contacto/<?=utf8_encode($archivo)?>" alt="...">
-                        <div>
-                          <?php
-                            // $nombres = basename($archivo, ".jpg");
-                            // $nombres = str_replace('_',' ',$nombres);
-                            // $nombres = str_replace('-',' ',$nombres);
-                            // $nombres = ucwords($nombres);
-                            // echo utf8_encode($nombres);
-                           ?>
-                        </div>
                     </div>
               <?php
                 $active="";

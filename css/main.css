@@ -485,8 +485,7 @@ iframe {
 .img-slide-contacto {
   height: 350px !important;
   min-height: 350px !important;
-  margin:auto;
-  display: block !important;
+  margin: auto;
 }
 
 /* ========== FIN CARUSEL CONTACTO ========== */
@@ -1129,5 +1128,10 @@ MEDIA QUERIE DESKTOP
   }
   .heart {
     margin-top: 5%;
+  }
+  .img-slide-contacto {
+    height: 150px !important;
+    min-height: 150px !important;
+    margin: auto !important;
   }
 }
