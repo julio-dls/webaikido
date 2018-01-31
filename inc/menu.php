@@ -15,8 +15,8 @@
 
           <a class="navbar-brand" href="home.php">Juana Ryu Art</a>
           <img class="icon-personalizado img-fluid" src="images/logo/logo.png" alt="logo">
-          <a class="heart" href="#"></i></a>
-          <!-- <i id="heart-beating" class="fa fa-heart btn btn-corazon-latido" aria-hidden="true"> -->
+          <a class="heart" href="#"></a>
+          <!-- <i id="heart-beating" class="fa fa-heart btn btn-corazon-latido" aria-hidden="true"></i> -->
         </div>
         <!-- FIN LOGO -->
         <!-- MENU -->
@@ -39,9 +39,9 @@
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">AIKIDOKAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="gallery.php?categoria=aikidokas/Flia_saito">Familia Saito</a></li>
+                <li><a href="gallery.php?categoria=aikidokas/flia_saito">Familia Saito</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="gallery.php?categoria=aikidokas/Varios">Aikidokas</a></li>
+                <li><a href="gallery.php?categoria=aikidokas/aikidokas">Aikidokas</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>

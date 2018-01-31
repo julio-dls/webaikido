@@ -480,9 +480,16 @@ iframe {
 
 /* ========== FIN DE SIDEBAR REDES SOCIALES ========== */
 
-/* ========== CARUSEL MULTI ITEMS ========== */
+/* ========== CARUSEL CONTACTO ========== */
 
-/* ========== FIN CARUSEL MULTI ITEMS ========== */
+.img-slide-contacto {
+  height: 350px !important;
+  min-height: 350px !important;
+  margin:auto;
+  display: block !important;
+}
+
+/* ========== FIN CARUSEL CONTACTO ========== */
 
 /*========================
 DESCRIPTION BODY CONTENT
@@ -1120,7 +1127,7 @@ MEDIA QUERIE DESKTOP
     margin-bottom: 10%;
     margin-top: 10%;
   }
-  .heart{
+  .heart {
     margin-top: 5%;
   }
 }

@@ -188,7 +188,7 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/proyecto_cortometraje/'; //
+            $path = 'Web_Aikido/images/proyectoCortometraje/'; //'images/proyectoCortometraje/'; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
@@ -197,7 +197,7 @@
                 if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
 
                     <div class="item <?=$active?>">
-                        <img src="images/proyecto_cortometraje/<?=utf8_encode($archivo)?>" alt="...">
+                        <img src="images/proyectoCortometraje/<?=utf8_encode($archivo)?>" alt="...">
                         <div>
                           <?php
                             $nombres = basename($archivo, ".jpg");
@@ -240,7 +240,7 @@
       <div class="col-md-6">
         <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
 
-        <p class="desc-text ">Gracias por su Visita! Si usted necesita algún archivo en algun formato especial o algo que desea solicitar fuera de tema aikido, no dude en comunicarse ,especifique qué necesita. A la brevedad responderé su inquietud. <br>Gracias por comuncarse!</p>
+        <p class="desc-text ">Gracias por su Visita! <br>Si usted necesita algún archivo en algun formato especial o algo que desea solicitar fuera de tema aikido, no dude en comunicarse ,especifique qué necesita. A la brevedad responderé su inquietud. <br>Gracias por comuncarse!</p>
 
       </div>
       <div class="col-md-6">
@@ -250,7 +250,7 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/contacto/'; //
+            $path = 'Web_Aikido/images/contacto/'; //'images/proyecto_cortometraje/'; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
@@ -258,8 +258,8 @@
               while(($archivo = readdir($directorio)) !== false) {
                 if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
 
-                    <div class="item <?=$active?> thumbnail">
-                        <img class="img-responsive" src="images/contacto/<?=utf8_encode($archivo)?>" width="360px" max-height="260px" alt="...">
+                    <div class="item <?=$active?> ">
+                        <img class="img-responsive img-slide-contacto" src="images/contacto/<?=utf8_encode($archivo)?>" alt="...">
                         <div>
                           <?php
                             // $nombres = basename($archivo, ".jpg");
