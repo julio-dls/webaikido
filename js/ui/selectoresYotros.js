@@ -77,7 +77,11 @@ $(document).ready(function() {
 
   $('#heart-beating').remove();
   // $('.heart').remove();
-  $(window).resize(function clonar() {
+  $(window).on('load', clonar);
+  $(window).on('resize',clonar);
+
+  function clonar() {
+    console.log("entro");
     if ($(window).width() <= 992) {
       $('.heart').append(clon);
       $('#icon-latiendo-btn').remove();
@@ -88,6 +92,6 @@ $(document).ready(function() {
       $('.btn-latiendo').append(clonSidebar);
       $('#heart-beating').remove();
     }
-  });
-  /* ====== QUITAR UN ELEMENTO POR OTRO  ====== */
+  };
+/* ====== QUITAR UN ELEMENTO POR OTRO  ====== */
 });
