@@ -4,24 +4,21 @@
 
 /* http://jsfiddle.net/mturjak/2wk6Q/1949/ */
 
-/* @page {
-  size: A4;
+body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  page-break-before: avoid;
-  page-break-after: avoid;
-  vertical-align: top;
+  padding: 0;
 }
 
-@page: blank {
-  visibility: hidden;
+* {
+  box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+
+@page {
+  size: auto !important;
+  margin: auto;
+  overflow: hidden !important;
   page-break-inside: avoid;
 }
-
-@page: first {}
-
-*/
-body {
-  -webkit-print-color-adjust: exact; /*economy | exact*/
-    color-adjust: exact;
-    margin-top: 30%;
- }

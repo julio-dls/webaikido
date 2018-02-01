@@ -20,8 +20,6 @@
   <link href="css/thumbnail-gallery.css" rel="stylesheet">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
   <style type="text/css">
-    @media print {
-      background-color: #F5F5F5 !important;
-    }
+    @import url(css/print.css) print;
   </style>
 </head>
