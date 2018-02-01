@@ -1,6 +1,6 @@
 <?php
 $hostname = 'localhost';
-$database = '';
+$database = 'web_aikido';
 $username = 'root';
 $password = '';
 

@@ -78,10 +78,9 @@ $(document).ready(function() {
   $('#heart-beating').remove();
   // $('.heart').remove();
   $(window).on('load', clonar);
-  $(window).on('resize',clonar);
+  $(window).on('resize', clonar);
 
   function clonar() {
-    console.log("entro");
     if ($(window).width() <= 992) {
       $('.heart').append(clon);
       $('#icon-latiendo-btn').remove();
@@ -93,5 +92,13 @@ $(document).ready(function() {
       $('#heart-beating').remove();
     }
   };
-/* ====== QUITAR UN ELEMENTO POR OTRO  ====== */
+  /* ====== QUITAR UN ELEMENTO POR OTRO  ====== */
+  $('.botonMostrar').on('click', function() {
+    $('.grupoVideos').show(3000);
+    $('.grupoVideos').show("slow");
+  });
+  $('.botonOcultar').on('click', function() {
+    $('.grupoVideos').hide(3000);
+    $('.grupoVideos').hide("fast");
+  });
 });

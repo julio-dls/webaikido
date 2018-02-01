@@ -1,5 +1,6 @@
 <!-- https://webaikido.herokuapp.com/home.php -->
 <!-- boton donaciones https://www.youtube.com/watch?v=jXQmho-zxFY  -->
+<?php include_once ('inc/conexion.php');?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -110,13 +111,19 @@
     </div>
     <div class="container ">
       <!-- <h1 class="text-center">Ultimos Videos<small></small></h1> -->
+      <?php
+        $sql = ('SELECT url FROM `video` WHERE id = 1 order by id desc');
+        $videoPrincipal =$con->query($sql);
+      ?>
       <div class="row">
         <div class="col-md-6">
-          <iframe class="img-fluid iframePrindipal" width="560" height="315" src="https://www.youtube.com/embed/O-WKYaTCum4" frameborder="0" allowfullscreen></iframe>
+          <?php foreach ($videoPrincipal as $row) { ?>
+            <iframe class="img-fluid iframePrindipal" width="560" height="315" src="<?=$row['url']?>" frameborder="0" allowfullscreen></iframe>
+          <?php } ?>
         </div>
 
         <div class="col-md-6">
-          <h3 class="">Project Description</h3>
+          <h3 class="">Project titulo</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
           </p>
           <h3 class="fa-2x">Project Details</h3>
@@ -132,36 +139,25 @@
       <!-- /.row -->
 
       <h3 class="my-4">Video Recientes</h3>
-      <div class="row description_content">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="row description_content" >
+        <?php
+        $sqlSecundario = ('SELECT url FROM `video`');
+        $videosSecundario =$con->query($sqlSecundario);
+
+        foreach ($videosSecundario as $rows) {?>
+        <div class="col-md-3 col-sm-6 col-xs-12 grupoVideos">
           <a class="aIframeVideoSeleccionado" href="#">
-              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/IH3ooH-RUC8" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
-            </a>
+            <iframe class="img-fluid iframeSeleccionado" src="<?=$rows['url']?>" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
+          </a>
         </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <a href="#">
-              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/CoUlKdN-kgQ" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
-            </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12 iframeSeleccionado">
-          <a href="#">
-            <iframe class="img-fluid iframe-secundario" src="https://www.youtube.com/embed/KiUj-F7sIrw" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
-            </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <a href="#">
-              <iframe class="img-fluid iframeSeleccionado" src="https://www.youtube.com/embed/ywePqfgOlFc" frameborder="1"  gesture="media" allow="encrypted-media" scrolling="no"></iframe>
-            </a>
-        </div>
-
+      <?php }
+      ?>
       </div>
       <div class="col-md-4 col-md-offset-4">
-        <button type="button" class="btn btn-default btn-lg btn-block"></span> Ver Mas ...</button>
+        <button type="button" class="btn btn-default btn-lg btn-block botonMostrar">Ver Mas ...</button>
+        <button type="button" class="btn btn-default btn-lg btn-block botonOcultar">Ver Menos ...</button>
       </div>
-    </div>
+  </div>
   </section>
   <!-- ============ VIDEOS ============= -->
 

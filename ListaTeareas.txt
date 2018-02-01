@@ -13,8 +13,8 @@
 # https://www.youtube.com/watch?v=KiUj-F7sIrw
 # https://www.youtube.com/watch?v=ywePqfgOlFc
 
-https://www.youtube.com/watch?v=ch_krYFukQU
-https://www.youtube.com/watch?v=ZAqL3SC-lGw
-https://www.youtube.com/watch?v=57QcKKtEb9s
-https://www.youtube.com/watch?v=P9spL8c2P3Q
-https://www.youtube.com/watch?v=8V7NHLlmT3Y
+# https://www.youtube.com/watch?v=ch_krYFukQU
+# https://www.youtube.com/watch?v=ZAqL3SC-lGw
+# https://www.youtube.com/watch?v=57QcKKtEb9s
+# https://www.youtube.com/watch?v=P9spL8c2P3Q
+# https://www.youtube.com/watch?v=8V7NHLlmT3Y
