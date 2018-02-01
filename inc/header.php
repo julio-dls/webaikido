@@ -13,11 +13,15 @@
   <link rel="icon" href="images/logo/logo.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball"> -->
-  <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link href="css/thumbnail-gallery.css" rel="stylesheet">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <style type="text/css">
+    @media print {
+      background-color: #F5F5F5 !important;
+    }
+  </style>
 </head>

@@ -1,4 +1,3 @@
-<?php header('Content-Type: text/html; charset=UTF-8'); ?>
 <?php
   include_once ('inc/header.php');
   include_once ('inc/menu.php');
@@ -46,17 +45,17 @@
                 </div>
 
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
 
-                <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
-                  ?>
-                  <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                        <i class="fa fa-heart" aria-hidden="true"></i></a>
-                  <?php
-                } ?>
+                  <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
+                    ?>
+                    <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                          <i class="fa fa-heart" aria-hidden="true"></i></a>
+                    <?php
+                  } ?>
 
-                <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
+                  <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
                 </form>
               </div>
             </div>

@@ -19,10 +19,9 @@
 
 @page: first {}
 
-@media print {
-  html, body {
-    margin-top: 0px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  } */
-}
+*/
+body {
+  -webkit-print-color-adjust: exact; /*economy | exact*/
+    color-adjust: exact;
+    margin-top: 30%;
+ }

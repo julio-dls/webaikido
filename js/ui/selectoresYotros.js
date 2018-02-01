@@ -77,7 +77,6 @@ $(document).ready(function() {
 
   $('#heart-beating').remove();
   // $('.heart').remove();
-
   $(window).resize(function clonar() {
     if ($(window).width() <= 992) {
       $('.heart').append(clon);
