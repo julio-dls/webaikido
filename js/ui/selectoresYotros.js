@@ -93,12 +93,13 @@ $(document).ready(function() {
     }
   };
   /* ====== QUITAR UN ELEMENTO POR OTRO  ====== */
-  $('.botonMostrar').on('click', function() {
-    $('.grupoVideos').show(3000);
-    $('.grupoVideos').show("slow");
-  });
-  $('.botonOcultar').on('click', function() {
-    $('.grupoVideos').hide(3000);
-    $('.grupoVideos').hide("fast");
-  });
+  //http://www.miopiblog.com/2012/12/ocultar-y-mostrar-un-div-con-jquery.html
+  // $('.botonMostrar').on('click', function() {
+  //   $('.grupoVideos').show(3000);
+  //   $('.grupoVideos').show("slow");
+  // });
+  // $('.botonOcultar').on('click', function() {
+  //   $('.grupoVideos').hide(3000);
+  //   $('.grupoVideos').hide("fast");
+  // });
 });

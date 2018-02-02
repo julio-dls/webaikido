@@ -1,6 +1,10 @@
 <!-- https://webaikido.herokuapp.com/home.php -->
 <!-- boton donaciones https://www.youtube.com/watch?v=jXQmho-zxFY  -->
-<?php include_once ('inc/conexion.php');?>
+<?php
+include_once ('inc/conexion.php');
+include_once ('inc/videos.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -113,7 +117,7 @@
       <!-- <h1 class="text-center">Ultimos Videos<small></small></h1> -->
       <?php
         $sql = ('SELECT url FROM `video` WHERE id = 1 order by id desc');
-        $videoPrincipal =$con->query($sql);
+        $videoPrincipal = $con->query($sql);
       ?>
       <div class="row">
         <div class="col-md-6">
@@ -139,12 +143,15 @@
       <!-- /.row -->
 
       <h3 class="my-4">Video Recientes</h3>
-      <div class="row description_content" >
+      <div class="row description_content" id="videosDos">
         <?php
-        $sqlSecundario = ('SELECT url FROM `video`');
-        $videosSecundario =$con->query($sqlSecundario);
+        $indice;
+        $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental']:4;
 
-        foreach ($videosSecundario as $rows) {?>
+        $VideosObj = new VideosClass($con);
+        $videosSecundario = $VideosObj->MostrarMas($indice);
+
+        foreach ($videosSecundario as $rows) { ?>
         <div class="col-md-3 col-sm-6 col-xs-12 grupoVideos">
           <a class="aIframeVideoSeleccionado" href="#">
             <iframe class="img-fluid iframeSeleccionado" src="<?=$rows['url']?>" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
@@ -154,8 +161,13 @@
       ?>
       </div>
       <div class="col-md-4 col-md-offset-4">
-        <button type="button" class="btn btn-default btn-lg btn-block botonMostrar">Ver Mas ...</button>
-        <button type="button" class="btn btn-default btn-lg btn-block botonOcultar">Ver Menos ...</button>
+      <form  action="home.php#videosDos" method="post">
+        <input type="hidden" name="autoincremental" value="<?=$indice+4?>">
+
+        <?php if ($numeroTotal = $VideosObj->getTotalVideos() < $indice): ?>
+          <button type="submit" class="btn btn-default btn-lg btn-block botonMostrar">Ver Mas ...</button>
+        <?php endif; ?>
+      </form>
       </div>
   </div>
   </section>
