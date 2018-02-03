@@ -48,7 +48,7 @@
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">EXTRAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="gallery.php?categoria=extras/moldes">Models</a></li>
+                <li><a href="gallery.php?categoria=extras/moldes">Modelos</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=extras/tarjetas">Tarjetas</a></li>
                 <li role="separator" class="divider"></li>
