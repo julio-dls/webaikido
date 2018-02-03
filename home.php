@@ -109,7 +109,12 @@
   <!-- ============ FIN BOTON IR ARRIBA ============ -->
 
   <!-- ============ VIDEOS ============= -->
-
+  <section>
+    <div id="videos" class="videos background_content">
+      <h1><span>Videos</span></h1>
+      <h1 class="text-center">En Construccion <small></small></h1>
+    </div>
+  </section>
   <!-- ============ VIDEOS ============= -->
 
   <!-- ============ PROYECTOS  ============= -->
@@ -135,7 +140,7 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'Web_Aikido/images/proyectoCortometraje/'; //'images/proyectoCortometraje/'; //
+            $path = 'images/proyectoCortometraje/'; //'Web_Aikido/images/proyectoCortometraje/'; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
@@ -197,7 +202,7 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'Web_Aikido/images/contacto/'; //'images/proyecto_cortometraje/'; //
+            $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/contacto/'; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
