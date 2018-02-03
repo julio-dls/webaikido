@@ -1130,8 +1130,11 @@ MEDIA QUERIE DESKTOP
     margin-top: 5%;
   }
   .img-slide-contacto {
-    /* height: 150px !important;
-    min-height: 150px !important;
-    margin: auto !important; */
+    height: 160px !important;
+    min-height: 160px !important;
+    margin: auto;
+  }
+  .image_box_story2 {
+    margin-left: -40px;
   }
 }

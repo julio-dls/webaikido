@@ -147,7 +147,7 @@ include_once ('inc/videos.php');
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
-        
+
         $VideosObj = new VideosClass($con);
         $videosSecundario = $VideosObj->MostrarMas($indice);
 
