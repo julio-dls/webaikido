@@ -4,8 +4,8 @@
 # 2- los espaciso de aikidokas , deberias ser todo iguales...usa de variable el espacio que hay entre la foto y el boton
   3- los titulos de las secciones no estan ok
 # 5- los únicos que no llevan botón donación son los aikidokas
-  6- las imágenes en web , al seleccionar deberían estar centradas y mas grandes (ahora están pegadas arriba.)
-  7- la impresión no sale bien...al seleccionar abre 3 hojas!!
+#  6- las imágenes en web , al seleccionar deberían estar centradas y mas grandes (ahora están pegadas arriba.)
+#  7- la impresión no sale bien...al seleccionar abre 3 hojas!!
 
 # https://www.youtube.com/watch?v=O-WKYaTCum4
 # https://www.youtube.com/watch?v=IH3ooH-RUC8
