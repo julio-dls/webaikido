@@ -203,7 +203,7 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'images/proyecto_cortometraje/'; //'Web_Aikido/images/contacto/'; //
+            $path = 'images/contacto/'; //'Web_Aikido/images/contacto/'; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
