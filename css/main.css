@@ -471,7 +471,7 @@ iframe {
 }
 
 .btn-corazon-latido {
-  font-size: 30px !IMPORTANT;
+  font-size: 30px;
   text-shadow: 0 0 10px #222, 1px 1px 0 #450505;
   color: red;
   animation: latidos .5s infinite;
@@ -1136,5 +1136,8 @@ MEDIA QUERIE DESKTOP
   }
   .image_box_story2 {
     margin-left: -40px;
+  }
+  .btn-corazon-latido {
+    font-size: 25px;
   }
 }
