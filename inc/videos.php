@@ -15,7 +15,7 @@ class VideosClass {
     return $this->con->query($sqlSecundario);
   }
   public function getTotalVideos() {
-    return $this->con->query('SELECT count(id) as totalId FROM `video`');
+    return $this->con->query('SELECT count(id) as totalId FROM `video`')->fetch();
   }
 
 }

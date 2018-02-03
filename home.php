@@ -146,10 +146,13 @@ include_once ('inc/videos.php');
       <div class="row description_content" id="videosDos">
         <?php
         $indice;
-        $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental']:4;
+        $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
 
         $VideosObj = new VideosClass($con);
         $videosSecundario = $VideosObj->MostrarMas($indice);
+
+        $resultado = $VideosObj->getTotalVideos();
+        $numeroTotal = $resultado[0];
 
         foreach ($videosSecundario as $rows) { ?>
         <div class="col-md-3 col-sm-6 col-xs-12 grupoVideos">
@@ -164,7 +167,7 @@ include_once ('inc/videos.php');
       <form  action="home.php#videosDos" method="post">
         <input type="hidden" name="autoincremental" value="<?=$indice+4?>">
 
-        <?php if ($numeroTotal = $VideosObj->getTotalVideos() < $indice): ?>
+        <?php if ($numeroTotal > $indice): ?>
           <button type="submit" class="btn btn-default btn-lg btn-block botonMostrar">Ver Mas ...</button>
         <?php endif; ?>
       </form>
