@@ -1,8 +1,8 @@
 <!-- https://webaikido.herokuapp.com/home.php -->
 <!-- boton donaciones https://www.youtube.com/watch?v=jXQmho-zxFY  -->
 <?php
-include_once ('inc/conexion.php');
-include_once ('inc/videos.php');
+// include_once ('inc/conexion.php');
+// include_once ('inc/videos.php');
 ?>
 
 <!DOCTYPE html>
