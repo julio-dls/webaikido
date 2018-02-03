@@ -31,7 +31,7 @@
                 <div id="img-repo<?=$count?>" class="div-print">
                   <a title="Image 1" href="#">
                     <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
-                    data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_dencode($archivo)?>">
+                    data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
                   </a>
                 </div>
 
