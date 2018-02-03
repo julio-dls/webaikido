@@ -147,7 +147,7 @@ include_once ('inc/videos.php');
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
-
+        
         $VideosObj = new VideosClass($con);
         $videosSecundario = $VideosObj->MostrarMas($indice);
 
@@ -166,7 +166,6 @@ include_once ('inc/videos.php');
       <div class="col-md-4 col-md-offset-4">
       <form  action="home.php#videosDos" method="post">
         <input type="hidden" name="autoincremental" value="<?=$indice+4?>">
-
         <?php if ($numeroTotal > $indice): ?>
           <button type="submit" class="btn btn-default btn-lg btn-block botonMostrar">Ver Mas ...</button>
         <?php endif; ?>
