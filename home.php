@@ -68,7 +68,7 @@
           <img class="img-rounded selectorImg" id="image-2" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_yasuhiro_saito2.jpg" width="250">
           <div class="img-section-space"></div>
 
-          <img class="img-rounded selectorImg" id="image-3" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_Miru.jpg.jpg" width="250">
+          <img class="img-rounded selectorImg" id="image-3" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_Miru.jpg" width="250">
           <img class="img-rounded selectorImg" id="image-4" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos.jpg" width="250">
 
           <div class="img-section-space"></div>
