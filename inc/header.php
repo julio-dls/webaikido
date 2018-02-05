@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Iwama Ryu Art</title>
-  <link rel="icon" href="images/logo/logo.png" type="image/png">
+  <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
   <link rel="stylesheet" href="css/normalize.css">

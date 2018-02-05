@@ -14,6 +14,7 @@ p.desc-text {
   font-size: 18px;
   line-height: 35px;
   text-align: justify;
+  color: #000;
 }
 
 .text-content.container {
@@ -287,9 +288,9 @@ INTRO CONTAINER
 }
 
 .icon-personalizado {
-  width: 20px !important;
-  height: 20px !important;
-  border: 2px solid #fff;
+  width: 18px !important;
+  height: 18px !important;
+  border: 0.5px solid #fff;
   /* #9d9275 */
   margin-top: 21px;
   margin-left: 21px;
@@ -762,6 +763,7 @@ div .fa-2x {
 
 h1 {
   text-transform: capitalize;
+  width: 327px !important;
 }
 
 .navbar-default {
@@ -1126,9 +1128,7 @@ MEDIA QUERIE DESKTOP
     margin-bottom: 10%;
     margin-top: 10%;
   }
-  .heart {
-    margin-top: 5%;
-  }
+
   .img-slide-contacto {
     height: 160px !important;
     min-height: 160px !important;
@@ -1137,7 +1137,17 @@ MEDIA QUERIE DESKTOP
   .image_box_story2 {
     margin-left: -40px;
   }
+
   .btn-corazon-latido {
-    font-size: 25px !important;
+    font-size: 23px !important;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+  .icon-personalizado {
+    width: 16px !important;
+    height: 16px !important;
+    border: 1px solid #fff;
+    margin-top: 21px;
+    margin-left: 12px;
   }
 }

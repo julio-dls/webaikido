@@ -11,14 +11,17 @@ body {
   padding: 0;
 }
 
+#image-1 {
+  max-height: 520px;
+}
+
 * {
   box-sizing: border-box;
-   -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 @page {
-  size: auto !important;
+  size: auto;
   margin: auto;
-  overflow: hidden !important;
-  page-break-inside: avoid;
+  page-break-inside: avoid !important;
 }

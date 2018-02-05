@@ -50,8 +50,8 @@
 
                   <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
                     ?>
-                    <a class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                          <i class="fa fa-heart" aria-hidden="true"></i></a>
+                    <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                          <i class="fa fa-heart" aria-hidden="true"></i></button>
                     <?php
                   } ?>
 
@@ -59,7 +59,6 @@
                 </form>
               </div>
             </div>
-
         <?php
         }
       }
@@ -74,7 +73,7 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="Imagenes de modal">
+        <img id="imagen-modal-centrada" class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal img-responsive" src="" alt="Imagenes de modal">
       </div>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
         <label id="label-modal" or="#"></label>

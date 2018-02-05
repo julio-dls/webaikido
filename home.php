@@ -54,7 +54,7 @@ include_once ('inc/videos.php');
       </div>
       <div class="col-md-6">
         <div class="text-fondo-gris">
-          <p class="desc-text">Bienvenidos!! Iwama Ryu Art es una pagina de arte independiente. Lo que usted verá a continuacion son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japon, fue en el año 2013. Mi
+          <p class="desc-text">Bienvenidos!! <br>Iwama Ryu Art es una pagina de arte independiente. Lo que usted verá a continuacion son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japon, fue en el año 2013. Mi
             estadia fue maravillosa, casi diria magica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algun modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes
             paises, a quienes muchos no los conozco, pero que el aikido me los acerca como Familia Iwama. Todos los dibujos estan a su disposicion , agradeciendo que mencione el origen de las mismas. De a poco iré sumando mas aikidokas A los que algun
             dia, los conoceré en persona ,compartiendo keiko!. Soy Arquitecto , ilustrador y animador 2d tradicional. Partico aikido en Aiki Shuren Dojo Buenos Aires - Argentina Espero que sea de su agrado!! <br> gracias por su vista! <br> ChinoYuen
