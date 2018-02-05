@@ -7,6 +7,31 @@
 #  6- las imágenes en web , al seleccionar deberían estar centradas y mas grandes (ahora están pegadas arriba.)
 #  7- la impresión no sale bien...al seleccionar abre 3 hojas!!
 
+observaciones
+web
+
+# 1: entrada: texto ueshiba sigue alto
+# 2: al subie a Bienvenido. el texto de acerca de iwama Ru Art queda cortado....ponerlo en un solo renglon
+("me tenias que pasar la imagen!")
+# 3: Separador de Videos en construccion...centrar la imagen con el archivo nuevo
+("esta seccin vidoe esta armada no te la puedo mostra por que este servidor no tiene para base de datos")
+# 4- proyecto uchideshi: poner el texto centrado y sacar gradiente gris
+5-segunda seccion Poses_manos: el titulo que no corresponde ("los titutlos no puedo cambiar hasta tener base de datos armada")
+6-los tamaños agrandados al tocar son chicos en web ("discutir ")
+7- boton imprimir...no da la paguina A4 se pasa en algunas imagenes
+8- boton donar :no va a ningun lado ("tenes que pasarame el boton de paypal")
+10-poses solo--sin imagenes!mal titulo ("la seccion POSES = se dividen en manos/solo/parejas" enviado por email!)
+11-poses-pareja:sin imagenes!mal titulo ("la seccion POSES = se dividen en manos/solo/parejas" enviado por email!)
+12-akidokas..no hay nada ()
+13_extra-modelo---la impresion se pasa de la hoja y faltan imagenes ("hay imagenes que no son .jpg")
+14-extras-varios---la imagenes agrandadas.centrar en pantalla.LA impresion se va de la hoja. (si centro esas imagens las grandes quedan cortadas abajo! que de hecho las que son muy grandes quedan cortadas!)
+15 Kamidanas: no hay nada (no espacio en servidor)
+16_hanmi...no hay nada (no espacio en servidor)
+17-videos---no va a seccion
+18-contacto no va a seccion
+# 19...en ningun caso se puede volve a bienvenidos
+
+
 # https://www.youtube.com/watch?v=O-WKYaTCum4
 # https://www.youtube.com/watch?v=IH3ooH-RUC8
 # https://www.youtube.com/watch?v=CoUlKdN-kgQ

@@ -23,7 +23,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav main-nav  clear navbar-right">
-            <li><a class="navactive color_animation scroll-lento" href="#poses">BIENVENIDOS</a></li>
+            <li><a class="navactive color_animation" href="home.php">BIENVENIDOS</a></li>
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">POSES <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
@@ -57,10 +57,10 @@
               </ul>
             </li>
             <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
-            <li><a class="navactive color_animation " href="gallery.php?categoria=hanmi">HANMI</a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#videos">VIDEOS</a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#proyectos">PROYECTOS</a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#contacts">CONTACT</a></li>
+            <li><a class="navactive color_animation" href="gallery.php?categoria=hanmi">HANMI</a></li>
+            <li><a class="navactive color_animation" href="home.php#videos">VIDEOS</a></li>
+            <li><a class="navactive color_animation" href="home.php#proyectos">PROYECTOS</a></li>
+            <li><a class="navactive color_animation" href="home.php#contacts">CONTACT</a></li>
           </ul>
         </div>
         <!-- FIN DE MENU -->
