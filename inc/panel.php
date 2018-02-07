@@ -19,7 +19,7 @@ class panelABM {
         $nombres = ucwords($nombres);
         $nombres = utf8_encode($nombres);
       }
-      $sql = "INSERT INTO `imagenes`(`titulo`, `categoria`) VALUES ('".$nombres."', '".$data['categoria']."' )";
+      $sql = "INSERT INTO `imagenes`(`nombre`, `categoria`) VALUES ('".$nombres."', '".$data['categoria']."' )";
       $transCorrect=$this->con->exec($sql);
     } else {
       $transCorrect = false;

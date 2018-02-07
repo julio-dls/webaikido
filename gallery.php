@@ -21,13 +21,13 @@
     <div class="grid">
     <?php
 
-    $sql = 'SELECT `id`, `titulo`, `categoria` FROM `imagenes` WHERE 1 ';
+    $sql = 'SELECT `id`, `nombre`, `categoria` FROM `imagenes` WHERE 1 ';
     if(isset($_GET['categoria'])){
       $categoria = $_GET['categoria'];
       $sql .= 'and categoria="'.$categoria.'" ';
     }
     $sql .= ' ORDER BY 1 DESC';
-    // echo $sql;
+
     $galleriaImg = $con->query($sql);
     if(!empty($galleriaImg)){
     $indice=0;
@@ -55,7 +55,7 @@
 
                   <div class="caption col-sx-3">
                   <?php
-                  $nombres = basename($rows['titulo'], ".jpg");
+                  $nombres = basename($rows['nombre'], ".jpg");
                   $nombres = str_replace('_',' ',$nombres);
                   $nombres = str_replace('-',' ',$nombres);
                   $nombres = ucwords($nombres);
@@ -63,8 +63,7 @@
                   <h3><?=utf8_encode($nombres)?></h3>
                   </div>
 
-                  <?php if (($rows['categoria'] != 'Aikidokas')): ?>
-
+                  <?php if (($rows['categoria'] != 'aikidokas')): ?>
                   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
                     <i class="fa fa-heart" aria-hidden="true"></i>
                   </a>

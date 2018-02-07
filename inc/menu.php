@@ -48,7 +48,7 @@
               <ul class="dropdown-menu dropdown-menu-left">
                 <li><a href="gallery.php?categoria=modelos">Modelos</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="gallery.php?categoria=extras/tarjetas">Tarjetas</a></li>
+                <li><a href="gallery.php?categoria=tarjetas">Tarjetas</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=varios">Varios</a></li>
                 <li role="separator" class="divider"></li>

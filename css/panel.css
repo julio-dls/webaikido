@@ -1,8 +1,34 @@
 /* PERSONALIZADO */
+
 /* http://www.oneskyapp.com/es/docs/bootstrap/css */
+
 .wrapper {
   margin-left: 20%;
 }
+
+/* TABLA */
+
+.scrollable {
+  overflow: scroll;
+  margin:auto;
+  width: 100%;
+}
+
+.maxMedida {
+  max-width: 200px;
+}
+
+#tabla-md {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+#tabla-md thead tr td {
+  /* background-color: #EE745A; */
+}
+
+/* FIN TABLA */
 
 /* FIN DE PERSONALIZADO */
 
