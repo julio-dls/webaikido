@@ -19,11 +19,11 @@ $(document).ready(function() {
   /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */
 
   /* ====== SELECTOR DE VIDEO  ====== */
-  $('.iframeSeleccionado').on('click', function() {
-    //player.stopVideo():Void
-    $this = $(this);
-    var srcVideo = $this.atrr("src");
-    $('.iframePrindipal').attr("src", srcVideo);
+  $('#mostrarMas').on('click', function(e){
+    e.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: $("#videosDos").offset().top
+    }, 2000);
   });
   /* ====== FIN SELECTOR DE VIDEO  ====== */
 

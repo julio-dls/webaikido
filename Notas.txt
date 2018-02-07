@@ -1,0 +1,2 @@
+Resolver problema de &file vacio y tamaño maximo de subida de archivos al servidor:
+http://armandof.cubava.cu/2015/08/13/aumentar-el-tamano-de-subida-de-archivos-en-xampp/

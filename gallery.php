@@ -44,17 +44,15 @@
                 <h3><?=utf8_encode($nombres)?></h3>
                 </div>
 
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="U3D2T5YW6FBJE">
-
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="95RJ53TE8DTAL">
                   <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
                     ?>
                     <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
                           <i class="fa fa-heart" aria-hidden="true"></i></button>
                     <?php
                   } ?>
-
                   <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
                 </form>
               </div>

@@ -167,7 +167,10 @@ include_once ('inc/videos.php');
       <form  action="home.php#videosDos" method="post">
         <input type="hidden" name="autoincremental" value="<?=$indice+4?>">
         <?php if ($numeroTotal > $indice): ?>
-          <button type="submit" class="btn btn-default btn-lg btn-block botonMostrar">Ver Mas ...</button>
+          <button type="submit" class="btn btn-default btn-lg btn-block">Ver Mas ...</button>
+        <?php else: ?>
+          <input type="hidden" name="autoincremental" value="<?= 4 + ($indice-$indice)?>">
+          <button type="submit" class="btn btn-default btn-lg btn-block">Ver Menos ...</button>
         <?php endif; ?>
       </form>
       </div>
