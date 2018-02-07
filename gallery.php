@@ -1,66 +1,83 @@
 <?php
   include_once ('inc/header.php');
   include_once ('inc/menu.php');
+  include_once ('inc/conexion.php');
 ?>
   <!-- ==== Page Content ==== -->
   <div class="container">
     <div class="col-xs-6">
-      <h1>AIKIDOKAS</h1>
+      <?php if(isset($_GET['categoria'])){
+        $tituloGaleria = $_GET['categoria'];
+        $titulo = str_replace('_',' ',$tituloGaleria);
+        $titulo = str_replace('-',' ',$titulo);
+        $titulo = strtoupper($titulo);
+        ?><h1 class="text-center"><?=utf8_encode($titulo)?></h1><?php
+      } else {
+        ?><h1 class="text-center">Galeria Imagenes</h1><?php
+      } ?>
       <hr>
     </div>
-    <!-- ucwords($nameGaleria) -->
 
     <div class="grid">
     <?php
+
+    $sql = 'SELECT `id`, `titulo`, `categoria` FROM `imagenes` WHERE 1 ';
     if(isset($_GET['categoria'])){
       $categoria = $_GET['categoria'];
+      $sql .= 'and categoria="'.$categoria.'" ';
     }
+    $sql .= ' ORDER BY 1 DESC';
+    // echo $sql;
+    $galleriaImg = $con->query($sql);
+    if(!empty($galleriaImg)){
+    $indice=0;
+      foreach ($galleriaImg as $rows) {
 
-    $path = 'Web_Aikido/images/' .$categoria; //'images/'.$categoria; //
-    trim($path);
-    $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
-    $count=0;
-    if($directorio = opendir($carpeta)){
-      while(($archivo = readdir($directorio)) !== false) {
-        if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){
-          $count++;
-          list($width, $height, $type, $attr) = getimagesize("images/".$categoria."/".$archivo."");
-          $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
-            <div class="grid-item">
-              <div class="thumbnail">
-                <div id="img-repo<?=$count?>" class="div-print">
-                  <a title="Image 1" href="#">
-                    <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
-                    data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$categoria?>/<?=utf8_encode($archivo)?>">
+      $path = 'Web_Aikido/images/'.$rows['id']; //'images/'.$categoria; //
+      trim($path);
+      $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
+
+      if($directorio = opendir($carpeta)){
+        while(($archivo = readdir($directorio)) !== false) {
+          if($archivo != '.' && $archivo != '..' && stristr($archivo,'_big') !== false){
+            $indice++;
+            list($width, $height, $type, $attr) = getimagesize("images/".$rows['id']."/".$archivo);
+            $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
+              <div class="grid-item">
+                <div class="thumbnail">
+                  <div id="img-repo<?=$indice?>" class="div-print">
+                    <a title="Image 1" href="#">
+                      <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
+                      data-toggle="modal" data-target=".bd-example-modal-lg"
+                      src="images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>">
+                    </a>
+                  </div>
+
+                  <div class="caption col-sx-3">
+                  <?php
+                  $nombres = basename($rows['titulo'], ".jpg");
+                  $nombres = str_replace('_',' ',$nombres);
+                  $nombres = str_replace('-',' ',$nombres);
+                  $nombres = ucwords($nombres);
+                  ?>
+                  <h3><?=utf8_encode($nombres)?></h3>
+                  </div>
+
+                  <?php if (($rows['categoria'] != 'Aikidokas')): ?>
+
+                  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
                   </a>
+                  <?php endif; ?>
+                  <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
                 </div>
-
-                <div class="caption col-sx-3">
-                <?php $nombres = basename($archivo, ".jpg");
-                $nombres = str_replace('_',' ',$nombres);
-                $nombres = str_replace('-',' ',$nombres);
-                $nombres = ucwords($nombres);
-                ?>
-                <h3><?=utf8_encode($nombres)?></h3>
-                </div>
-
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="95RJ53TE8DTAL">
-                  <?php if (($_GET['categoria'] != 'aikidokas/Varios')) {
-                    ?>
-                    <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                          <i class="fa fa-heart" aria-hidden="true"></i></button>
-                    <?php
-                  } ?>
-                  <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$count?>')">Imprimir</a>
-                </form>
               </div>
-            </div>
-        <?php
+            <?php
+            }
+          }
+          closedir($directorio);
         }
       }
-      closedir($directorio);
     }?>
     </div>
     <?php include_once ('inc/sidebar.php'); ?>

@@ -10,13 +10,16 @@ class panelABM {
 
   public function alta($data = array(),$fImg = array()) {
 
-    if (!empty($data)) {
-      $nombre = str_replace('_',' ',$fImg['ContenedorImg']['name']);
-      $nombre = str_replace('-',' ',$fImg['ContenedorImg']['name']);
-      $nombre = ucwords($fImg['ContenedorImg']['name']);
-      $nombre = utf8_encode($fImg['ContenedorImg']['name']);
-
-      $sql = "INSERT INTO `imagenes`(`titulo`, `categoria`) VALUES ('".."', '".$data['categoria']."' )";
+    if (!empty($data) and !empty($fImg)) {
+      foreach ($fImg['ContenedorImg']['name'] as $posicion => $nombre) {
+        $finlename = $fImg['ContenedorImg']['name'][$posicion];
+        $nombres = basename($finlename, ".jpg");
+        $nombres = str_replace('_',' ',$nombres);
+        $nombres = str_replace('-',' ',$nombres);
+        $nombres = ucwords($nombres);
+        $nombres = utf8_encode($nombres);
+      }
+      $sql = "INSERT INTO `imagenes`(`titulo`, `categoria`) VALUES ('".$nombres."', '".$data['categoria']."' )";
       $transCorrect=$this->con->exec($sql);
     } else {
       $transCorrect = false;
@@ -48,7 +51,7 @@ class panelABM {
                $ultimoId = $this->con->query('SELECT max(`id`) as imagenes_id FROM `imagenes`')->fetch();
                $idUltimo = $ultimoId['imagenes_id'];
                $sqlDelete = ("DELETE FROM `imagenes` WHERE id=".$idUltimo);
-                $transCorrect=$this->con->exec($sqlDelete);
+               $this->con->exec($sqlDelete);
                echo "<script>alert('No se creo la carpeta, por favor, vuelta a intentarlo ');</script>";
            }
          }

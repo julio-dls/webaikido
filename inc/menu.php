@@ -27,9 +27,9 @@
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">POSES <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="gallery.php?categoria=poses/manosSimples">Manos</a></li>
+                <li><a href="gallery.php?categoria=manos">Manos</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="gallery.php?categoria=poses/posesSimples">Parejas</a></li>
+                <li><a href="gallery.php?categoria=parejas">Parejas</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
@@ -37,25 +37,25 @@
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">AIKIDOKAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="gallery.php?categoria=aikidokas/flia_saito">Familia Saito</a></li>
+                <li><a href="gallery.php?categoria=flia_saito">Familia Saito</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="gallery.php?categoria=aikidokas/aikidokas">Aikidokas</a></li>
+                <li><a href="gallery.php?categoria=aikidokas">Aikidokas</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">EXTRAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="gallery.php?categoria=extras/moldes">Modelos</a></li>
+                <li><a href="gallery.php?categoria=modelos">Modelos</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=extras/tarjetas">Tarjetas</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="gallery.php?categoria=extras/varios">Varios</a></li>
+                <li><a href="gallery.php?categoria=varios">Varios</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
             <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
-            <li><a class="navactive color_animation" href="gallery.php?categoria=hanmi">HANMI</a></li>
+            <li><a class="navactive color_animation" href="gallery.php?categoria=hamni">HANMI</a></li>
             <li><a class="navactive color_animation" href="home.php#videos">VIDEOS</a></li>
             <li><a class="navactive color_animation" href="home.php#proyectos">PROYECTOS</a></li>
             <li><a class="navactive color_animation" href="home.php#contacts">CONTACT</a></li>
