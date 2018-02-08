@@ -21,11 +21,23 @@
     <div class="grid">
     <?php
 
+    $pagina = 0;
+    $limite = 9;                                                            //CANTIDAD DE PRODUCTOS POR PAGINA
+
+    if(isset($_GET['page'])){
+      $pagina = $_GET['page'];
+    }
+
     $sql = 'SELECT `id`, `nombre`, `categoria` FROM `imagenes` WHERE 1 ';
+    $tatalFilas = 'SELECT count(1) as total FROM `imagenes` WHERE 1 ';
     if(isset($_GET['categoria'])){
       $categoria = $_GET['categoria'];
       $sql .= 'and categoria="'.$categoria.'" ';
     }
+
+    $tatalFilas = $con->query($tatalFilas)->fetch();
+    $cantidad = 100;//$tatalFilas['total'];
+
     $sql .= ' ORDER BY 1 DESC';
 
     $galleriaImg = $con->query($sql);

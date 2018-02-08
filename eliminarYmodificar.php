@@ -15,9 +15,8 @@
   <div class="container">
     <div class="row">
         <!-- COMIENZO ELIMINAR IMAGENES -->
-        <section class="wrapper">
          <div class="col-xs-6">
-            <h1 class="text-center"> Eliminar o Modificar Imagenes</1>
+            <h1 class="text-center"> Eliminar o Modificar</1>
           </div>
           <hr>
          </div>
@@ -50,8 +49,11 @@
             </tbody>
           </table>
           </div>
-        </section>
-        <!-- FIN ELIMINAR IMAGENES -->
+      </div>
+    <hr>
+    </div>
+</section>
+<!-- FIN ELIMINAR IMAGENES -->
 
         <!--COMIENZO MODAL ESTAS SEGURO ELIMINAR-->
         <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog">

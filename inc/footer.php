@@ -4,17 +4,27 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
         <ul class="pagination">
-          <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
+          <?php if($pagina != 0): ?>
+            <li class="page-item">
+              <a class="page-link" href="?page=<?=($pagina-1)?>">Previous</a>
+            </li>
+          <?php endif;
+
+          for($i=1;$i<floor($cantidad / $limite);$i++){
+            if($i == $pagina){ ?>
+              <li class="page-item active">
+                <a  class="page-link" href="#"><?=$i?><span class="sr-only">(current)</span></a>
+              </li>
+            <?php } else { ?>
+              <li class="page-item" >
+                <a class="page-link" href="?pagina=<?=$i?>"><?=$i?></a></li>
+            <?php }
+          }
+          if($pagina < floor($cantidad / $limite)): ?>
+          <li class="page-item">
+            <a class="page-link" href="?page=<?=($pagina+1)?>">Next</a>
           </li>
+          <?php endif; ?>
         </ul>
       </div>
     </div>
