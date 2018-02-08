@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('.boton_personalizado').click(function(e) {
     e.preventDefault();
     $("html, body").animate({
-      scrollTop: $("#poses").offset().top
+      scrollTop: $("#bienvenidos").offset().top
     }, 2000);
   });
 

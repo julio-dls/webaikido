@@ -8,7 +8,7 @@ class BM {
 
   public function Eliminar($data = array()){
 
-    $del = "DELETE FROM `imagenes` WHERE id = '".$data['id']."' ";
+    $del = "DELETE FROM `imagenes` WHERE id =".$data['id']." ";
     $delImg=$this->con->exec($del);
     // if ($delImg) {
     //   $path = 'Web_Aikido/images/'.$data['id'];
