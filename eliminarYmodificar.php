@@ -37,7 +37,7 @@
               foreach ($resultadoSql as $rows) {?>
                 <tr>
                   <td><?=$col++?></td>
-                  <td class="maxMedida text-primary"><?=$rows[1]?></td>
+                  <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
                   <td class="maxMedida text-primary"><?=$rows[2]?></td>
                   <td class="accion">
                       <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
@@ -86,10 +86,10 @@
             <h4 class="modal-title" id="exampleModalLabel">Modificar</h4>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="BM.php">
               <div class="form-group has-success">
                 <label for="nombre" class="control-label" ></span>Nombre</label>
-                <input type="text" class="form-control" id="nombre" required>
+                <input type="text" class="form-control" id="nombreModal" placeholder="" required>
               </div>
               <div class="form-group has-success">
                 <label class="control-label" for="Categoria">Categoria</label>

@@ -19,33 +19,19 @@ class BM {
   }
 
   public function Modificar($data = array()){
-    if (!empty($data['id']) and !empty($data['nombre'])) {
-      $sql = "UPDATE productos SET" ;
+
+    if (!empty($data['id']) && (!empty($data['nombre']))) {
+      $sql = "UPDATE `imagenes` SET " ;
+
       if (!empty($data['nombre'])) {
         $sql .= " nombre= '".$data['nombre']."' ";
       }
-      if (!empty($data['descripcion'])) {
-        $sql .= ", descripcion='".$data['descripcion']."' ";
+
+      if (!empty($data['categoria'])) {
+        $sql .= ", categoria='".$data['categoria']."' ";
       }
-      if (!empty($data['nombreIngles'])) {
-        $sql .= ", `nombre-ingles`='".$data['nombreIngles']."' ";
-      }
-      if (!empty($data['descripcionIngles'])) {
-        $sql .= ", `descripcion-ingles`='".$data['descripcionIngles']."' ";
-      }
-      if (!empty($data['categoria']) or !empty($data['estacion']) or !empty($data['accesorio'])) {
-        if (!empty($data['categoria']) and !empty($data['estacion'])) {
-          $sql .= ", categoria='".$data['categoria']."' ";
-          $sql .= ", estacion='".$data['estacion']."' ";
-          $sql .= ", accesorios=0 ";
-        }
-        if (!empty($data['accesorio'])) {
-          $sql .= ", accesorios='".$data['accesorio']."' ";
-          $sql .= ", categoria=0 ";
-          $sql .= ", estacion=0 ";
-        }
-      }
-      $sql .= " WHERE producto_id=" .$data['id'];
+
+      $sql .= " WHERE id=" .$data['id'];
       // echo "sql: " .$sql;
       $this->con->exec($sql);
     }

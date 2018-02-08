@@ -8,8 +8,8 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Iwama Ryu Art</title>
-  <link rel="icon" href="images/logo/logo.png" type="image/png">
+  <title>Iwama Ryu </title>
+  <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.min.css">

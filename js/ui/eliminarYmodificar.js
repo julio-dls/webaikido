@@ -28,29 +28,23 @@ var eliminarYmodificarImg = (function(){
     $('.btn-modificar').on('click', function() {
       $this = $(this);
       idImg = $this.attr('data-id-modificar');
+
+      var nombre = $('#nombreTable').attr('data-nombre');
+      $('#nombreModal').attr("placeholder",nombre);
+
     });
   }
 
   function modificarImg(){
     $('.modificar').on('click', function(){
       var id = idImg;
-      var descripcion = $('#descripcion').val();
-      var nombre = $('#nombre').val();
-      var nombreIngles = $('#nombre-ingles').val();
-      var descripcionIngles = $('#descripcion-ingles').val();
+      var nombre = $('#nombreModal').val();
       var categoria =  $('#categoria').val();
-      var estacion =  $('#estacion').val();
-      var accesorio = $('#accesorio').val();
 
       var objImg = {
         "id":idImg,
         "nombre":nombre,
-        "descripcion":descripcion,
-        "nombreIngles":nombreIngles,
-        "descripcionIngles":descripcionIngles,
         "categoria":categoria,
-        "estacion":estacion,
-        "accesorio":accesorio
       };
 
       $.ajax({
