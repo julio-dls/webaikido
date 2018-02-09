@@ -2,8 +2,7 @@
   <div class="social">
     <ul class="nav">
       <li class="btn-latiendo">
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"
-        id="icon-latiendo-btn" class="btn btn-danger sidebar-social" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL" id="icon-latiendo-btn" class="btn btn-danger sidebar-social" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
           <i class="fa fa-heart sidebar-social-latidos" aria-hidden="true"></i>
         </a>
       </li>

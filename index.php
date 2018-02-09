@@ -16,7 +16,7 @@ include_once ('inc/videos.php');
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Iwama Ryu Art</title>
-  <link rel="icon" href="images/logo/logo.png" type="image/png">
+  <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball"> -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -252,14 +252,11 @@ include_once ('inc/videos.php');
     <div class="text-content container">
       <div class="col-md-6">
         <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
-
         <p class="desc-text ">Gracias por su Visita! <br>Si usted necesita algún archivo en algun formato especial o algo que desea solicitar fuera de tema aikido, no dude en comunicarse ,especifique qué necesita. A la brevedad responderé su inquietud. <br>Gracias por comuncarse!</p>
-
       </div>
       <div class="col-md-6">
         <ul class="image_box_story2">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
             <div class="carousel-inner" role="listbox">
 
             <?php

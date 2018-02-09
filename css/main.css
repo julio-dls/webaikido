@@ -916,7 +916,7 @@ MEDIA QUERIES TABLET
     font-size: 4.5em;
     position: relative;
     top: 41%;
-    width: 100%;
+    width: 100% !important;
     color: white;
     padding: 0;
     border: 0;

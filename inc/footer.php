@@ -3,10 +3,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
+        <?php
+        $cat = '';
+        if(isset($_GET['categoria'])){ $cat .= '&categoria='.$_GET['categoria']; } ?>
         <ul class="pagination">
           <?php if($pagina != 0): ?>
             <li class="page-item">
-              <a class="page-link" href="?page=<?=($pagina-1)?>">Previous</a>
+              <a class="page-link" href="?page=<?=($pagina-1).$cat?>">Previous</a>
             </li>
           <?php endif;
 
@@ -17,12 +20,12 @@
               </li>
             <?php } else { ?>
               <li class="page-item" >
-                <a class="page-link" href="?pagina=<?=$i?>"><?=$i?></a></li>
+                <a class="page-link" href="?pagina=<?=$i.$cat?>"><?=$i?></a></li>
             <?php }
           }
           if($pagina < floor($cantidad / $limite)): ?>
           <li class="page-item">
-            <a class="page-link" href="?page=<?=($pagina+1)?>">Next</a>
+            <a class="page-link" href="?page=<?=($pagina+1).$cat?>">Next</a>
           </li>
           <?php endif; ?>
         </ul>

@@ -45,6 +45,7 @@ class panelABM {
                            $posicion,
                            $tamanhos
                          );
+            echo "<script>alert('Imagen Cargada Correctamente');</script>";
            }
 
            if(!file_exists($ruta)){

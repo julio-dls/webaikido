@@ -12,8 +12,6 @@
       $panelABMObj = new panelABM($con);
       $panelABMObj->AltaVideos($_POST,$_FILES);
   }
-
-
 ?>
   <?php include_once ('inc/menuPanel.php'); ?>
 
@@ -41,7 +39,7 @@
             </div>
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="file" class="form-control" name="ContenedorImg[]" accept="*.jpg">
+                <input type="file" class="form-control" name="ContenedorImg[]" accept="*.jpg" required>
               </div>
             </div>
             <div class="form-group has-success">
@@ -65,17 +63,17 @@
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="text" class="form-control" name="titulo" placeholder="Titulo">
+                <input type="text" class="form-control" name="titulo" placeholder="Titulo" required>
               </div>
             </div>
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="text" class="form-control" name="descripcion" placeholder="Descripcion">
+                <textarea type="text" class="form-control" name="descripcion" placeholder="Descripcion" rows="5" style="resize: none" required></textarea>
               </div>
             </div>
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="text" class="form-control" name="url" placeholder="Url Video">
+                <input type="text" class="form-control" name="url" placeholder="Url Video" required>
               </div>
             </div>
             <div class="form-group has-success">

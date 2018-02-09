@@ -2,6 +2,8 @@
   include_once ('inc/header.php');
   include_once ('inc/menu.php');
   include_once ('inc/conexion.php');
+  include_once ('inc/search.php');
+
 ?>
   <!-- ==== Page Content ==== -->
   <div class="container">
@@ -21,24 +23,32 @@
     <div class="grid">
     <?php
 
-    $pagina = 0;
-    $limite = 20;                                                            //CANTIDAD DE PRODUCTOS POR PAGINA
+    $limite = 20;
 
     if(isset($_GET['page'])){
       $pagina = $_GET['page'];
+    } else {
+      $pagina = 0;
     }
 
     $sql = 'SELECT `id`, `nombre`, `categoria` FROM `imagenes` WHERE 1 ';
-    $tatalFilas = 'SELECT count(1) as total FROM `imagenes` WHERE 1 ';
-    if(isset($_GET['categoria'])){
+    $sqlTatalFilas = 'SELECT count(1) as total FROM `imagenes` WHERE 1 ';
+
+    if (isset($_GET['formCategria']) && !empty($_GET['formCategria'])) {
+      $search = new Search($con);
+      $sql .= $search->BuscarPorNombre($_GET);
+      // echo "nombre" .$search->BuscarPorNombre($_GET);
+    } else
+    if(isset($_GET['categoria'])) {
       $categoria = $_GET['categoria'];
       $sql .= 'and categoria="'.$categoria.'" ';
+      $sqlTatalFilas .= 'and categoria="'.$categoria.'" ';
     }
 
-    $tatalFilas = $con->query($tatalFilas)->fetch();
-    $cantidad = 100;//$tatalFilas['total'];
+    $tatalFilas = $con->query($sqlTatalFilas)->fetch();
+    $cantidad = $tatalFilas['total'];
 
-    $sql .= ' ORDER BY 1 DESC';
+    $sql .= ' ORDER BY 1 DESC LIMIT '.$limite.' OFFSET '.($pagina*$limite);
 
     $galleriaImg = $con->query($sql);
     if(!empty($galleriaImg)){
@@ -124,10 +134,12 @@
           <h4 class="modal-title" id="exampleModalLabel">Buscar</h4>
         </div>
         <div class="modal-body">
-          <form class="navbar-form" role="search">
+          <form class="navbar-form" role="search" action="gallery.php" method="GET">
             <div class="input-group">
-              <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+              <input class="form-control" placeholder="Nombre" name="srch-nombre" id="srch-term" type="text" required>
               <div class="input-group-btn">
+                <input type="hidden" name="formCategria" value="<?=$tituloGaleria  ? $tituloGaleria : $categoria;?>">
+                <input type="hidden" name="categoria" value="<?=$tituloGaleria  ? $tituloGaleria : $categoria;?>">
                 <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
               </div>
             </div>
