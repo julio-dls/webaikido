@@ -1,4 +1,3 @@
-
 h1 {
   font-size: 37px;
   font-weight: 900;
@@ -358,14 +357,11 @@ INTRO CONTAINER
 
 .background_content h1 span {
   color: white;
-  /* border-bottom: 8px solid #fff; */
 }
 
 .videos.background_content {
-  /*videos*/
   background: url('../images/fondos_intermedio/banners_intermedios1.jpg') no-repeat center center;
   background-size: contain;
-  /* background-position: 70% 100%; */
   z-index: -1;
   filter: grayscale(60%);
 }
@@ -377,7 +373,6 @@ iframe {
 .contact.background_content {
   background: url('../images/fondos_intermedio/banners_intermedios3.jpg') no-repeat center center;
   background-size: contain;
-  /* background-position: 70% 100%; */
   z-index: -1;
   filter: grayscale(60%);
 }
@@ -1129,7 +1124,6 @@ MEDIA QUERIE DESKTOP
     margin-bottom: 10%;
     margin-top: 10%;
   }
-
   .img-slide-contacto {
     height: 160px !important;
     min-height: 160px !important;
@@ -1138,7 +1132,6 @@ MEDIA QUERIE DESKTOP
   .image_box_story2 {
     margin-left: -40px;
   }
-
   .btn-corazon-latido {
     font-size: 23px !important;
     margin-top: 2%;

@@ -11,7 +11,7 @@ class VideosClass {
   }
 
   public function MostrarMas($cantidad) {
-    $sqlSecundario = ('SELECT url FROM `video` LIMIT '.($cantidad).' OFFSET 1');
+    $sqlSecundario = ('SELECT url FROM `video` ORDER BY id DESC LIMIT '.($cantidad).' OFFSET 1');
     return $this->con->query($sqlSecundario);
   }
   public function getTotalVideos() {

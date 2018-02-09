@@ -2,16 +2,22 @@
   include_once ('inc/conexion.php');
   include_once ('inc/panel.php');
 
-  $panelABMObj = new panelABM($con);
-
-  if(!empty($_POST) && !empty($_FILES)) {
-    $panelABMObj->alta($_POST,$_FILES);
+  if (isset($_POST['form1']) && (!empty($_POST['form1']))) {
+    if(!empty($_POST) && !empty($_FILES)) {
+      $panelABMObj = new panelABM($con);
+      $panelABMObj->Alta($_POST,$_FILES);
+    }
   }
+    if (isset($_POST['form2']) && (!empty($_POST['form2']))) {
+      $panelABMObj = new panelABM($con);
+      $panelABMObj->AltaVideos($_POST,$_FILES);
+  }
+
 
 ?>
   <?php include_once ('inc/menuPanel.php'); ?>
 
-  <section class="wrapper">
+  <section id="alta-imagenes" class="wrapper">
     <div class="container">
       <div class="row">
         <div class="form-panel col-md-8 col-md-offset-2">
@@ -40,12 +46,47 @@
             </div>
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-4 col-sm-4 ">
-                <button id="inputSuccess" type="submit" class="btn btn-primary btn-lg btn-block">Aplicar</button>
+                <input type="hidden" name="form1" value="enviado">
+                <button id="#" type="submit" class="btn btn-primary btn-lg btn-block">Aplicar</button>
               </div>
             </div>
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-4 col-sm-4 ">
-                <button id="inputSuccess" type="reset" class="btn btn-warning btn-lg btn-block" onclick="desblock(true)">Limpiar</button>
+                <button id="#" type="reset" class="btn btn-warning btn-lg btn-block" onclick="desblock(true)">Limpiar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-panel col-md-8 col-md-offset-2">
+          <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Videos</h3>
+          <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
+            <div class="form-group has-success">
+              <div class="col-lg-6 col-md-6 col-sm-4 ">
+                <input type="text" class="form-control" name="titulo" placeholder="Titulo">
+              </div>
+            </div>
+            <div class="form-group has-success">
+              <div class="col-lg-6 col-md-6 col-sm-4 ">
+                <input type="text" class="form-control" name="descripcion" placeholder="Descripcion">
+              </div>
+            </div>
+            <div class="form-group has-success">
+              <div class="col-lg-6 col-md-6 col-sm-4 ">
+                <input type="text" class="form-control" name="url" placeholder="Url Video">
+              </div>
+            </div>
+            <div class="form-group has-success">
+              <div class="col-lg-6 col-md-4 col-sm-4 ">
+                <input type="hidden" name="form2" value="enviar">
+                <button id="#" type="submit" class="btn btn-primary btn-lg btn-block">Aplicar</button>
+              </div>
+            </div>
+            <div class="form-group has-success">
+              <div class="col-lg-6 col-md-4 col-sm-4 ">
+                <button id="#" type="reset" class="btn btn-warning btn-lg btn-block" onclick="desblock(true)">Limpiar</button>
               </div>
             </div>
           </form>

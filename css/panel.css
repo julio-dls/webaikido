@@ -15,26 +15,9 @@ h1 {
 /* FIN DE ELIMINAR Y MODIFICAR */
 
 /* TABLA */
-
-.scrollable {
-  overflow: scroll;
-  margin: auto;
-  width: 80%;
-  float: left;
-}
-
-.maxMedida {
-  max-width: 200px;
-}
-
-#tabla-md {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 15px;
-}
-
-#tabla-md thead tr td {
-  /* background-color: #EE745A; */
+.col-personalizada{
+  width: 3%;
+  overflow: auto;
 }
 
 /* FIN TABLA */

@@ -34,9 +34,9 @@
             <a href="#"><i class="fa fa-gift fa-lg"></i> Galeria <span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse" id="products">
-            <li class="active"><a href="panel.php">Subir imagenes</a></li>
-            <li><a href="eliminarYmodificar.php">Eliminar o Modificar</a></li>
-            <li><a href="#">Buttons</a></li>
+            <li class="active"><a href="panel.php">Subir Imagenes o Videos</a></li>
+            <li><a href="eliminarYmodificar.php">Eliminar o Modificar Imagenes</a></li>
+            <li><a href="eliminarVideo.php">Eliminar Videos</a></li>
           </ul>
           <li data-toggle="collapse" data-target="#service" class="collapsed">
             <a href="#">  <i class="fa fa-users fa-lg"></i> Users</a></a>

@@ -116,7 +116,7 @@ include_once ('inc/videos.php');
     </div>
     <div class="container ">
       <?php
-        $sql = ('SELECT url FROM `video` WHERE id = 1 order by id desc');
+        $sql = ('SELECT url FROM `video` order by id desc LIMIT 1');
         $videoPrincipal = $con->query($sql);
       ?>
       <div class="row">

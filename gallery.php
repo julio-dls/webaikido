@@ -22,7 +22,7 @@
     <?php
 
     $pagina = 0;
-    $limite = 9;                                                            //CANTIDAD DE PRODUCTOS POR PAGINA
+    $limite = 20;                                                            //CANTIDAD DE PRODUCTOS POR PAGINA
 
     if(isset($_GET['page'])){
       $pagina = $_GET['page'];

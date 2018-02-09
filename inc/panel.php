@@ -8,7 +8,7 @@ class panelABM {
     $this->con = $con;
   }
 
-  public function alta($data = array(),$fImg = array()) {
+  public function Alta($data = array(),$fImg = array()) {
 
     if (!empty($data) and !empty($fImg)) {
       foreach ($fImg['ContenedorImg']['name'] as $posicion => $nombre) {
@@ -56,9 +56,21 @@ class panelABM {
            }
          }
        }
+    } else {
+       echo "<script>alert('La Imagen Fue Ingresada Correctamente');</script>";
     }
   }
 
+  public function AltaVideos($data = array()){
+    $sql = "INSERT INTO `video` (`titulo`, `descripcion`, `url`) VALUES ('".$data['titulo']."', '".$data['descripcion']."', '".$data['url']."' )";
+    $transCorrect=$this->con->exec($sql);
+
+    if ($transCorrect) {
+      echo "<script>alert('El Video Se Cargo Correctamente');</script>";
+    } else {
+      echo "<script>alert('Fallo el intento de cargar el video, intente nuevamente por favor!');</script>";
+    }
+  }
 }
 
 //redimencionar imagen

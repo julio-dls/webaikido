@@ -16,39 +16,41 @@
       <div class="row">
       <!-- COMIENZO ELIMINAR IMAGENES -->
        <div class="col-xs-6">
-          <h1 class="text-center"> Eliminar o Modificar </1>
+          <h1 class="text-center"> Eliminar o Modificar Video </1>
         </div>
       <hr>
       </div>
-      <div class="table-responsive">
-        <?php $resultadoSql = $con->query("SELECT * FROM `imagenes` ORDER BY 1 DESC"); ?>
-          <table class="table table-striped table-hover text-center" border="1">
-          <thead class="thead-dark">
-            <tr class="success">
-                <td>#</td>
-                <td>Nombre</td>
-                <td>Categoria</td>
-                <td>Accion</td>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-            $col = 1;
-            foreach ($resultadoSql as $rows) {?>
-              <tr>
-                <td><?=$col++?></td>
-                <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
-                <td class="maxMedida text-primary"><?=$rows[2]?></td>
-                <td class="accion">
-                    <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
-                    <a data-id-modificar="<?=$rows[0]?>" class="btn btn-modificar btn-xs text-warning"
-                      data-toggle="modal" data-target="#modificarImg">Modificar</a>
-                </td>
-              </tr>
-            <?php } ?>
-          </tbody>
-        </table>
-      </div>
+            <?php $resultadoSql = $con->query("SELECT * FROM `video` ORDER BY 1 DESC"); ?>
+            <div class="table-responsive">
+            <table id="tabla-md" class="table table-striped table-hover text-center" border="1">
+              <thead class="thead-dark">
+                <tr class="success">
+                    <td>#</td>
+                    <td>Titulo</td>
+                    <td>Descripcion</td>
+                    <td>Url</td>
+                    <td>Accion</td>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $col = 1;
+                foreach ($resultadoSql as $rows) {?>
+                  <tr>
+                    <td><?=$col++?></td>
+                    <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
+                    <td class="maxMedida text-primary"><?=$rows[2]?></td>
+                    <td class="maxMedida text-primary"><?=$rows[3]?></td>
+                    <td class="accion">
+                        <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
+                        <a data-id-modificar="<?=$rows[0]?>" class="btn btn-modificar btn-xs text-warning"
+                          data-toggle="modal" data-target="#modificarImg">Modificar</a>
+                    </td>
+                  </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+        </div>
     </div>
   </section>
   <!-- FIN TABLA -->
