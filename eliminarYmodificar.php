@@ -35,6 +35,7 @@
       <hr>
       <?php
       $resultadoSql = "";
+      $total=1;
       if (isset($_GET['categoria']) && !empty($_GET['categoria'])) {
          $resultadoSql = $con->query("SELECT * FROM `imagenes` WHERE `categoria` = '".$_GET['categoria']."'  ORDER BY 1 DESC");
          $sqlTotalFilas = $con->query("SELECT count(1) as total FROM `imagenes` WHERE `categoria` = '".$_GET['categoria']."'  ORDER BY 1 DESC")->fetch();
