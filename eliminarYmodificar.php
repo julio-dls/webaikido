@@ -15,39 +15,63 @@
     <div class="container">
       <div class="row">
       <!-- COMIENZO ELIMINAR IMAGENES -->
-       <div class="col-xs-6">
+       <div class="col-md-6 col-lg-6 col-xs-12">
           <h1 class="text-center"> Eliminar o Modificar </1>
         </div>
-      <hr>
-      </div>
-      <div class="table-responsive">
-        <?php $resultadoSql = $con->query("SELECT * FROM `imagenes` ORDER BY 1 DESC"); ?>
-          <table class="table table-striped table-hover text-center" border="1">
-          <thead class="thead-dark">
-            <tr class="success">
-                <td>#</td>
-                <td>Nombre</td>
-                <td>Categoria</td>
-                <td>Accion</td>
-            </tr>
-          </thead>
-          <tbody>
+        <div class="col-md-6 col-lg-6 col-xs-12">
+          <form class="form-inline form-filtrar" action="eliminarYmodificar.php" method="GET">
+            <select class="form-control" id="categoria" name="categoria">
+            <option value="" class="text-success bg-warning">None</option>
             <?php
-            $col = 1;
-            foreach ($resultadoSql as $rows) {?>
-              <tr>
-                <td><?=$col++?></td>
-                <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
-                <td class="maxMedida text-primary"><?=$rows[2]?></td>
-                <td class="accion">
-                    <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
-                    <a data-id-modificar="<?=$rows[0]?>" class="btn btn-modificar btn-xs text-warning"
-                      data-toggle="modal" data-target="#modificarImg">Modificar</a>
-                </td>
-              </tr>
+            $categoria = $con->query("SELECT `subcategoria` FROM `categoria` WHERE subcategoria !='' ORDER BY 1 ASC ");
+            foreach ($categoria as $row) {?>
+            <option value="<?=$row[0]?>" class="text-success bg-warning"><?=ucwords($row[0])?></option>
             <?php } ?>
-          </tbody>
-        </table>
+            </select>
+            <button type="submit" class="btn btn-default">Filtrar</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <?php
+      $resultadoSql = "";
+      if (isset($_GET['categoria']) && !empty($_GET['categoria'])) {
+         $resultadoSql = $con->query("SELECT * FROM `imagenes` WHERE `categoria` = '".$_GET['categoria']."'  ORDER BY 1 DESC");
+         $sqlTotalFilas = $con->query("SELECT count(1) as total FROM `imagenes` WHERE `categoria` = '".$_GET['categoria']."'  ORDER BY 1 DESC")->fetch();
+         $total = $sqlTotalFilas['total'];
+      } else {
+        $resultadoSql = $con->query("SELECT * FROM `imagenes` ORDER BY 1 DESC");
+      }
+      if ($total== 0) {
+        echo "No hay Registros";
+      } ?>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover text-center" border="1">
+        <thead class="thead-dark">
+          <tr class="success">
+              <td>#</td>
+              <td>Nombre</td>
+              <td>Categoria</td>
+              <td>Accion</td>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          $col = 1;
+          foreach ($resultadoSql as $rows) {?>
+            <tr>
+              <td><?=$col++?></td>
+              <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
+              <td class="maxMedida text-primary"><?=$rows[2]?></td>
+              <td class="accion">
+                  <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
+                  <a data-id-modificar="<?=$rows[0]?>" class="btn btn-modificar btn-xs text-warning"
+                    data-toggle="modal" data-target="#modificarImg">Modificar</a>
+              </td>
+            </tr>
+          <?php } ?>
+        </tbody>
+      </table>
       </div>
     </div>
   </section>

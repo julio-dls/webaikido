@@ -22,7 +22,6 @@
 
     <div class="grid">
     <?php
-
     $limite = 20;
 
     if(isset($_GET['page'])){

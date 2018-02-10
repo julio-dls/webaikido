@@ -12,10 +12,16 @@ h1 {
   width: 556px !important;
 }
 
+.form-filtrar {
+  float: right;
+  margin-top: 10%;
+}
+
 /* FIN DE ELIMINAR Y MODIFICAR */
 
 /* TABLA */
-.col-personalizada{
+
+.col-personalizada {
   width: 3%;
   overflow: auto;
 }
@@ -176,5 +182,10 @@ body {
   }
   h1 {
     width: 100% !important;
+  }
+  .form-filtrar {
+    float: left;
+    margin-top: 0;
+    width: 100%
   }
 }
