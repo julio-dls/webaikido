@@ -7,7 +7,7 @@
 ?>
   <!-- ==== Page Content ==== -->
   <div class="container">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <?php if(isset($_GET['categoria'])){
         $tituloGaleria = $_GET['categoria'];
         $titulo = str_replace('_',' ',$tituloGaleria);
@@ -36,6 +36,7 @@
     if (isset($_GET['formCategria']) && !empty($_GET['formCategria'])) {
       $search = new Search($con);
       $sql .= $search->BuscarPorNombre($_GET);
+      $sqlTatalFilas .= $search->TotalFilasBuscarPorNombre ($_GET);
       // echo "nombre" .$search->BuscarPorNombre($_GET);
     } else
     if(isset($_GET['categoria'])) {

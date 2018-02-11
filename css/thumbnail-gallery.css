@@ -10,6 +10,7 @@ body {
   border: 1px solid #f2f2f2;
   overflow: hidden;
   padding: 0em 0em 2em 0em;
+  min-height: 350px;
 }
 
 .grid-item {
@@ -71,6 +72,7 @@ h3 {
   }
   h1 {
     font-size: xx-large;
+    width: 100% !important;
   }
   h3 {
     font-size: 11px;

@@ -12,5 +12,8 @@ class Search {
     $sqlSearch = ' and nombre like "%'.$data['srch-nombre'].'%" and categoria="'.$data['formCategria'].'" ';
     return $sqlSearch ? $sqlSearch : false;
   }
+  public function TotalFilasBuscarPorNombre($data = array()) {
+    return ' and nombre like "%'.$data['srch-nombre'].'%" and categoria="'.$data['formCategria'].'" ';
+  }
 }
  ?>
