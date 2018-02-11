@@ -50,7 +50,7 @@
             <a href="#"><i class="fa fa-car fa-lg"></i> Home <span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse" id="new">
-            <li>Videos</li>
+            <li>#</li>
             <li>Proyecto</li>
             <li>Contacto</li>
           </ul>
