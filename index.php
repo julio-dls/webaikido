@@ -1,8 +1,15 @@
 <!-- https://webaikido.herokuapp.com/index.php -->
 <!-- boton donaciones https://www.youtube.com/watch?v=jXQmho-zxFY  -->
 <?php
-include_once ('inc/conexion.php');
-include_once ('inc/videos.php');
+  include_once ('inc/conexion.php');
+  include_once ('inc/videos.php');
+  include_once ('inc/SendEmail.php');
+
+  if (!empty($_POST['formContacto'])) {
+    $EnviarEmail = new SendEmail($con);
+    $EnviarEmail->sendMail($_POST);
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -281,22 +288,24 @@ include_once ('inc/videos.php');
         </ul>
       </div>
     </div>
+    <!-- FORM CONTACTO -->
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="inner contact">
             <div class="contact-form">
-              <form id="contact-us" method="post" action="#">
+              <form id="#" method="POST" action="index.php">
                 <div class="col-md-6 ">
-                  <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-                  <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
-                  <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                  <input type="text" name="nombreContacto" id="name" required="required" class="form" placeholder="Name" />
+                  <input type="email" name="emailContacto" id="email" required="required" class="form" placeholder="Email" />
+                  <input type="text" name="subjectContacto" id="subject" required="required" class="form" placeholder="Subject" />
+                  <input type="hidden" name="formContacto" value="Enviado">
                 </div>
                 <div class="col-md-6">
-                  <textarea name="message" id="message" class="form textarea" placeholder="Message"></textarea>
+                  <textarea name="messageContacto" id="#" class="form textarea" placeholder="Message"></textarea>
                 </div>
                 <div class="relative fullwidth col-xs-12">
-                  <button type="submit" id="submit" name="submit" class="form-btn">Send Message</button>
+                  <button type="submit" id="#" name="submit" class="form-btn">Send Message</button>
                 </div>
                 <div class="clear"></div>
               </form>
@@ -305,6 +314,7 @@ include_once ('inc/videos.php');
         </div>
       </div>
     </div>
+    <!-- FIN FORM CONTTACTO -->
   </section>
   <!-- ============ FIN FORM CONTACTO ============ -->
 

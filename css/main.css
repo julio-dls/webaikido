@@ -633,6 +633,7 @@ p.sub-footer-text a {
 .mail-message-area {
   width: 100%;
   padding: 0 15px;
+  resize: none;
 }
 
 .mail-message {
