@@ -23,7 +23,7 @@
                 <a class="page-link" href="?pagina=<?=$i.$cat?>"><?=$i?></a></li>
             <?php }
           }
-          // echo "paginas".$pagina."cantidad".$cantidad."limite".$limite."total".floor($cantidad / $limite);
+          echo "paginas".$pagina."cantidad".$cantidad."limite".$limite."total".floor($cantidad / $limite);
           if($pagina < floor($cantidad / $limite) && ($cantidad > $limite)): ?>
           <li class="page-item">
             <a class="page-link" href="?page=<?=($pagina+1).$cat?>">Next</a>

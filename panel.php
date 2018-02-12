@@ -20,6 +20,9 @@
       <div class="row">
         <div class="form-panel col-md-8 col-md-offset-2">
           <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Imagens</h3>
+          <div class="checkbox">
+          <label> <input type="checkbox" class="checkbox"> Multiple </label>
+          </div>
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
@@ -38,8 +41,8 @@
               </div>
             </div>
             <div class="form-group has-success">
-              <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="file" class="form-control" name="ContenedorImg[]" accept="*.jpg" required>
+              <div class="col-lg-6 col-md-6 col-sm-4 mutipleTrueOrFalse">
+                <input id="input-image" type="file" class="form-control" name="ContenedorImg[]" accept="*.jpg" required>
               </div>
             </div>
             <div class="form-group has-success">
