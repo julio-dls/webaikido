@@ -9,9 +9,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
-        <a class="navbar-brand" href="index.php">Juana Ryu Art</a>
-          <img class="icon-personalizado img-fluid" src="images/logo/logoIwama.jpg" alt="logo">
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="index.php">Juana Ryu Art</a></li>
+            <li><img class="icon-personalizado" src="images/logo/logoIwama.jpg" alt="logo"></li>
+          </ul>
         <a class="heart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"></a>
       </div>
       <!-- FIN LOGO -->

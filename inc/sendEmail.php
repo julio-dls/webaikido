@@ -48,10 +48,12 @@ class SendEmail {
           '</body>'.
         '</html>';
         $mail->send();
+        if(!$mail->send()) { echo 'Mailer error: ' .$mail->ErrorInfo; }
+        else { echo '<script> alert("Email enviado"); </script>'; }
     } catch (Exception $e) {
-        echo $e->errorMessage(); //Pretty error messages from PHPMailer
+        // echo $e->errorMessage(); //Pretty error messages from PHPMailer
     } catch (\Exception $e) {
-        echo $e->getMessage(); //Boring error messages from anything else!
+        // echo $e->getMessage(); //Boring error messages from anything else!
     }
   }
 }

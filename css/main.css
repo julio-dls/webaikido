@@ -290,7 +290,7 @@ INTRO CONTAINER
 .icon-personalizado {
   width: 19px !important;
   height: 18px !important;
-  /* border: 0.5px solid #fff; */
+  border: 1px solid #fff;
   /* #9d9275 */
   margin-top: 21px;
   margin-left: 21px;
