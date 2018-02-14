@@ -29,7 +29,7 @@ class SendEmail {
         $mail->setFrom($data['emailContacto']);
         $mail->addAddress(self::SECRET_USER);
         $mail->isHTML(true);
-        $mail->Subject  = "Consutla desde pagina de: " .$data['subjectContacto'];
+        $mail->Subject  = "Consutla desde pagina, asunto: " .$data['subjectContacto'];
         $mail->Body =
         '<!DOCTYPE html>'.
         '<html>'.
@@ -39,7 +39,7 @@ class SendEmail {
             '<meta http-equiv="content-type" content="text/html; charset=UTF-8" />'.
           '</head>'.
           '<body>'.
-            '<h2>Consulta Realizada desdes pagina web.</h2><br />'.
+            '<h2>'.$data['nombreContacto'].' dice: </h2><br />'.
             '<h3>'.$data['messageContacto'].'</h3>'.
             '<hr>'.
             '<h4>Datos de contacto:</h4>'.

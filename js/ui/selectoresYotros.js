@@ -13,7 +13,6 @@ $(document).ready(function() {
     $this = $(this);
     var srcImg = $this.attr('src');
     $(".selectorImgModal").attr("src", srcImg);
-    // LAGEL modal
     $('#label-modal').text($this.attr('data-medidas'));
   });
   /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */
@@ -65,6 +64,7 @@ $(document).ready(function() {
     // $('.social').hide(300);
     $('.social').delay(8000).hide(300);
     $(document).on('click', function() {
+      $('#icon-latiendo-btn').attr('href','https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
       $('.social').show();
     });
 
@@ -76,7 +76,6 @@ $(document).ready(function() {
   var clonSidebar = $('<a id="icon-latiendo-btn" class="btn btn-danger sidebar-social" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion"><i class="fa fa-heart sidebar-social-latidos" aria-hidden="true"></i></a>').clone();
 
   $('#heart-beating').remove();
-  // $('.heart').remove();
   $(window).on('load', clonar);
   $(window).on('resize', clonar);
 

@@ -55,7 +55,7 @@
     $indice=0;
       foreach ($galleriaImg as $rows) {
 
-      $path = 'Web_Aikido/images/'.$rows['id']; //'images/'.$categoria; //
+      $path = 'Web_Aikido/images/'.$rows['id']; //'images/'.$rows['id']; //
       trim($path);
       $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 

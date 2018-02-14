@@ -1,7 +1,7 @@
 <?php
   include_once ('inc/conexion.php');
   include_once ('inc/videos.php');
-  include_once ('inc/SendEmail.php');
+  include_once ('inc/sendEmail.php');
 
   if (!empty($_POST['formContacto'])) {
     $EnviarEmail = new SendEmail($con);
