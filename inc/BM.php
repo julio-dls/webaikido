@@ -32,7 +32,7 @@ class BM {
       }
 
       $sql .= " WHERE id=" .$data['id'];
-      // echo "sql: " .$sql;
+      echo "sql: " .$sql;
       $this->con->exec($sql);
     }
   }

@@ -12,11 +12,12 @@
                           <span class="icon-bar"></span>
                       </button>
 
-          <ul class="nav navbar-nav">
+          <ul class="nav-titulo-icon">
             <li><a class="navbar-brand" href="index.php">Juana Ryu Art</a></li>
             <li><img class="icon-personalizado" src="images/logo/logoIwama.jpg" alt="logo"></li>
+            <li><a class="heart" href=""></a></li>
           </ul>
-          <a class="heart" href="#"></a>
+
         </div>
         <!-- FIN LOGO -->
         <!-- MENU -->
@@ -28,6 +29,8 @@
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">POSES <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
                 <li><a href="gallery.php?categoria=manos">Manos</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="gallery.php?categoria=individual">Individual</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=parejas">Parejas</a></li>
                 <li role="separator" class="divider"></li>
@@ -46,7 +49,7 @@
             <li class="dropdown">
               <a href="#" class="navactive dropdown-toggle color_animation" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">EXTRAS <span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="gallery.php?categoria=modelos">Modelos</a></li>
+                <li><a href="gallery.php?categoria=moldes">Moldes</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=tarjetas">Tarjetas</a></li>
                 <li role="separator" class="divider"></li>
@@ -55,7 +58,7 @@
               </ul>
             </li>
             <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
-            <li><a class="navactive color_animation" href="gallery.php?categoria=hamni">HANMI</a></li>
+            <li><a class="navactive color_animation" href="gallery.php?categoria=hanmi">HANMI</a></li>
             <li><a class="navactive color_animation" href="index.php#videos">VIDEOS</a></li>
             <li><a class="navactive color_animation" href="index.php#proyectos">PROYECTOS</a></li>
             <li><a class="navactive color_animation" href="index.php#contacts">CONTACT</a></li>

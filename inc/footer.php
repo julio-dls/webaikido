@@ -14,7 +14,7 @@
             </li>
           <?php endif;
 
-          for($i=$pagina;$i <= floor($cantidad / $limite);$i++){
+          for($i=1;$i <= floor($cantidad / $limite);$i++){
             if($i == $pagina) { ?>
               <li class="page-item active">
                 <a  class="page-link" href="#"><?=$i?><span class="sr-only">(current)</span></a>

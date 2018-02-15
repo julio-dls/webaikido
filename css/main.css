@@ -213,11 +213,20 @@ nav {
   color: black !important;
 }
 
-/* li{
-    color: white !important;
-    /*padding-left: 10px;
-    word-spacing: 5px !important;
-} */
+.nav-titulo-icon {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  padding-left: 10px;
+  word-spacing: 5px !important;
+  margin-left: -32px;
+  margin-top: 2%;
+}
+
+.nav-titulo-icon li {
+  padding-left: 5px;
+  word-spacing: 5px !important;
+}
 
 /*========================
 INTRO CONTAINER
@@ -396,6 +405,9 @@ iframe {
 .img-section img {
   cursor: pointer;
   border: 2px solid #000;
+  /* height: 200px;
+  min-height: 200px;
+  margin: auto; */
 }
 
 #btnModal {
@@ -1144,5 +1156,8 @@ MEDIA QUERIE DESKTOP
     border: 1px solid #fff;
     margin-top: 21px;
     margin-left: 12px;
+  }
+  .nav-titulo-icon {
+    margin-left: -6px;
   }
 }

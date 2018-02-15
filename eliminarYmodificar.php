@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-6 col-lg-6 col-xs-12">
           <form class="form-inline form-filtrar" action="eliminarYmodificar.php" method="GET">
-            <select class="form-control" id="categoria" name="categoria">
+            <select class="form-control" id="#" name="categoria">
             <option value="" class="text-success bg-warning">None</option>
             <?php
             $categoria = $con->query("SELECT `subcategoria` FROM `categoria` WHERE subcategoria !='' ORDER BY 1 ASC ");
@@ -117,7 +117,7 @@
             </div>
             <div class="form-group has-success">
               <label class="control-label" for="Categoria">Categoria</label>
-              <select class="form-control" id="categoria" name="categoria" required>
+              <select class="form-control" id="categoria" name="" required>
               <option value="" class="text-success bg-warning">None</option>
               <?php $categoria = $con->query("SELECT `subcategoria` FROM `categoria` WHERE subcategoria!='' ORDER BY 1 ASC ");
               foreach ($categoria as $row) {?>

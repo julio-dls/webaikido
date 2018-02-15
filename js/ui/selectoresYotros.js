@@ -81,12 +81,14 @@ $(document).ready(function() {
 
   function clonar() {
     if ($(window).width() <= 992) {
+      $('.heart').attr('href','https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
       $('.heart').append(clon);
       $('#icon-latiendo-btn').remove();
     } else {
       if ($('#icon-latiendo-btn').length > 0) {
         $('#icon-latiendo-btn').remove();
       }
+      $('.heart').attr('href','https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
       $('.btn-latiendo').append(clonSidebar);
       $('#heart-beating').remove();
     }

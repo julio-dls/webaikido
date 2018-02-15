@@ -22,7 +22,7 @@
 
     <div class="grid">
     <?php
-    $limite = 20;
+    $limite = 40;
 
     if(isset($_GET['page'])){
       $pagina = $_GET['page'];
@@ -44,7 +44,6 @@
       $sql .= 'and categoria="'.$categoria.'" ';
       $sqlTatalFilas .= 'and categoria="'.$categoria.'" ';
     }
-
     $tatalFilas = $con->query($sqlTatalFilas)->fetch();
     $cantidad = $tatalFilas['total'];
 

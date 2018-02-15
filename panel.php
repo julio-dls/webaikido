@@ -20,9 +20,6 @@
       <div class="row">
         <div class="form-panel col-md-8 col-md-offset-2">
           <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Imagens</h3>
-          <div class="checkbox">
-          <label> <input type="checkbox" class="checkbox"> Multiple </label>
-          </div>
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
@@ -31,7 +28,7 @@
             </div>
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
-              <select class="form-control" id="categoria" name="categoria" required>
+              <select class="form-control" id="#" name="categoria" required>
               <option value="" class="text-success bg-warning">None</option>
               <?php $categoria = $con->query("SELECT `subcategoria` FROM `categoria` WHERE subcategoria!='' ORDER BY 1 ASC ");
               foreach ($categoria as $row) {?>

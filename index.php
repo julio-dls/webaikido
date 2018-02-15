@@ -69,15 +69,16 @@
       </div>
       <div class="col-md-6">
         <div class="img-section">
-          <img class="img-rounded selectorImg" id="image-1" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_katana.jpg" width="250">
-          <img class="img-rounded selectorImg" id="image-2" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_yasuhiro_saito2.jpg" width="250">
+    <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE 1 ORDER BY 1 DESC LIMIT 4';
+          $imagenesUltimas = $con->query($sql);
+          $contador=0;
+          foreach ($imagenesUltimas as $rows):
+            $contador++;?>
+          <img class="img-rounded selectorImg" id="image-1" data-categoria="<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
+          <?php if ($contador == 2): ?>
           <div class="img-section-space"></div>
-
-          <img class="img-rounded selectorImg" id="image-3" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos_Miru.jpg" width="250">
-          <img class="img-rounded selectorImg" id="image-4" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/poses/manosSimples/manos.jpg" width="250">
-
-          <div class="img-section-space"></div>
-
+          <?php endif;
+          endforeach; ?>
         </div>
       </div>
     </div>
