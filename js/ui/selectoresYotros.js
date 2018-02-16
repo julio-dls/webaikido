@@ -12,7 +12,9 @@ $(document).ready(function() {
   $('.selectorImg').on('click', function() {
     $this = $(this);
     var srcImg = $this.attr('src');
+    var categoriaData = $this.attr('data-categoria');
     $(".selectorImgModal").attr("src", srcImg);
+    $("#btn-modal-galeria").attr("href", categoriaData);
     $('#label-modal').text($this.attr('data-medidas'));
   });
   /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */

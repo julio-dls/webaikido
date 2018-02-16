@@ -61,7 +61,7 @@
             <li><a class="navactive color_animation" href="gallery.php?categoria=hanmi">HANMI</a></li>
             <li><a class="navactive color_animation" href="index.php#videos">VIDEOS</a></li>
             <li><a class="navactive color_animation" href="index.php#proyectos">PROYECTOS</a></li>
-            <li><a class="navactive color_animation" href="index.php#contacts">CONTACT</a></li>
+            <li><a class="navactive color_animation" href="index.php#contacts">CONTACTO</a></li>
           </ul>
         </div>
         <!-- FIN DE MENU -->

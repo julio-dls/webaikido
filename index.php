@@ -69,12 +69,12 @@
       </div>
       <div class="col-md-6">
         <div class="img-section">
-    <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE 1 ORDER BY 1 DESC LIMIT 4';
+    <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 4';
           $imagenesUltimas = $con->query($sql);
           $contador=0;
           foreach ($imagenesUltimas as $rows):
             $contador++;?>
-          <img class="img-rounded selectorImg" id="image-1" data-categoria="<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
+          <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
           <?php if ($contador == 2): ?>
           <div class="img-section-space"></div>
           <?php endif;
@@ -96,7 +96,7 @@
             <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
           </div>
           <div class="col-md-4">
-            <a href="gallery.php?categoria=manos" id="btnModal" class="btn btn-danger btn-xs btn-block">Galeria</a>
+            <a id="btn-modal-galeria" href="" id="btnModal" class="btn btn-danger btn-xs btn-block">Galeria</a>
           </div>
       </div>
     </div>
@@ -253,7 +253,7 @@
   <!-- ============ FORM CONTACTO ============ -->
   <section class="description_content">
     <div id="contacts" class="contact background_content">
-      <h1><span>Contato</span></h1>
+      <h1><span>Contacto</span></h1>
     </div>
     <div class="text-content container">
       <div class="col-md-6">
@@ -323,9 +323,9 @@
     <div class="container">
       <div class="col-md-4"></div>
       <div class="col-md-4 text-center">
-        <p class="sub-footer-text text-center">&copy; Aikido 2017, Theme by <a href="#">DeveloperWebMJ</a></p>
-        <p class="sub-footer-text text-center">Back to <a href="#top">TOP</a></p>
-        <p class="sub-footer-text text-center">Built With Care By <a href="#" target="_blank">Us</a></p>
+        <p class="sub-footer-text text-center">&copy; Iwama Ryu Art 2018, Theme by <a href="#">DeveloperWebMJ</a></p>
+        <p class="sub-footer-text text-center">Adaptado: <a href="#">M & J Developers-Web</a></p>
+        <p class="sub-footer-text text-center">Email: <a href="#">developerwebmj@gmail.com</a></p>
       </div>
       <div class="col-md-4"></div>
     </div>

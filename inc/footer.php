@@ -41,9 +41,9 @@
     <div class="container">
       <div class="col-md-4"></div>
       <div class="col-md-4 text-center">
-        <p class="sub-footer-text text-center">&copy; Aikido 2017, Theme by <a href="#">DeveloperWebMJ</a></p>
-        <p class="sub-footer-text text-center">Back to <a href="#top">TOP</a></p>
-        <p class="sub-footer-text text-center">Built With Care By <a href="#" target="_blank">Us</a></p>
+        <p class="sub-footer-text text-center">&copy; Iwama Ryu Art 2018, Theme by <a href="#">DeveloperWebMJ</a></p>
+        <p class="sub-footer-text text-center">Adaptado: <a href="#">M & J Developers-Web</a></p>
+        <p class="sub-footer-text text-center">Email: <a href="#">developerwebmj@gmail.com</a></p>
       </div>
       <div class="col-md-4"></div>
     </div>

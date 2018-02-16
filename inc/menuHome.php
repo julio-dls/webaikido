@@ -54,10 +54,10 @@
             </ul>
           </li>
           <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana">KAMIDANAS</a></li>
-          <li><a class="navactive color_animation " href="gallery.php?categoria=hamni">HANMI</a></li>
+          <li><a class="navactive color_animation " href="gallery.php?categoria=hanmi">HANMI</a></li>
           <li><a class="navactive color_animation scroll-lento" href="#videos">VIDEOS</a></li>
           <li><a class="navactive color_animation scroll-lento" href="#proyectos">PROYECTOS</a></li>
-          <li><a class="navactive color_animation scroll-lento" href="#contacts">CONTACT</a></li>
+          <li><a class="navactive color_animation scroll-lento" href="#contacts">CONTACTO</a></li>
         </ul>
       </div>
       <!-- FIN DE MENU -->
