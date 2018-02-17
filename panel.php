@@ -56,7 +56,7 @@
           </form>
         </div>
       </div>
-
+      <hr>
       <div class="row">
         <div class="form-panel col-md-8 col-md-offset-2">
           <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Videos</h3>

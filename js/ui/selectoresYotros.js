@@ -8,7 +8,7 @@ $(document).ready(function() {
     }, 2000);
   });
 
-  /* ====== SELECTOR DE IMAGEN MODAL POSES ====== */
+  /* ====== SELECTOR DE IMAGEN MODAL =SOBRE AIKIDO ===== */
   $('.selectorImg').on('click', function() {
     $this = $(this);
     var srcImg = $this.attr('src');
@@ -17,7 +17,7 @@ $(document).ready(function() {
     $("#btn-modal-galeria").attr("href", categoriaData);
     $('#label-modal').text($this.attr('data-medidas'));
   });
-  /* ====== FIN SELECTOR DE IMAGEN MODAL POSES ====== */
+  /* ====== FIN SELECTOR DE IMAGEN MODAL SOBRE AIKIDO ====== */
 
   /* ====== SELECTOR DE VIDEO  ====== */
   $('#mostrarMas').on('click', function(e){

@@ -13,7 +13,8 @@ class panelABM {
     if (!empty($data) and !empty($fImg)) {
       foreach ($fImg['ContenedorImg']['name'] as $posicion => $nombre) {
         $finlename = $fImg['ContenedorImg']['name'][$posicion];
-        $nombres = basename($finlename, ".jpg");
+        $nombres = utf8_decode($finlename);
+        $nombres = basename($nombres, ".jpg");
         $nombres = str_replace('_',' ',$nombres);
         $nombres = str_replace('-',' ',$nombres);
         $nombres = ucwords($nombres);

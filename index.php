@@ -22,8 +22,6 @@
 
   <title>Iwama Ryu Art</title>
   <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -67,30 +65,29 @@
           </p>
         </div>
       </div>
+
       <div class="col-md-6">
         <div class="img-section">
-    <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 4';
+          <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 2';
           $imagenesUltimas = $con->query($sql);
           $contador=0;
           foreach ($imagenesUltimas as $rows):
             $contador++;?>
-          <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
-          <?php if ($contador == 2): ?>
+          <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_big.jpg" width="300">
           <div class="img-section-space"></div>
-          <?php endif;
+          <?php
           endforeach; ?>
         </div>
       </div>
-    </div>
   </section>
 
-  <!-- ============= MODAL POSES ============= -->
+  <!-- ============= MODAL SOBRE AIKIDO ============= -->
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
+        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
       </div>
-      <div class="col-md-6 col-md-offset-3 col-sm-8 col-xs-12">
+      <div class="col-md-8 col-md-offset-2 col-sm-8 col-xs-12">
         <hr>
           <div class="col-md-4 col-md-offset-2">
             <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
@@ -101,7 +98,7 @@
       </div>
     </div>
   </div>
-  <!-- ============= FIN MODAL POSES ============= -->
+  <!-- ============= FIN MODAL SOBRE AIKIDO ============= -->
 
   <!-- ============= SIDEBAR DE REDES SOCIALES ============= -->
 
@@ -122,7 +119,7 @@
     </div>
     <div class="container ">
       <?php
-        $sql = ('SELECT url FROM `video` order by id desc LIMIT 1');
+        $sql = ('SELECT url,titulo,descripcion FROM `video` order by id desc LIMIT 1');
         $videoPrincipal = $con->query($sql);
       ?>
       <div class="row">
@@ -133,23 +130,22 @@
         </div>
 
         <div class="col-md-6">
-          <h3 class="">Project titulo</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
-          </p>
-          <h3 class="fa-2x">Project Details</h3>
+          <h3 class=""><?=$row['titulo']?></h3>
+          <p><?=$row['descripcion']?></p>
+          <!-- <h3 class="fa-2x">Project Details</h3>
           <ul>
             <li>Lorem Ipsum</li>
             <li>Dolor Sit Amet</li>
             <li>Consectetur</li>
             <li>Adipiscing Elit</li>
-          </ul>
+          </ul> -->
         </div>
 
       </div>
       <!-- /.row -->
 
-      <h3 class="my-4">Video Recientes</h3>
-      <div class="row description_content" id="videosDos">
+      <h2 class="text-center">Video Recientes</h2>
+      <div class="row" id="videosDos"> <!-- description_content -->
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
@@ -163,7 +159,7 @@
         foreach ($videosSecundario as $rows) { ?>
         <div class="col-md-3 col-sm-6 col-xs-12 grupoVideos">
           <a class="aIframeVideoSeleccionado" href="#">
-            <iframe class="img-fluid iframeSeleccionado" src="<?=$rows['url']?>" frameborder="1" gesture="media" allow="encrypted-media" scrolling="no"></iframe>
+            <iframe class="img-fluid iframeSeleccionado" src="<?=$rows['url']?>" frameborder="0" allowfullscreen></iframe>
           </a>
         </div>
       <?php }
@@ -173,10 +169,10 @@
       <form  action="index.php#videosDos" method="post">
         <input type="hidden" name="autoincremental" value="<?=$indice+4?>">
         <?php if ($numeroTotal > $indice): ?>
-          <button type="submit" class="btn btn-default btn-lg btn-block">Ver Mas ...</button>
+          <button type="submit" class="btn btn-default btn-lg btn-block btn-ver-mas-menos">Ver Mas ...</button>
         <?php else: ?>
           <input type="hidden" name="autoincremental" value="<?= 4 + ($indice-$indice)?>">
-          <button type="submit" class="btn btn-default btn-lg btn-block">Ver Menos ...</button>
+          <button type="submit" class="btn btn-default btn-lg btn-block btn-ver-mas-menos">Ver Menos ...</button>
         <?php endif; ?>
       </form>
       </div>
@@ -198,7 +194,6 @@
       </div>
     </div>
   </section>
-
 
   <div class="container bs-docs-container">
     <div class="row">

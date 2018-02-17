@@ -17,14 +17,10 @@
           for($i=1;$i <= floor($cantidad / $limite);$i++){
             if($i == $pagina) { ?>
               <li class="page-item active">
-                <a  class="page-link" href="#"><?=$i?><span class="sr-only">(current)</span></a>
-              </li>
-            <?php } else { ?>
-              <li class="page-item" >
                 <a class="page-link" href="?pagina=<?=$i.$cat?>"><?=$i?></a></li>
+              </li>
             <?php }
           }
-          // echo "paginas".$pagina."total".floor($cantidad / $limite);
           if($pagina < floor($cantidad / $limite) && ($cantidad > $limite)): ?>
           <li class="page-item">
             <a class="page-link" href="?page=<?=($pagina+1).$cat?>">&raquo;</a>

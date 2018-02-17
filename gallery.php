@@ -76,7 +76,8 @@
 
                   <div class="caption col-sx-3">
                   <?php
-                  $nombres = basename($rows['nombre'], ".jpg");
+                  $nombres = utf8_decode($rows['nombre']);
+                  $nombres = basename($nombres, ".jpg");
                   $nombres = str_replace('_',' ',$nombres);
                   $nombres = str_replace('-',' ',$nombres);
                   $nombres = ucwords($nombres);

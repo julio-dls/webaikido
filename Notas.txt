@@ -1,2 +1,28 @@
-Resolver problema de &file vacio y tamaño maximo de subida de archivos al servidor:
+Resolver problema de &file vacio y tamaï¿½o maximo de subida de archivos al servidor:
 http://armandof.cubava.cu/2015/08/13/aumentar-el-tamano-de-subida-de-archivos-en-xampp/
+
+<div class="col-md-6">
+  <div class="img-section">
+    <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 2';
+    $imagenesUltimas = $con->query($sql);
+
+    $autoincrement=0;
+    foreach ($imagenesUltimas as $rows):
+    $row[$autoincrement] = $rows['id'];
+    $autoincrement++;
+    endforeach;
+     ?>
+    <table class="tabla-ultimas-imagenes" border="0">
+      <tbody>
+        <tr>
+          <td class="ultimas-imagenes-td"><img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$row[0]?>/img_0_small.jpg" width="250"></td>
+          <td class="ultimas-imagenes-td"><img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$row[1]?>/img_0_small.jpg" width="250"></td>
+        </tr>
+        <tr>
+          <td class="ultimas-imagenes-td"><img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$row[2]?>/img_0_small.jpg" width="250"></td>
+          <td class="ultimas-imagenes-td"><img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$row[3]?>/img_0_small.jpg" width="250"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
