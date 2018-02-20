@@ -43,7 +43,7 @@
           </li>
           <ul class="sub-menu collapse" id="service">
             <li>Nuevo Usuario</li>
-            <li>Login</li>
+            <li><a href="login.php">Login</a></li>
             <li>Modificar o Eliminar</li>
           </ul>
           <li data-toggle="collapse" data-target="#new" class="collapsed">

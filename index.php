@@ -24,9 +24,8 @@
   <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -66,17 +65,19 @@
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="img-section">
-          <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 2';
-          $imagenesUltimas = $con->query($sql);
-          $contador=0;
-          foreach ($imagenesUltimas as $rows):
-            $contador++;?>
-          <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_big.jpg" width="300">
-          <div class="img-section-space"></div>
-          <?php
-          endforeach; ?>
+        <div class="col-md-6">
+          <div class="img-section">
+            <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 4';
+            $imagenesUltimas = $con->query($sql);
+            $contador=0;
+            foreach ($imagenesUltimas as $rows):
+              $contador++;?>
+            <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_big.jpg" width="250">
+            <?php if ($contador == 2): ?>
+            <div class="img-section-space"></div>
+            <?php endif;
+            endforeach; ?>
+          </div>
         </div>
       </div>
   </section>
@@ -85,16 +86,12 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="">
+        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="imagene-seleccionada-modal">
       </div>
-      <div class="col-md-8 col-md-offset-2 col-sm-8 col-xs-12">
-        <hr>
-          <div class="col-md-4 col-md-offset-2">
-            <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
-          </div>
-          <div class="col-md-4">
-            <a id="btn-modal-galeria" href="" id="btnModal" class="btn btn-danger btn-xs btn-block">Galeria</a>
-          </div>
+      <div class="col-md-8 col-md-offset-2 col-sm-8 col-xs-12 text-center">
+      <hr>
+        <button type="button" id="btnModal" class="btn btn-danger btn-sm " data-dismiss="modal">Volver</button>
+        <a id="btn-modal-galeria" href="" id="btnModal" class="btn btn-danger btn-sm ">Galeria</a>
       </div>
     </div>
   </div>

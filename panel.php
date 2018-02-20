@@ -1,6 +1,12 @@
 <?php
+  session_start();
+
   include_once ('inc/conexion.php');
+  include_once ('inc/loginControllador.php');
   include_once ('inc/panel.php');
+
+  $ControlLogin = new LoginControllador($con);
+  $ControlLogin->isLog($_POST);
 
   if (isset($_POST['form1']) && (!empty($_POST['form1']))) {
     if(!empty($_POST) && !empty($_FILES)) {
@@ -15,7 +21,7 @@
 ?>
   <?php include_once ('inc/menuPanel.php'); ?>
 
-  <section id="alta-imagenes" class="wrapper">
+  <section id="subir-imagenes" class="wrapper">
     <div class="container">
       <div class="row">
         <div class="form-panel col-md-8 col-md-offset-2">
@@ -56,37 +62,40 @@
           </form>
         </div>
       </div>
-      <hr>
+    </div>
+  </section>
+  <section id="subir-videos" class="wrapper">
+    <div class="container">
       <div class="row">
         <div class="form-panel col-md-8 col-md-offset-2">
           <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Videos</h3>
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
-            <div class="form-group has-success">
-              <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="text" class="form-control" name="titulo" placeholder="Titulo" required>
-              </div>
+          <div class="form-group has-success">
+            <div class="col-lg-6 col-md-6 col-sm-4 ">
+              <input type="text" class="form-control" name="titulo" placeholder="Titulo" required>
             </div>
-            <div class="form-group has-success">
-              <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <textarea type="text" class="form-control" name="descripcion" placeholder="Descripcion" rows="5" style="resize: none" required></textarea>
-              </div>
+          </div>
+          <div class="form-group has-success">
+            <div class="col-lg-6 col-md-6 col-sm-4 ">
+              <textarea type="text" class="form-control" name="descripcion" placeholder="Descripcion" rows="5" style="resize: none" required></textarea>
             </div>
-            <div class="form-group has-success">
-              <div class="col-lg-6 col-md-6 col-sm-4 ">
-                <input type="text" class="form-control" name="url" placeholder="Url Video" required>
-              </div>
+          </div>
+          <div class="form-group has-success">
+            <div class="col-lg-6 col-md-6 col-sm-4 ">
+              <input type="text" class="form-control" name="url" placeholder="Url Video" required>
             </div>
-            <div class="form-group has-success">
-              <div class="col-lg-6 col-md-4 col-sm-4 ">
-                <input type="hidden" name="form2" value="enviar">
-                <button id="#" type="submit" class="btn btn-primary btn-lg btn-block">Aplicar</button>
-              </div>
+          </div>
+          <div class="form-group has-success">
+            <div class="col-lg-6 col-md-4 col-sm-4 ">
+              <input type="hidden" name="form2" value="enviar">
+              <button id="#" type="submit" class="btn btn-primary btn-lg btn-block">Aplicar</button>
             </div>
-            <div class="form-group has-success">
-              <div class="col-lg-6 col-md-4 col-sm-4 ">
-                <button id="#" type="reset" class="btn btn-warning btn-lg btn-block" onclick="desblock(true)">Limpiar</button>
-              </div>
+          </div>
+          <div class="form-group has-success">
+            <div class="col-lg-6 col-md-4 col-sm-4 ">
+              <button id="#" type="reset" class="btn btn-warning btn-lg btn-block" onclick="desblock(true)">Limpiar</button>
             </div>
+          </div>
           </form>
         </div>
       </div>

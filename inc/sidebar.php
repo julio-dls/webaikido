@@ -12,8 +12,8 @@
         </a>
       </li>
       <li>
-        <a class="btn btn-info sidebar-social" data-toggle="tooltip" data-placement="right" title="Twiter">
-          <i class="fa fa-twitter" aria-hidden="true" ></i>
+        <a class="btn btn-info sidebar-social blogger-icon-sidebar" data-toggle="tooltip" data-placement="right" title="blogger">
+        <i class="fa fa-blog" aria-hidden="true"></i>
         </a>
       </li>
       <li>

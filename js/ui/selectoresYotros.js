@@ -8,7 +8,7 @@ $(document).ready(function() {
     }, 2000);
   });
 
-  /* ====== SELECTOR DE IMAGEN MODAL =SOBRE AIKIDO ===== */
+  /* ====== SELECTOR DE IMAGEN MODAL SOBRE AIKIDO ===== */
   $('.selectorImg').on('click', function() {
     $this = $(this);
     var srcImg = $this.attr('src');

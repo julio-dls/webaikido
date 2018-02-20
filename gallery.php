@@ -75,22 +75,21 @@
                   </div>
 
                   <div class="caption col-sx-3">
-                  <?php
-                  $nombres = utf8_decode($rows['nombre']);
-                  $nombres = basename($nombres, ".jpg");
-                  $nombres = str_replace('_',' ',$nombres);
-                  $nombres = str_replace('-',' ',$nombres);
-                  $nombres = ucwords($nombres);
-                  ?>
-                  <h3><?=utf8_encode($nombres)?></h3>
+                    <?php
+                    $nombres = utf8_decode($rows['nombre']);
+                    $nombres = basename($nombres, ".jpg");
+                    $nombres = str_replace('_',' ',$nombres);
+                    $nombres = str_replace('-',' ',$nombres);
+                    $nombres = ucwords($nombres);
+                    ?>
+                    <h3><?=utf8_encode($nombres)?></h3>
                   </div>
 
                   <?php if (($rows['categoria'] != 'aikidokas')): ?>
                   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                  </a>
+                    <i class="fa fa-heart" aria-hidden="true"></i></a>
                   <?php endif; ?>
-                  <a href="#" class="btn btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
+                  <a href="#" class="btn btn-sm btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
                 </div>
               </div>
             <?php
@@ -113,7 +112,7 @@
       </div>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
         <label id="label-modal" or="#"></label>
-          <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
+        <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
       </div>
     </div>
     </div>
