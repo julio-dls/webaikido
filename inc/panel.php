@@ -46,7 +46,6 @@ class panelABM {
                            $posicion,
                            $tamanhos
                          );
-            echo "<script>alert('Imagen Cargada Correctamente');</script>";
            }
 
            if(!file_exists($ruta)){
@@ -58,8 +57,6 @@ class panelABM {
            }
          }
        }
-    } else {
-       echo "<script>alert('La Imagen Fue Ingresada Correctamente');</script>";
     }
   }
 
@@ -73,8 +70,57 @@ class panelABM {
       echo "<script>alert('Fallo el intento de cargar el video, intente nuevamente por favor!');</script>";
     }
   }
-}
 
+  public function AltaImagenProyectoCortometraje($data = array(),$fImg = array()) {
+    if (!empty($data) and !empty($fImg)) {
+      foreach ($fImg['proyectoCortometrajeImages']['name'] as $posicion => $nombre) {
+        $finlename = $fImg['proyectoCortometrajeImages']['name'][$posicion];
+        $nombresPro = utf8_decode($finlename);
+        $nombresPro = basename($nombresPro, ".jpg");
+        $nombresPro = str_replace('_',' ',$nombresPro);
+        $nombresPro = str_replace('-',' ',$nombresPro);
+        $nombresPro = ucwords($nombresPro);
+        $nombresPro = utf8_encode($nombresPro);
+      }
+      $sql = "INSERT INTO `proyecto-cortometraje`(`nombre`, `categoria`) VALUES ('".$nombresPro."', '".$data['categoria']." ')";
+      $transCorrect=$this->con->exec($sql);
+
+    } else {
+      $transCorrect = false;
+    }
+    if ($transCorrect) {
+      $id_img = $this->con->query('SELECT max(`id`) as id FROM `proyecto-cortometraje`')->fetch();
+
+       if (is_array($fImg['proyectoCortometrajeImages'])) {
+         if(isset($fImg['proyectoCortometrajeImages']['name'])){
+           $id_imagenesProy = $id_img['id'];
+
+           foreach($fImg['proyectoCortometrajeImages']['name'] as $posicion => $nombre){
+             $ruta = 'images/proyectoCortometraje/'.$id_imagenesProy;
+             @mkdir($ruta);
+
+             $tamanhos = array('0'=>array('ancho'=>'800','alto'=>'514','nombre'=>'small'));
+
+             redimensionar($ruta.'/',
+                           $fImg['proyectoCortometrajeImages']['name'][$posicion],
+                           $fImg['proyectoCortometrajeImages']['tmp_name'][$posicion],
+                           $posicion,
+                           $tamanhos
+                         );
+           }
+
+           if(!file_exists($ruta)){
+               $ultimoId = $this->con->query('SELECT max(`id`) as id FROM `proyecto-cortometraje`')->fetch();
+               $idUltimo = $id_img['id'];
+               $sqlDelete = ("DELETE FROM `proyecto-cortometraje` WHERE id=".$idUltimo);
+               $this->con->exec($sqlDelete);
+               echo "<script>alert('No se creo la carpeta, por favor, vuelta a intentarlo ');</script>";
+           }
+         }
+       }
+    }
+  }
+}
 //redimencionar imagen
 function redimensionar($ruta,$file_name,$file_temp,$id,$tamanhos){
   $filename = stripslashes($file_name);

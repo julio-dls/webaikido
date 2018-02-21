@@ -10,12 +10,11 @@
 
   <title>Iwama Ryu </title>
   <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="css/main.css" media="screen" type="text/css"> -->
   <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>

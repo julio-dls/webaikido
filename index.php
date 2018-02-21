@@ -22,10 +22,10 @@
 
   <title>Iwama Ryu Art</title>
   <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>
@@ -55,12 +55,12 @@
         <h1 class="my-4 text-center text-lg-left">Acerca de Iwama Ryu Art.</h1>
       </div>
       <div class="col-md-6">
-        <div class="text-fondo-gris">
-          <p class="desc-text">Bienvenidos!! <br>Iwama Ryu Art es una pagina de arte independiente. Lo que usted verá a continuacion son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japon, fue en el año 2013. Mi
-            estadia fue maravillosa, casi diria magica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algun modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes
-            paises, a quienes muchos no los conozco, pero que el aikido me los acerca como Familia Iwama. Todos los dibujos estan a su disposicion , agradeciendo que mencione el origen de las mismas. De a poco iré sumando mas aikidokas A los que algun
-            dia, los conoceré en persona ,compartiendo keiko!. Soy Arquitecto , ilustrador y animador 2d tradicional. Partico aikido en Aiki Shuren Dojo Buenos Aires - Argentina Espero que sea de su agrado!! <br> gracias por su vista! <br> ChinoYuen
-            <tenetur class="lorem"></tenetur>
+        <div>
+          <p class="desc-text"> ¡Bienvenidos!!<br>
+          Iwama Ryu Art es una página de arte independiente. Lo que usted verá a continuación son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japón, fue´ en dic. 2012. ¡Mi estadía fue maravillosa !, casi diría mágica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algún modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes países, a quienes  muchos, no los conozco, pero que el aikido me los acerca como Familia Iwama. Todos los dibujos están a su disposición, agradeciendo que mencione el origen de las mismas. ¡De a poco iré sumando más aikidokas, a los que algún día, los conoceré en persona, compartiendo Keiko!
+          Soy Arquitecto, ilustrador y animador 2d tradicional. Partico aikido en Aiki Shuren Dojo Buenos Aires- Argentina.
+          <br>¡Espero que sea de su agrado!!  gracias por su vista!
+          <tenetur class="lorem"></tenetur>
           </p>
         </div>
       </div>
@@ -114,7 +114,7 @@
     <div id="videos" class="videos background_content">
       <h1><span>Videos</span></h1>
     </div>
-    <div class="container ">
+    <div class="container">
       <?php
         $sql = ('SELECT url,titulo,descripcion FROM `video` order by id desc LIMIT 1');
         $videoPrincipal = $con->query($sql);
@@ -126,18 +126,12 @@
           <?php } ?>
         </div>
 
-        <div class="col-md-6">
-          <h3 class=""><?=$row['titulo']?></h3>
-          <p><?=$row['descripcion']?></p>
-          <!-- <h3 class="fa-2x">Project Details</h3>
-          <ul>
-            <li>Lorem Ipsum</li>
-            <li>Dolor Sit Amet</li>
-            <li>Consectetur</li>
-            <li>Adipiscing Elit</li>
-          </ul> -->
+          <div class="col-md-6 desc-text">
+          <h3>Project titulo</h3>
+          <blockquote>
+            <p class="desc-text"> &quot;Tu corazón está lleno de semillas fértiles esperando brotar. Del mismo modo que una flor de loto surge del lodo para florecer en todo su esplendor, la interacción de la respiración cósmica hace florecer el espíritu para que dé fruto en este mundo.&quot; <br><cite> Morihei Ueshiba</cite></p>
+          </blockquote>
         </div>
-
       </div>
       <!-- /.row -->
 
@@ -199,19 +193,23 @@
             <div class="carousel-inner" role="listbox">
 
             <?php
-            $path = 'Web_Aikido/images/proyectoCortometraje/'; //'images/proyectoCortometraje/'; //
+            $sqlPro = ('SELECT `id`, `nombre` FROM `proyecto-cortometraje` WHERE 1');
+            $totalImgPro = $con->query($sqlPro);
+            $active="active";
+            foreach ($totalImgPro as $rows) {
+
+            $path = 'Web_Aikido/images/proyectoCortometraje/'.$rows['id']; //'images/proyectoCortometraje/'.$rows['id']; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
-              $active="active";
               while(($archivo = readdir($directorio)) !== false) {
                 if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
 
                     <div class="item <?=$active?>">
-                        <img src="images/proyectoCortometraje/<?=utf8_encode($archivo)?>" alt="...">
+                        <img src="images/proyectoCortometraje/<?=$rows['id']?>/<?=utf8_encode($archivo)?>" alt="...">
                         <div>
                           <?php
-                            $nombres = basename($archivo, ".jpg");
+                            $nombres = basename($rows['nombre'], ".jpg");
                             $nombres = str_replace('_',' ',$nombres);
                             $nombres = str_replace('-',' ',$nombres);
                             $nombres = ucwords($nombres);
@@ -219,12 +217,13 @@
                            ?>
                         </div>
                     </div>
-              <?php
-                $active="";
+                <?php
+                  $active="";
+                  }
                 }
-              }
               closedir($directorio);
-              } ?>
+              }
+            }?>
             </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -250,7 +249,7 @@
     <div class="text-content container">
       <div class="col-md-6">
         <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
-        <p class="desc-text ">Gracias por su Visita! <br>Si usted necesita algún archivo en algun formato especial o algo que desea solicitar fuera de tema aikido, no dude en comunicarse ,especifique qué necesita. A la brevedad responderé su inquietud. <br>Gracias por comuncarse!</p>
+        <p class="desc-text ">¡Gracias por su Visita!<br>Si usted necesita algún archivo especial o algún formato particular o necesita algo de otros temas: espero su consulta. Su solicitud será´ atendida a la brevedad. <br>¡Gracias por comunicarse!</p>
       </div>
       <div class="col-md-6">
         <ul class="image_box_story2">

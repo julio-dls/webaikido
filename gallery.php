@@ -52,15 +52,15 @@
     $galleriaImg = $con->query($sql);
     if(!empty($galleriaImg)){
     $indice=0;
-      foreach ($galleriaImg as $rows) {
+    foreach ($galleriaImg as $rows) {
 
       $path = 'Web_Aikido/images/'.$rows['id']; //'images/'.$rows['id']; //
       trim($path);
       $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
 
-      if($directorio = opendir($carpeta)){
+      if($directorio = opendir($carpeta)) {
         while(($archivo = readdir($directorio)) !== false) {
-          if($archivo != '.' && $archivo != '..' && stristr($archivo,'_big') !== false){
+          if($archivo != '.' && $archivo != '..' && stristr($archivo,'_big') !== false) {
             $indice++;
             list($width, $height, $type, $attr) = getimagesize("images/".$rows['id']."/".$archivo);
             $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
@@ -75,21 +75,22 @@
                   </div>
 
                   <div class="caption col-sx-3">
-                    <?php
+                  <p>  <?php
                     $nombres = utf8_decode($rows['nombre']);
                     $nombres = basename($nombres, ".jpg");
                     $nombres = str_replace('_',' ',$nombres);
                     $nombres = str_replace('-',' ',$nombres);
                     $nombres = ucwords($nombres);
                     ?>
-                    <h3><?=utf8_encode($nombres)?></h3>
+                    <h3><?=utf8_encode($nombres)?></h3></p>
+                    <p>
                   </div>
-
                   <?php if (($rows['categoria'] != 'aikidokas')): ?>
                   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
                     <i class="fa fa-heart" aria-hidden="true"></i></a>
                   <?php endif; ?>
                   <a href="#" class="btn btn-sm btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
+                </p>
                 </div>
               </div>
             <?php

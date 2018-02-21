@@ -2,7 +2,6 @@ var panel = (function() {
 
   function inicializar() {
     hamburger_cross();
-    checked();
   }
 
   var trigger = $('.hamburger'),
@@ -31,20 +30,6 @@ var panel = (function() {
   $('[data-toggle="offcanvas"]').click(function() {
     $('#wrapper').toggleClass('toggled');
   });
-
-  // function checked() {
-  //   $('.checkbox').on('click', function() {
-  //     $this = $(this);
-  //     if ($this.prop('checked') == true) {
-  //       $("#input-image").attr("multiple");
-  //       console.log("true");
-  //     } else {
-  //       console.log("false");
-  //       // $("#input-image").removeClass("multiple");
-  //     }
-  //   });
-  // }
-
   return {
     inicializar: inicializar
   }
