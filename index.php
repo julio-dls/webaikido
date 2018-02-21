@@ -49,9 +49,9 @@
   <!-- ============ FIN BOTON IR ABAJO ============ -->
 
   <!-- ============ SOBRE AIKIDO ============= -->
-  <section class="description_content">
+  <section class="description_content" id="bienvenidos">
     <div class="text-content container">
-      <div id="bienvenidos">
+      <div>
         <h1 class="my-4 text-center text-lg-left">Acerca de Iwama Ryu Art.</h1>
       </div>
       <div class="col-md-6">

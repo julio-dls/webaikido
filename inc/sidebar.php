@@ -7,17 +7,17 @@
         </a>
       </li>
       <li>
-        <a href="#" class="btn btn-primary sidebar-social" data-toggle="tooltip" data-placement="right" title="Facebook">
+        <a href="https://www.facebook.com/chinoyuen.yuen" class="btn btn-primary sidebar-social" data-toggle="tooltip" data-placement="right" title="Facebook">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn btn-info sidebar-social blogger-icon-sidebar" data-toggle="tooltip" data-placement="right" title="blogger">
-        <i class="fa fa-blog" aria-hidden="true"></i>
+        <a href=" http://chinoyuencreative.blogspot.com.ar/" class="btn btn-info sidebar-social blogger-icon-sidebar" data-toggle="tooltip" data-placement="right" title="blogger">
+        <img src="images/logo/blogger.png" alt="logo blogger"></img>
         </a>
       </li>
       <li>
-        <a class="btn btn-warning sidebar-social instagram-icon-sidebar" data-toggle="tooltip" data-placement="right" title="Instagram">
+        <a href="http://www.thepictaram.club/instagram/chinoyuencreative" class="btn btn-warning sidebar-social instagram-icon-sidebar" data-toggle="tooltip" data-placement="right" title="Instagram">
       <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
       </li>

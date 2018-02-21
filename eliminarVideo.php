@@ -1,11 +1,14 @@
 <?php
+  session_start();
   include_once ('inc/conexion.php');
   include_once ('inc/BM.php');
+  include_once ('inc/loginControllador.php');
 
-  $bajaModificacion = new BM($con);
+  $ControlLogin = new LoginControllador($con);
+  $ControlLogin->isLog($_POST);
 
-  if (!empty($_POST)) { $bajaModificacion->Modificar($_POST); }
-  if (!empty($_GET['id'])) { $bajaModificacion->Eliminar($_GET); }
+  if (!empty($_POST)) { $bajaModificacion = new BM($con); $bajaModificacion->Modificar($_POST); }
+  if (!empty($_GET['id'])) { $bajaModificacion = new BM($con); $bajaModificacion->Eliminar($_GET); }
 
 ?>
 

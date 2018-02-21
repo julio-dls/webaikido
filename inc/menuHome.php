@@ -26,7 +26,7 @@
             <ul class="dropdown-menu dropdown-menu-left">
               <li><a href="gallery.php?categoria=manos">Manos</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="gallery.php?categoria=individual">Individual</a></li>
+              <li><a href="gallery.php?categoria=individual">Solo</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="gallery.php?categoria=parejas">Parejas</a></li>
               <li role="separator" class="divider"></li>

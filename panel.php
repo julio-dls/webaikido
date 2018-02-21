@@ -2,8 +2,8 @@
   session_start();
 
   include_once ('inc/conexion.php');
-  include_once ('inc/loginControllador.php');
   include_once ('inc/panel.php');
+  include_once ('inc/loginControllador.php');
 
   $ControlLogin = new LoginControllador($con);
   $ControlLogin->isLog($_POST);

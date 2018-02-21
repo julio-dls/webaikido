@@ -101,7 +101,7 @@
       }
     }?>
     </div>
-    <?php include_once ('inc/sidebar.php'); ?>
+
   </div>
 
   <!-- ==== MODAL ==== -->
@@ -152,4 +152,5 @@
     </div>
   </div>
   <!-- ==== FIN DE BOTON BUSCAR ==== -->
+<?php include_once ('inc/sidebar.php'); ?>
 <?php include_once ('inc/footer.php'); ?>
