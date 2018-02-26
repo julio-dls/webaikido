@@ -11,7 +11,6 @@
   <title>Iwama Ryu </title>
   <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="css/main.css" media="screen" type="text/css"> -->
   <link rel="stylesheet" href="css/panel.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -34,14 +33,13 @@
           </li>
           <ul class="sub-menu collapse" id="products">
             <li class="active"><a href="panel.php">Subir Imagenes o Videos</a></li>
-            <li><a href="eliminarYmodificar.php">Eliminar o Modificar Imagenes</a></li>
-            <li><a href="eliminarVideo.php">Eliminar Videos</a></li>
+            <li><a href="bmImg.php">Eliminar o Modificar Imagenes</a></li>
+            <li><a href="bmVideo.php">Eliminar Videos</a></li>
           </ul>
           <li data-toggle="collapse" data-target="#service" class="collapsed">
             <a href="#">  <i class="fa fa-users fa-lg"></i> Users</a></a>
           </li>
           <ul class="sub-menu collapse" id="service">
-            <li>Nuevo Usuario</li>
             <li><a href="login.php">Login</a></li>
             <li>Modificar o Eliminar</li>
           </ul>

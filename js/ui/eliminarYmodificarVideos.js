@@ -13,7 +13,7 @@ var eliminarYmodificarImg = (function() {
       $('#modalEliminar').modal();
       $('#btn-aceptar').on('click', function() {
         $.ajax({
-          url: "./bmImg.php",
+          url: "./bmVideo.php",
           type: "GET",
           data: {
             "id": id
@@ -40,16 +40,18 @@ var eliminarYmodificarImg = (function() {
     $('.modificar').on('click', function() {
       var id = idImg;
       var nombre = $('#nombreModal').val();
-      var categoria = $('#categoria').val();
+      var descripcion = $('#descripcion').val();
+      var url = $('#url').val();
 
       var objImg = {
         "id": idImg,
         "nombre": nombre,
-        "categoria": categoria,
+        "descripcion": descripcion,
+        "url": url,
       };
 
       $.ajax({
-        url: "./bmImg.php",
+        url: "./bmVideo.php",
         type: "POST",
         data: objImg,
         //  dataType: 'json'
@@ -62,8 +64,6 @@ var eliminarYmodificarImg = (function() {
       });
     });
   }
-
-
   return {
     inicializar: inicializar
   }

@@ -37,7 +37,6 @@
       $search = new Search($con);
       $sql .= $search->BuscarPorNombre($_GET);
       $sqlTatalFilas .= $search->TotalFilasBuscarPorNombre ($_GET);
-      // echo "nombre" .$search->BuscarPorNombre($_GET);
     } else
     if(isset($_GET['categoria'])) {
       $categoria = $_GET['categoria'];
@@ -60,9 +59,9 @@
 
       if($directorio = opendir($carpeta)) {
         while(($archivo = readdir($directorio)) !== false) {
-          if($archivo != '.' && $archivo != '..' && stristr($archivo,'_big') !== false) {
+          if($archivo != '.' && $archivo != '..' && stristr($archivo,'_small') !== false) {
             $indice++;
-            list($width, $height, $type, $attr) = getimagesize("images/".$rows['id']."/".$archivo);
+            list($width, $height, $type, $attr) = getimagesize("images/".$rows['id']."/".str_replace('small','big',$archivo));
             $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
               <div class="grid-item">
                 <div class="thumbnail">

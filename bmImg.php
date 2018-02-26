@@ -19,10 +19,10 @@
       <div class="row">
       <!-- COMIENZO ELIMINAR IMAGENES -->
        <div class="col-md-6 col-lg-6 col-xs-12">
-          <h1 class="text-center"> Eliminar o Modificar </1>
+          <h1 class="text-center"> Galeria </1>
         </div>
         <div class="col-md-6 col-lg-6 col-xs-12">
-          <form class="form-inline form-filtrar" action="eliminarYmodificar.php" method="GET">
+          <form class="form-inline form-filtrar" action="bmImg.php" method="GET">
             <select class="form-control" id="#" name="categoria">
             <option value="" class="text-success bg-warning">None</option>
             <?php
@@ -65,12 +65,12 @@
           foreach ($resultadoSql as $rows) {?>
             <tr>
               <td><?=$col++?></td>
-              <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
+              <td class="maxMedida text-primary"><?=$rows[1]?></td>
               <td class="maxMedida text-primary"><?=$rows[2]?></td>
               <td class="accion">
-                  <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
-                  <a data-id-modificar="<?=$rows[0]?>" class="btn btn-modificar btn-xs text-warning"
-                    data-toggle="modal" data-target="#modificarImg">Modificar</a>
+                <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
+                <a data-id-modificar="<?=$rows[0]?>" data-nombre="<?=$rows[1]?>" class="btn btn-modificar btn-xs text-warning"
+                data-toggle="modal" data-target="#modificarImg">Modificar</a>
               </td>
             </tr>
           <?php } ?>
@@ -113,10 +113,10 @@
           <h4 class="modal-title" id="exampleModalLabel">Modificar</h4>
         </div>
         <div class="modal-body">
-          <form action="BM.php">
+          <form>
             <div class="form-group has-success">
               <label for="nombre" class="control-label" ></span>Nombre</label>
-              <input type="text" class="form-control" id="nombreModal" placeholder="" required>
+              <input type="text" class="form-control" id="nombreModal" required>
             </div>
             <div class="form-group has-success">
               <label class="control-label" for="Categoria">Categoria</label>
@@ -131,7 +131,6 @@
             </form>
           </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" id="reset" onclick="desblock(true)">Limpiar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary modificar">Aceptar</button>
         </div>

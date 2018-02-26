@@ -7,7 +7,6 @@
 }
 
 /* ELIMINAR Y MODIFICAR */
-
 h1 {
   width: 556px !important;
 }
@@ -16,20 +15,20 @@ h1 {
   float: right;
   margin-top: 10%;
 }
-
 /* FIN DE ELIMINAR Y MODIFICAR */
 
 /* TABLA */
-
 .col-personalizada {
-  width: 3%;
+  /* width: 3%;
   overflow: auto;
+  max-width: 20px !important;*/
 }
-
+#tabla-md {
+  max-width: 95% !important;
+}
 /* FIN TABLA */
 
 /* FIN DE PERSONALIZADO */
-
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;

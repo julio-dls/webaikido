@@ -72,7 +72,7 @@
             $contador=0;
             foreach ($imagenesUltimas as $rows):
               $contador++;?>
-            <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_big.jpg" width="250">
+            <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
             <?php if ($contador == 2): ?>
             <div class="img-section-space"></div>
             <?php endif;
@@ -190,7 +190,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner text-center" role="listbox">
 
             <?php
             $sqlPro = ('SELECT `id`, `nombre` FROM `proyecto-cortometraje` WHERE 1');

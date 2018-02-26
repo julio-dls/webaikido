@@ -1,7 +1,7 @@
 <?php
   session_start();
   include_once ('inc/conexion.php');
-  include_once ('inc/BM.php');
+  include_once ('inc/bmVideos.php');
   include_once ('inc/loginControllador.php');
 
   $ControlLogin = new LoginControllador($con);
@@ -19,20 +19,7 @@
       <div class="row">
       <!-- COMIENZO ELIMINAR IMAGENES -->
        <div class="col-md-6 col-lg-6 col-xs-12">
-          <h1 class="text-center"> Eliminar o Modificar </1>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xs-12">
-          <form class="form-inline form-filtrar" action="eliminarVideo.php" method="GET">
-            <select class="form-control" id="titulo" name="titulo">
-            <option value="" class="text-success bg-warning">None</option>
-            <?php
-            $titulo = $con->query("SELECT `titulo` FROM `video` WHERE titulo !='' ORDER BY 1 DESC ");
-            foreach ($titulo as $row) {?>
-            <option value="<?=$row[0]?>" class="text-success bg-warning"><?=ucwords($row[0])?></option>
-            <?php } ?>
-            </select>
-            <button type="submit" class="btn btn-default">Filtrar</button>
-          </form>
+          <h1 class="text-center"> Videos </1>
         </div>
       </div>
       <hr>
@@ -66,12 +53,12 @@
           foreach ($resultadoSql as $rows) {?>
             <tr>
               <td><?=$col++?></td>
-              <td class="maxMedida text-primary" id="nombreTable" data-nombre="<?=$rows[1]?>"><?=$rows[1]?></td>
+              <td class="maxMedida text-primary"><?=$rows[1]?></td>
               <td class="maxMedida text-primary"><?=$rows[2]?></td>
               <td class="maxMedida text-primary"><?=$rows[3]?></td>
               <td class="accion">
                   <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
-                  <a data-id-modificar="<?=$rows[0]?>" class="btn btn-modificar btn-xs text-warning"
+                  <a data-id-modificar="<?=$rows[0]?>" data-nombre="<?=$rows[1]?>" class="btn btn-modificar btn-xs text-warning"
                     data-toggle="modal" data-target="#modificarImg">Modificar</a>
               </td>
             </tr>
@@ -102,10 +89,9 @@
      </div>
     </div>
    </div>
-   <!--FIN MODAL ESTAS SEGURO ELIMINAR-->
-  <!--FIN MODAL ELIMINAR IMAGENES-->
+   <!--FIN MODAL ELIMINAR VIDEOS-->
 
-  <!-- COMIENZON MODIFICAR IMAGENES -->
+  <!-- COMIENZON MODIFICAR VIDEO -->
   <div class="modal fade" id="modificarImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -118,34 +104,31 @@
           <form action="BM.php">
             <div class="form-group has-success">
               <label for="nombre" class="control-label" ></span>Nombre</label>
-              <input type="text" class="form-control" id="nombreModal" placeholder="" required>
+              <input type="text" class="form-control" id="nombreModal" required>
             </div>
             <div class="form-group has-success">
-              <label class="control-label" for="Categoria">Categoria</label>
-              <select class="form-control" id="categoria" name="categoria" required>
-              <option value="" class="text-success bg-warning">None</option>
-              <?php $categoria = $con->query("SELECT `subcategoria` FROM `categoria` WHERE subcategoria!='' ORDER BY 1 ASC ");
-              foreach ($categoria as $row) {?>
-              <option value="<?=$row[0]?>" class="text-success bg-warning"><?=ucwords($row[0])?></option>
-              <?php } ?>
-              </select>
+              <label for="nombre" class="control-label" ></span>Descripcion</label>
+              <textarea type="text" class="form-control" id="descripcion" resize:"none" required></textarea>
+            </div>
+            <div class="form-group has-success">
+              <label for="nombre" class="control-label" ></span>URL</label>
+              <input type="text" class="form-control" id="url" required>
             </div>
             </form>
           </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" id="reset" onclick="desblock(true)">Limpiar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary modificar">Aceptar</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- FIN MODIFICAR IMAGENES -->
+  <!-- FIN MODIFICAR VEDEOS -->
   <footer>
   </footer>
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/ui/eliminarYmodificar.js"></script>
+  <script type="text/javascript" src="js/ui/eliminarYmodificarVideos.js"></script>
   </script>
 </body>
 

@@ -30,7 +30,9 @@ body {
 /* ===== FIN GRID ITEM ===== */
 
 /* ======= GALLERY POSES ====== */
-
+.thumbnail img{
+  width: 100%;
+}
 .thumbnail {
   margin-bottom: auto !important;
 }
@@ -40,12 +42,16 @@ body {
   margin-bottom: 1em !important;
   padding: 0 !important;
 }
-
-.modal {
-  top: 0%;
+.modal img{
+  width: auto !important;
+  height: 100% !important;
   z-index: 3000;
+  margin-left: auto !important;
+  max-height: 700px !important;
 }
-
+.modal {
+  margin-left: auto !important;
+}
 #btnModal {
   margin-top: 10px !important;
 }
@@ -86,5 +92,9 @@ h3 {
   form .btn {
     padding: 2px 4px !important;
     margin-bottom: 2px !important;
+  }
+  .modal img{
+    width: 100% !important;
+    height: auto !important;
   }
 }

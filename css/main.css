@@ -410,10 +410,15 @@ iframe {
 }
 
 .modal {
-  /* top: 4%; */
   z-index: 3000 !important;
 }
-
+.modal img{
+  width: 100% !important;
+  height: auto !important;
+  z-index: 3000;
+  margin-left: auto !important;
+  max-height: 700px !important;
+}
 /* SIDEBAR REDES SOCIALES */
 
 .social {
@@ -999,7 +1004,7 @@ MEDIA QUERIE DESKTOP
     padding: 0;
     border: 0;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 5%;
   }
   .background_content h1 span {
     color: white;
@@ -1121,6 +1126,10 @@ MEDIA QUERIE DESKTOP
     text-align: center !important;
     font-size: 10px !important;
     line-height: 1.33 !important;
+  }
+  .blogger-icon-sidebar img {
+    margin: auto !important;
+    width: 70%;
   }
   h1 {
     font-size: 22px !important;

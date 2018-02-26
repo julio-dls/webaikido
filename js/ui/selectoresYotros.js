@@ -12,6 +12,7 @@ $(document).ready(function() {
   $('.selectorImg').on('click', function() {
     $this = $(this);
     var srcImg = $this.attr('src');
+    var srcImg = srcImg.replace(/small/g,'big');
     var categoriaData = $this.attr('data-categoria');
     $(".selectorImgModal").attr("src", srcImg);
     $("#btn-modal-galeria").attr("href", categoriaData);
