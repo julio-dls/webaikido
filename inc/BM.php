@@ -32,11 +32,11 @@ class BM {
       }
 
       $sql .= " WHERE id=" .$data['id'];
-      echo "sql: " .$sql;
       $this->con->exec($sql);
     }
   }
 }
+
 function rmDir_rf($carpeta) {
   foreach(glob($carpeta."/*") as $archivos_carpeta){
     if (is_dir($archivos_carpeta)){

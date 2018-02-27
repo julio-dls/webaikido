@@ -7,6 +7,7 @@
 }
 
 /* ELIMINAR Y MODIFICAR */
+
 h1 {
   width: 556px !important;
 }
@@ -15,20 +16,25 @@ h1 {
   float: right;
   margin-top: 10%;
 }
+
 /* FIN DE ELIMINAR Y MODIFICAR */
 
 /* TABLA */
+
 .col-personalizada {
   /* width: 3%;
   overflow: auto;
   max-width: 20px !important;*/
 }
+
 #tabla-md {
   max-width: 95% !important;
 }
+
 /* FIN TABLA */
 
 /* FIN DE PERSONALIZADO */
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -222,6 +228,12 @@ body {
 
 /***** Modal Register*****/
 
+.btn-register {
+  float: right;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
 #modal-register .modal-content {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -229,14 +241,6 @@ body {
   border: 0;
   text-align: left;
 }
-
-/* #modal-register .modal-header {
-	padding: 25px 25px 15px 25px;
-	background: #fff;
-	border: 0;
-	border-bottom: 1px solid #ddd;
-	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
-} */
 
 #modal-register .modal-header .close {
   font-size: 36px;

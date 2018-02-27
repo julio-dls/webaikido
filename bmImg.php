@@ -69,7 +69,8 @@
               <td class="maxMedida text-primary"><?=$rows[2]?></td>
               <td class="accion">
                 <a data-id="<?=$rows[0]?>" class="btn btn-eliminar btn-xs text-danger">Eliminar</a> |
-                <a data-id-modificar="<?=$rows[0]?>" data-nombre="<?=$rows[1]?>" class="btn btn-modificar btn-xs text-warning"
+                <a data-id-modificar="<?=$rows[0]?>" data-nombre="<?=$rows[1]?>"
+                  class="btn btn-modificar btn-xs text-warning"
                 data-toggle="modal" data-target="#modificarImg">Modificar</a>
               </td>
             </tr>

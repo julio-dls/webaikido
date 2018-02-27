@@ -12,11 +12,12 @@ class LoginControllador {
 
     if(!empty($data['nombre_usuario']) AND !empty($data['pass'])) {
 
-      $resultado = $this->con->query("SELECT `nombre`, `password` FROM `iwama-ryu-art-usuarios` WHERE `nombre` = '".$data['nombre_usuario']."' and `password` = '".md5($data['pass'])."' ")->fetch();
+      $resultado = $this->con->query("SELECT `nombre`, `password`, `permiso` FROM `iwama-ryu-art-usuarios` WHERE `nombre` = '".$data['nombre_usuario']."' and `password` = '".md5($data['pass'])."' ")->fetch();
 
       if (!empty($resultado['nombre']) and !empty($resultado['password'])) {
           $_SESSION['usuario'] = $resultado['nombre'];
           $_SESSION['password'] = $resultado['password'];
+          $_SESSION['permiso'] = $resultado['permiso'];
           redirect('panel.php');
       } else {
           echo "<script>alert('El usuario o el password son incorrectos, por favor intente otra vez.');</script>";
@@ -36,7 +37,7 @@ class LoginControllador {
     if(isset($datos['logout'])){
       unset($_SESSION['usuario']);
       unset($_SESSION['password']);
-      unset($_SESSION['privilegios']);
+      unset($_SESSION['permiso']);
     }
   }
 }

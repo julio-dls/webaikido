@@ -41,7 +41,7 @@
           </li>
           <ul class="sub-menu collapse" id="service">
             <li><a href="login.php">Login</a></li>
-            <li>Modificar o Eliminar</li>
+            <li><a href="bmUsuario.php">Modificar o Eliminar Usuarios</li>
           </ul>
           <li data-toggle="collapse" data-target="#new" class="collapsed">
             <a href="#"><i class="fa fa-car fa-lg"></i> Home <span class="arrow"></span></a>
