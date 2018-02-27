@@ -4,6 +4,7 @@
   include_once ('inc/loginControllador.php');
 
   if (isset($_POST)) { $ControlLogin = new LoginControllador($con); $ControlLogin->VerificarUsuario($_POST); }
+  if (isset($_GET)) { $ControlLogin = new LoginControllador($con); $ControlLogin->logout($_GET); }
 
 ?>
 <!DOCTYPE html>

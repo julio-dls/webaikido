@@ -51,6 +51,9 @@
             <li>Proyecto</li>
             <li>Contacto</li>
           </ul>
+          <li>
+            <a id="logout" href="login.php?logout" class="btn btn-success btn-lg btn-block">logout</a> 
+          </li>
         </ul>
       </div>
     </div>

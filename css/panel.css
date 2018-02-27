@@ -3,7 +3,16 @@
 /* http://www.oneskyapp.com/es/docs/bootstrap/css */
 
 .wrapper {
-  margin-left: 20%;
+  float: right;
+}
+
+.mb {
+  background-color: #5cb85c;
+  color: white;
+  padding: 2%;
+  font-size: 30px;
+  margin-bottom: 3%;
+  margin-top: 0px;
 }
 
 /* ELIMINAR Y MODIFICAR */
@@ -43,7 +52,7 @@ h1 {
   background-color: #2e353d;
   position: fixed;
   top: 0px;
-  width: 300px;
+  width: 280px;
   height: 100%;
   color: #e1ffff;
 }

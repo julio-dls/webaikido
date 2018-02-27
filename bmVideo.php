@@ -37,7 +37,7 @@
         echo "No hay Registros";
       } ?>
       <div class="table-responsive">
-      <table id="tabla-md" class="table table-striped table-hover text-center" border="1">
+      <table class="table table-striped table-hover text-center" border="1">
         <thead class="thead-dark">
           <tr class="success">
               <td>#</td>

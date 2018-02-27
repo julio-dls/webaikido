@@ -18,6 +18,7 @@ class SendEmail {
   function sendMail($data = array()) {
     if (!empty($data['nombreContacto']) && !empty($data['emailContacto']) && !empty($data['messageContacto'])) {
       $mail = new PHPMailer;
+      $mail -> charSet = "UTF-8";
       $mail->isSMTP();
       $mail->Host = 'mx1.hostinger.com.ar';
       $mail->SMTPAuth = true;

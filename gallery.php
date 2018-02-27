@@ -3,7 +3,7 @@
   include_once ('inc/menu.php');
   include_once ('inc/conexion.php');
   include_once ('inc/search.php');
-
+  include_once ('inc/funcionesUtiles.php');
 ?>
   <!-- ==== Page Content ==== -->
   <div class="container">
@@ -74,21 +74,19 @@
                   </div>
 
                   <div class="caption col-sx-3">
-                  <p>  <?php
-                    $nombres = utf8_decode($rows['nombre']);
-                    $nombres = basename($nombres, ".jpg");
-                    $nombres = str_replace('_',' ',$nombres);
-                    $nombres = str_replace('-',' ',$nombres);
-                    $nombres = ucwords($nombres);
-                    ?>
-                    <h3><?=utf8_encode($nombres)?></h3></p>
-                    <p>
+                  <p>
+                    <?php $funcionesUltimes = new FuncionesUtiles(); ?>
+                    <h3><?=$funcionesUltimes->eliminar_tildes($rows['nombre'])?></h3>
+                  </p>
+
                   </div>
-                  <?php if (($rows['categoria'] != 'aikidokas')): ?>
-                  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                    <i class="fa fa-heart" aria-hidden="true"></i></a>
-                  <?php endif; ?>
-                  <a href="#" class="btn btn-sm btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
+                  <p>
+                    <?php if (($rows['categoria'] != 'aikidokas')): ?>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"
+                    class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                      <i class="fa fa-heart" aria-hidden="true"></i></a>
+                    <?php endif; ?>
+                    <a href="#" class="btn btn-sm btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
                 </p>
                 </div>
               </div>

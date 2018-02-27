@@ -24,12 +24,12 @@
   }
 ?>
   <?php include_once ('inc/menuPanel.php'); ?>
-
+  
   <section id="subir-imagenes" class="wrapper">
     <div class="container">
       <div class="row">
+        <h3 class="mb text-center"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Imagenes</h3>
         <div class="form-panel col-md-8 col-md-offset-2">
-          <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Imagens</h3>
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">
@@ -72,8 +72,8 @@
   <section id="subir-videos" class="wrapper">
     <div class="container">
       <div class="row">
+        <h3 class="mb text-center"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Videos</h3>
         <div class="form-panel col-md-8 col-md-offset-2">
-          <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Videos</h3>
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
           <div class="form-group has-success">
             <div class="col-lg-6 col-md-6 col-sm-4 ">
@@ -110,8 +110,8 @@
   <section id="subir-imagen-proyectoCortometraje" class="wrapper">
     <div class="container">
       <div class="row">
+        <h3 class="mb text-center"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Imagenes Proyecto Cortometraje</h3>
         <div class="form-panel col-md-8 col-md-offset-2">
-          <h3 class="mb"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Cargar Imagenes Proyecto Cortometraje</h3>
           <form class="form-horizontal tasi-form text-center" action="panel.php" method="post" enctype="multipart/form-data">
             <div class="form-group has-success">
               <div class="col-lg-6 col-md-6 col-sm-4 ">

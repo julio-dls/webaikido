@@ -57,7 +57,7 @@
       <div class="col-md-6">
         <div>
           <p class="desc-text"> ¡Bienvenidos!!<br>
-          Iwama Ryu Art es una página de arte independiente. Lo que usted verá a continuación son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japón, fue´ en dic. 2012. ¡Mi estadía fue maravillosa !, casi diría mágica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algún modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes países, a quienes  muchos, no los conozco, pero que el aikido me los acerca como Familia Iwama. Todos los dibujos están a su disposición, agradeciendo que mencione el origen de las mismas. ¡De a poco iré sumando más aikidokas, a los que algún día, los conoceré en persona, compartiendo Keiko!
+          Iwama Ryu Art es una página de arte independiente. Lo que usted verá a continuación son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japón, fue en dic. 2012. ¡Mi estadía fue maravillosa!, casi diría mágica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algún modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes países, a quienes  muchos, no los conozco, pero que el aikido me los acerca como Familia Iwama. Todos los dibujos están a su disposición, agradeciendo que mencione el origen de las mismas. ¡De a poco iré sumando más aikidokas, a los que algún día, los conoceré en persona, compartiendo Keiko!
           Soy Arquitecto, ilustrador y animador 2d tradicional. Partico aikido en Aiki Shuren Dojo Buenos Aires- Argentina.
           <br>¡Espero que sea de su agrado!!  gracias por su vista!
           <tenetur class="lorem"></tenetur>
@@ -249,7 +249,7 @@
     <div class="text-content container">
       <div class="col-md-6">
         <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
-        <p class="desc-text ">¡Gracias por su Visita!<br>Si usted necesita algún archivo especial o algún formato particular o necesita algo de otros temas: espero su consulta. Su solicitud será´ atendida a la brevedad. <br>¡Gracias por comunicarse!</p>
+        <p class="desc-text ">¡Gracias por su Visita!<br>Si usted necesita algún archivo especial o algún formato particular o necesita algo de otros temas: espero su consulta. Su solicitud será atendida a la brevedad. <br>¡Gracias por comunicarse!</p>
       </div>
       <div class="col-md-6">
         <ul class="image_box_story2">
