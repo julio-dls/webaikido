@@ -51,6 +51,7 @@
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
   <script src="js/ui/selectoresYotros.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/ui/print.js"></script>
   <script>
     $(document).ready(function() {
       myMasonry = function() {
@@ -65,15 +66,6 @@
         $('#modal').modal('hide');
       });
     });
-    // https://es.stackoverflow.com/questions/43444/bot%C3%B3n-para-imprimir-solo-el-contenido-de-un-div-conservando-estilos
-    function printDiv(nombreDiv) {
-      var contenido = document.getElementById(nombreDiv).innerHTML;
-      var contenidoOriginal = document.body.innerHTML;
-      document.body.innerHTML = contenido; //imprime lo que hemos selecconado
-      window.print();
-      document.body.innerHTML = contenidoOriginal; //copia el body del dom y lo muestra
-      window.location.reload();
-    }
   </script>
 </body>
 

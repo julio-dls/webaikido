@@ -68,17 +68,15 @@
                   <div id="img-repo<?=$indice?>" class="div-print">
                     <a title="Image 1" href="#">
                       <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
-                      data-toggle="modal" data-target=".bd-example-modal-lg"
-                      src="images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>">
+                      data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>">
                     </a>
                   </div>
 
                   <div class="caption col-sx-3">
-                  <p>
-                    <?php $funcionesUltimes = new FuncionesUtiles(); ?>
-                    <h3><?=$funcionesUltimes->eliminar_tildes($rows['nombre'])?></h3>
-                  </p>
-
+                    <p>
+                      <?php $funcionesUltimes = new FuncionesUtiles(); ?>
+                      <h3><?=$funcionesUltimes->eliminar_tildes($rows['nombre'])?></h3>
+                    </p>
                   </div>
                   <p>
                     <?php if (($rows['categoria'] != 'aikidokas')): ?>
@@ -86,8 +84,9 @@
                     class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
                       <i class="fa fa-heart" aria-hidden="true"></i></a>
                     <?php endif; ?>
-                    <a href="#" class="btn btn-sm btn-sm btn-success" role="button" onclick="printDiv('img-repo<?=$indice?>')">Imprimir</a>
-                </p>
+                    <!-- img-repo<?=$indice?> -->
+                    <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir"onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>')">Imprimir</a>
+                  </p>
                 </div>
               </div>
             <?php

@@ -15,7 +15,5 @@
   <link href="css/thumbnail-gallery.css" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <style type="text/css">
-    @import url(css/print.css) print;
-  </style>
+  <style type="text/css">@import url(css/print.css) print;</style>
 </head>

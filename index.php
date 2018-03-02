@@ -136,7 +136,8 @@
       <!-- /.row -->
 
       <h2 class="text-center">Video Recientes</h2>
-      <div class="row" id="videosDos"> <!-- description_content -->
+      <div class="row" id="videosDos">
+
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
@@ -153,8 +154,7 @@
             <iframe class="img-fluid iframeSeleccionado" src="<?=$rows['url']?>" frameborder="0" allowfullscreen></iframe>
           </a>
         </div>
-      <?php }
-      ?>
+        <?php } ?>
       </div>
       <div class="col-md-4 col-md-offset-4">
       <form  action="index.php#videosDos" method="post">
@@ -167,7 +167,8 @@
         <?php endif; ?>
       </form>
       </div>
-  </div>
+      </div>
+    </div>
   </section>
   <!-- ============ VIDEOS ============= -->
 
@@ -328,6 +329,40 @@
   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
   <script src="js/ui/selectoresYotros.js"></script>
+  <!-- <script>
+    //https://www.labnol.org/internet/light-youtube-embeds/27941/
+    /* Light YouTube Embeds by @labnol */
+    /* Web: http://labnol.org/?p=27941 */
+
+    document.addEventListener("DOMContentLoaded",
+        function() {
+            var div, n,
+                v = document.getElementsByClassName("youtube-player");
+            for (n = 0; n < v.length; n++) {
+                div = document.createElement("div");
+                div.setAttribute("data-id", v[n].dataset.id);
+                div.innerHTML = labnolThumb(v[n].dataset.id);
+                div.onclick = labnolIframe;
+                v[n].appendChild(div);
+            }
+        });
+
+    function labnolThumb(id) {
+        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+    }
+
+</script> -->
 </body>
 
 </html>

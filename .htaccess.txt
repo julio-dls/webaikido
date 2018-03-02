@@ -1,10 +1,14 @@
-https://manuais.iessanclemente.net/index.php/T%C3%A9cnicas_y_consejos_para_crear_una_web_multi-idioma
+;https://manuais.iessanclemente.net/index.php/T%C3%A9cnicas_y_consejos_para_crear_una_web_multi-idioma
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-php_value max_input_vars = 10000;
-php_value max_execution_time = 36000;
-php_value post_max_size=26M;
-php_value upload_max_filesize = 16Mb;
+;php_value max_input_vars = 10000;
+;php_value max_execution_time = 36000;
+;php_value post_max_size=26M;
+;php_value upload_max_filesize = 16Mb;
+
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>

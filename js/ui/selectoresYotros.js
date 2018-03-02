@@ -12,16 +12,18 @@ $(document).ready(function() {
   $('.selectorImg').on('click', function() {
     $this = $(this);
     var srcImg = $this.attr('src');
-    var srcImg = srcImg.replace(/small/g,'big');
+    var srcImg = srcImg.replace(/small/g, 'big');
     var categoriaData = $this.attr('data-categoria');
+    
     $(".selectorImgModal").attr("src", srcImg);
     $("#btn-modal-galeria").attr("href", categoriaData);
     $('#label-modal').text($this.attr('data-medidas'));
   });
+
   /* ====== FIN SELECTOR DE IMAGEN MODAL SOBRE AIKIDO ====== */
 
   /* ====== SELECTOR DE VIDEO  ====== */
-  $('#mostrarMas').on('click', function(e){
+  $('#mostrarMas').on('click', function(e) {
     e.preventDefault();
     $('html, body').stop().animate({
       scrollTop: $("#videosDos").offset().top
@@ -67,7 +69,7 @@ $(document).ready(function() {
     // $('.social').hide(300);
     $('.social').delay(8000).hide(300);
     $(document).on('click', function() {
-      $('#icon-latiendo-btn').attr('href','https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
+      $('#icon-latiendo-btn').attr('href', 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
       $('.social').show();
     });
 
@@ -84,26 +86,16 @@ $(document).ready(function() {
 
   function clonar() {
     if ($(window).width() <= 992) {
-      $('.heart').attr('href','https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
+      $('.heart').attr('href', 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
       $('.heart').append(clon);
       $('#icon-latiendo-btn').remove();
     } else {
       if ($('#icon-latiendo-btn').length > 0) {
         $('#icon-latiendo-btn').remove();
       }
-      $('.heart').attr('href','https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
+      $('.heart').attr('href', 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL');
       $('.btn-latiendo').append(clonSidebar);
       $('#heart-beating').remove();
     }
   };
-  /* ====== QUITAR UN ELEMENTO POR OTRO  ====== */
-  //http://www.miopiblog.com/2012/12/ocultar-y-mostrar-un-div-con-jquery.html
-  // $('.botonMostrar').on('click', function() {
-  //   $('.grupoVideos').show(3000);
-  //   $('.grupoVideos').show("slow");
-  // });
-  // $('.botonOcultar').on('click', function() {
-  //   $('.grupoVideos').hide(3000);
-  //   $('.grupoVideos').hide("fast");
-  // });
 });

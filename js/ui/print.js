@@ -1,24 +1,16 @@
-$(document).ready(function() {
-  myMasonry = function() {
-    $('.grid').masonry({
-      // options
-      //itemSelector: $theGrid,
-      //columnWidth: grid-item
-    })
-  };
-  $(window).on('load', myMasonry);
-  $('.closeModal').on('click', function() {
-    $('#modal').modal('hide');
-  });
-});
-
-// https: //es.stackoverflow.com/questions/43444/bot%C3%B3n-para-imprimir-solo-el-contenido-de-un-div-conservando-estilos
+// https://es.stackoverflow.com/questions/43444/bot%C3%B3n-para-imprimir-solo-el-contenido-de-un-div-conservando-estilos
 function printDiv(nombreDiv) {
-  var contenido = document.getElementById(nombreDiv).innerHTML;
-  var contenidoOriginal = document.body.innerHTML;
-  document.body.innerHTML = contenido;
-
-  window.print();
-
-  document.body.innerHTML = contenidoOriginal;
+  var nombreDiv = nombreDiv.replace(/small/g, 'big');
+  var html = '<html><head></head>' +
+              '<body>'+
+              '<div id="images-print">'+
+              '<img src="'+ nombreDiv +'">'+
+              '</div>'+
+              '</body></html>';
+  var imprme = window.open();
+  imprme.document.open();
+  imprme.document.write(html);
+  imprme.document.close();
+  imprme.print();
+  setTimeout(function(){ imprme.close(); }, 0);
 }
