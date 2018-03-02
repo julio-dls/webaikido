@@ -11,17 +11,15 @@ body {
   padding: 0;
 }
 
-#image-1 {
-  max-height: 80%;
-}
-
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+#images-print img {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 @page {
-  size: A3;
+  /* size: A4; */
   margin: auto;
   page-break-inside: avoid !important;
 }

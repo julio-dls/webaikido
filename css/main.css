@@ -991,6 +991,9 @@ section.social_connect {
 MEDIA QUERIE DESKTOP
 =========================*/
 
+@media (min-width: 2000px) {
+
+}
 @media (min-width: 1100px) {
   /*========================
     BACKGROUND CONTENT

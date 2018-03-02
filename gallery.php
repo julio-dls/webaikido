@@ -65,7 +65,7 @@
             $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
               <div class="grid-item">
                 <div class="thumbnail">
-                  <div id="img-repo<?=$indice?>" class="div-print">
+                  <div id="img-repo<?=$indice?>">
                     <a title="Image 1" href="#">
                       <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
                       data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>">
@@ -77,16 +77,15 @@
                       <?php $funcionesUltimes = new FuncionesUtiles(); ?>
                       <h3><?=$funcionesUltimes->eliminar_tildes($rows['nombre'])?></h3>
                     </p>
+                    <p>
+                      <?php if (($rows['categoria'] != 'aikidokas')): ?>
+                      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"
+                      class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                        <i class="fa fa-heart" aria-hidden="true"></i></a>
+                      <?php endif; ?>
+                      <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir"onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>')">Imprimir</a>
+                    </p>
                   </div>
-                  <p>
-                    <?php if (($rows['categoria'] != 'aikidokas')): ?>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"
-                    class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                      <i class="fa fa-heart" aria-hidden="true"></i></a>
-                    <?php endif; ?>
-                    <!-- img-repo<?=$indice?> -->
-                    <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir"onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>')">Imprimir</a>
-                  </p>
                 </div>
               </div>
             <?php
