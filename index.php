@@ -28,7 +28,8 @@
   <link rel="stylesheet" href="css/normalize.css">
 </head>
 
-<body>
+<body onload="getTime()">
+
   <!-- ============ MENU ============ -->
   <?php include_once ('inc/menuHome.php'); ?>
   <!-- ============ FIN MENU ============ -->
@@ -329,40 +330,8 @@
   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
   <script src="js/ui/selectoresYotros.js"></script>
-  <!-- <script>
-    //https://www.labnol.org/internet/light-youtube-embeds/27941/
-    /* Light YouTube Embeds by @labnol */
-    /* Web: http://labnol.org/?p=27941 */
+  <script type="text/javascript" src="js/ui/getTime.js" ></script>
 
-    document.addEventListener("DOMContentLoaded",
-        function() {
-            var div, n,
-                v = document.getElementsByClassName("youtube-player");
-            for (n = 0; n < v.length; n++) {
-                div = document.createElement("div");
-                div.setAttribute("data-id", v[n].dataset.id);
-                div.innerHTML = labnolThumb(v[n].dataset.id);
-                div.onclick = labnolIframe;
-                v[n].appendChild(div);
-            }
-        });
-
-    function labnolThumb(id) {
-        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
-            play = '<div class="play"></div>';
-        return thumb.replace("ID", id) + play;
-    }
-
-    function labnolIframe() {
-        var iframe = document.createElement("iframe");
-        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "1");
-        this.parentNode.replaceChild(iframe, this);
-    }
-
-</script> -->
 </body>
 
 </html>

@@ -2,6 +2,17 @@
 
 /* http://www.oneskyapp.com/es/docs/bootstrap/css */
 
+#showtime {
+  width: 100%;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
+}
+
 .wrapper {
   float: right;
 }

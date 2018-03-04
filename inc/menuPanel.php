@@ -51,8 +51,16 @@
             <li>Proyecto</li>
             <li>Contacto</li>
           </ul>
+          <li data-toggle="collapse" data-target="#visitas" class="collapsed">
+            <a href="#"><i class="fa fa-car fa-lg"></i> Visitas <span class="arrow"></span></a>
+          </li>
+          <ul class="sub-menu collapse" id="visitas">
+            <li>
+              <div id="showtime">41324134</div>
+            </li>
+          </ul>
           <li>
-            <a id="logout" href="login.php?logout" class="btn btn-success btn-lg btn-block">logout</a> 
+            <a id="logout" href="login.php?logout" class="btn btn-success btn-lg btn-block">logout</a>
           </li>
         </ul>
       </div>
