@@ -1071,13 +1071,13 @@ MEDIA QUERIE DESKTOP
 
 @media (min-width: 768px) {
   .navbar-right {
-    margin-right: -40px !important;
+    margin-right: -50px !important;
   }
 }
 
 @media (min-width: 300px) and (max-width: 992px) {
   .navbar-right {
-    margin-right: -40px !important;
+    margin-right: -50px !important;
   }
   .background_content {
     height: 150px;

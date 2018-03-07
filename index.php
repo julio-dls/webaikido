@@ -1,6 +1,6 @@
 <?php
   include_once ('inc/conexion.php');
-  include_once ('inc/videos.php');
+  include_once ('inc/contadorVisitas.php');
   include_once ('inc/sendEmail.php');
 
   if (!empty($_POST['formContacto'])) {
@@ -111,6 +111,7 @@
   <!-- ============ FIN BOTON IR ARRIBA ============ -->
 
   <!-- ============ VIDEOS ============= -->
+  <?php include_once ('inc/videos.php'); ?>
   <section>
     <div id="videos" class="videos background_content">
       <h1><span>Videos</span></h1>

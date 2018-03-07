@@ -10,7 +10,7 @@
                         <span class="icon-bar"></span>
                     </button>
           <ul class="nav-titulo-icon">
-            <li><a class="navbar-brand" href="index.php">Juana Ryu Art</a></li>
+            <li><a class="navbar-brand" href="index.php">Iwama Ryu Art</a></li>
             <li><img class="icon-personalizado" src="images/logo/logoIwama.png" alt="logo"></li>
             <li><a class="heart" href=""></a></li>
           </ul>
