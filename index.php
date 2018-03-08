@@ -1,15 +1,3 @@
-<?php
-  include_once ('inc/conexion.php');
-  include_once ('inc/contadorVisitas.php');
-  include_once ('inc/sendEmail.php');
-
-  if (!empty($_POST['formContacto'])) {
-    $EnviarEmail = new SendEmail($con);
-    $EnviarEmail->sendMail($_POST);
-  }
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,6 +15,21 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/normalize.css">
 </head>
+
+<?php
+  include_once ('inc/conexion.php');
+  include_once ('inc/contadorVisitas.php');
+  include_once ('inc/sendEmail.php');
+
+  $vistas = new contadorVisitas($con);
+  $vistas->contarVisitas();
+
+  if (!empty($_POST['formContacto'])) {
+    $EnviarEmail = new SendEmail($con);
+    $EnviarEmail->sendMail($_POST);
+  }
+
+?>
 
 <body onload="getTime()">
 
@@ -111,13 +114,13 @@
   <!-- ============ FIN BOTON IR ARRIBA ============ -->
 
   <!-- ============ VIDEOS ============= -->
-  <?php include_once ('inc/videos.php'); ?>
   <section>
     <div id="videos" class="videos background_content">
       <h1><span>Videos</span></h1>
     </div>
     <div class="container">
       <?php
+        include_once ('inc/videos.php');
         $sql = ('SELECT url,titulo,descripcion FROM `video` order by id desc LIMIT 1');
         $videoPrincipal = $con->query($sql);
       ?>

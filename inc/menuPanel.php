@@ -1,3 +1,4 @@
+<?php include_once ('inc/conexion.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +57,14 @@
           </li>
           <ul class="sub-menu collapse" id="visitas">
             <li>
-              <div id="showtime">41324134</div>
+              <h3>Total:</h3>
+              <?php $totalVisitas = $con->query("SELECT count(1) as total FROM `iwama_ryu_art_vistitas` WHERE 1")->fetch(); ?>
+              <div id="showtime"><?=$totalVisitas[0]?></div>
+            </li>
+            <li>
+              <h3>Mas de una vez:</h3>
+              <?php $totalVisitasRepetidas = $con->query("SELECT count(`id`) FROM `iwama_ryu_art_vistitas` GROUP BY ip")->fetch(); ?>
+              <div id="showtime"><?=$totalVisitasRepetidas[0]?></div>
             </li>
           </ul>
           <li>
