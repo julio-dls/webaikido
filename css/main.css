@@ -413,6 +413,12 @@ iframe {
   margin-left: auto !important;
   max-height: 700px !important;
 }
+
+#imagen-modal-centrada {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
 /* SIDEBAR REDES SOCIALES */
 
 .social {
@@ -985,9 +991,6 @@ section.social_connect {
 MEDIA QUERIE DESKTOP
 =========================*/
 
-@media (min-width: 2000px) {
-
-}
 @media (min-width: 1100px) {
   /*========================
     BACKGROUND CONTENT
@@ -1060,6 +1063,9 @@ MEDIA QUERIE DESKTOP
   iframe {
     max-width: 100%;
     max-height: 100%;
+  }
+  .follow_container {
+    top: 73%;
   }
 }
 

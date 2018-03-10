@@ -90,7 +90,7 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="imagene-seleccionada-modal">
+        <img  id="imagen-modal-centrada" class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12 selectorImgModal" src="" alt="imagene-seleccionada-modal">
       </div>
       <div class="col-md-8 col-md-offset-2 col-sm-8 col-xs-12 text-center">
       <hr>
