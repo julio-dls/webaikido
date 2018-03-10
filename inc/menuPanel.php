@@ -1,22 +1,4 @@
 <?php include_once ('inc/conexion.php'); ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Iwama Ryu </title>
-  <link rel="icon" href="images/logo/logoIwama.png" type="image/png">
-  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/panel.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/normalize.css">
-</head>
-
 <body>
   <header>
     <div class="nav-side-menu">
@@ -38,20 +20,20 @@
             <li><a href="bmVideo.php">Eliminar Videos</a></li>
           </ul>
           <li data-toggle="collapse" data-target="#service" class="collapsed">
-            <a href="#">  <i class="fa fa-users fa-lg"></i> Users</a></a>
+            <a href="#">  <i class="fa fa-users fa-lg"></i> Users<span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse" id="service">
             <li><a href="login.php">Login</a></li>
             <li><a href="bmUsuario.php">Modificar o Eliminar Usuarios</li>
           </ul>
-          <li data-toggle="collapse" data-target="#new" class="collapsed">
+          <!-- <li data-toggle="collapse" data-target="#new" class="collapsed">
             <a href="#"><i class="fa fa-car fa-lg"></i> Home <span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse" id="new">
             <li>#</li>
             <li>Proyecto</li>
             <li>Contacto</li>
-          </ul>
+          </ul> -->
           <li data-toggle="collapse" data-target="#visitas" class="collapsed">
             <a href="#"><i class="fa fa-car fa-lg"></i> Visitas <span class="arrow"></span></a>
           </li>
@@ -63,7 +45,7 @@
             </li>
             <li>
               <h3>Mas de una vez:</h3>
-              <?php $totalVisitasRepetidas = $con->query("SELECT count(`id`) FROM `iwama_ryu_art_vistitas` GROUP BY ip")->fetch(); ?>
+              <?php $totalVisitasRepetidas = $con->query("SELECT COUNT(1) as total FROM (SELECT COUNT(1) AS total FROM `iwama_ryu_art_vistitas` GROUP BY ip HAVING COUNT(1) > 1) t")->fetch(); ?>
               <div id="showtime"><?=$totalVisitasRepetidas[0]?></div>
             </li>
           </ul>

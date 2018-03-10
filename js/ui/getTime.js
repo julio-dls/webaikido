@@ -6,7 +6,7 @@ function getTime() {
   // add a zero in front of numbers<10
   // m = checkTime(m);
   // s = checkTime(s);
-  changeFond(m);
+  changeFond(s);
   // document.getElementById('showtime').innerHTML = h + ":" + m + ":" + s;
   t = setTimeout(function() {
     getTime()
@@ -31,5 +31,14 @@ function changeFond(hora) {
   var index = Math.floor((Math.random()*imagenes.length));
   if ((hora == 58)) {
     document.getElementById('top').style.background = 'url("' + imagenes[index] + '") no-repeat center center';
+    }
   }
+  $('#top').css({
+        'margin-left': '0%',
+        'height': 100%,
+        'background-size': 'cover',
+        'text-align': 'center',
+        'padding': '7.5em 0 2em 0',
+        'cursor': 'default'
+      });
 }

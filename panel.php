@@ -23,8 +23,9 @@
     $panelABMObj->AltaImagenProyectoCortometraje($_POST,$_FILES);
   }
 ?>
+  <?php include_once ('inc/headerPanel.php'); ?>
   <?php include_once ('inc/menuPanel.php'); ?>
-  
+
   <section id="subir-imagenes" class="wrapper">
     <div class="container">
       <div class="row">
@@ -37,7 +38,7 @@
               </div>
             </div>
             <div class="form-group has-success">
-              <div class="col-lg-6 col-md-6 col-sm-4 ">
+              <div class="col-lg-6 col-md-6 col-sm-4">
               <select class="form-control" id="#" name="categoria" required>
               <option value="" class="text-success bg-warning">None</option>
               <?php $categoria = $con->query("SELECT `subcategoria` FROM `categoria` WHERE subcategoria!='' ORDER BY 1 ASC ");

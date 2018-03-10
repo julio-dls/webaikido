@@ -12,7 +12,7 @@
   if (isset($_POST['formModificarUsuario'])) { $AbmUsuarios = new AbmUsuarios($con); $AbmUsuarios->Modificar($_POST); }
 
 ?>
-
+<?php include_once ('inc/headerPanel.php'); ?>
 <?php include_once ('inc/menuPanel.php'); ?>
   <!-- COMIENZO TABLA -->
   <section class="wrapper">

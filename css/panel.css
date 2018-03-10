@@ -41,16 +41,6 @@ h1 {
 
 /* TABLA */
 
-.col-personalizada {
-  /* width: 3%;
-  overflow: auto;
-  max-width: 20px !important;*/
-}
-
-#tabla-md {
-  max-width: 95% !important;
-}
-
 /* FIN TABLA */
 
 /* FIN DE PERSONALIZADO */
@@ -186,12 +176,6 @@ h1 {
   }
 }
 
-@media (min-width: 767px) {
-  .nav-side-menu .menu-list .menu-content {
-    display: block;
-  }
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -316,8 +300,26 @@ button.btn-modal2 {
 
 /* FIN DE LOGIN */
 
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+}
+.table-responsive {
+  margin-left: calc(300px /2) !important;
+}
+
+/* @media (min-width: 1200px) {
+  .table-responsive {
+    margin-left: 15%;
+  }
+}  */
+
 @media (min-width: 299px) and (max-width: 992px) {
-  .scrollable, .wrapper, .maxMedida {
+  .table-responsive {
+    margin-left: 15% !important;
+  }
+  .wrapper {
     width: 100%;
     margin-left: 0;
   }

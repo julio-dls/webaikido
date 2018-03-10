@@ -11,7 +11,7 @@
   if (!empty($_GET['id'])) { $bajaModificacion = new BM($con); $bajaModificacion->Eliminar($_GET); }
 
 ?>
-
+<?php include_once ('inc/headerPanel.php'); ?>
 <?php include_once ('inc/menuPanel.php'); ?>
   <!-- COMIENZO TABLA -->
   <section class="wrapper">
