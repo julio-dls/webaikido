@@ -31,7 +31,7 @@
 
 ?>
 
-<body onload="getTime()">
+<body>
 
   <!-- ============ MENU ============ -->
   <?php include_once ('inc/menuHome.php'); ?>
