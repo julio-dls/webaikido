@@ -218,7 +218,7 @@ INTRO CONTAINER
 =========================*/
 
 .starter_container {
-  /* background: url('../images/Home/fondo_entradaWeb1.gif') no-repeat center center; */
+  background: url('../images/Home/fondo_entradaWeb1.gif') no-repeat center center;
   height: 100%;
   background-size: cover;
   text-align: center;

@@ -83,7 +83,7 @@
                       class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
                         <i class="fa fa-heart" aria-hidden="true"></i></a>
                       <?php endif; ?>
-                      <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir"onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>')">Imprimir</a>
+                      <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir" onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>')"><?php echo BOTON_IMPRIMIR; ?></a>
                     </p>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
       </div>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
         <label id="label-modal" or="#"></label>
-        <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal">Volver</button>
+         <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal"><?php echo BOTON_VOLVER; ?>
       </div>
     </div>
     </div>
@@ -126,12 +126,12 @@
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content text-center">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Buscar</h4>
+          <h4 class="modal-title" id="exampleModalLabel"><?php echo TITULO_BUSCAR; ?></h4>
         </div>
         <div class="modal-body">
           <form class="navbar-form" role="search" action="gallery.php" method="GET">
             <div class="input-group">
-              <input class="form-control" placeholder="Nombre" name="srch-nombre" id="srch-term" type="text" required>
+              <input class="form-control" placeholder="<?php echo BUSCAR_NOMBRE; ?>" name="srch-nombre" id="srch-term" type="text" required>
               <div class="input-group-btn">
                 <input type="hidden" name="formCategria" value="<?=$tituloGaleria  ? $tituloGaleria : $categoria;?>">
                 <input type="hidden" name="categoria" value="<?=$tituloGaleria  ? $tituloGaleria : $categoria;?>">
@@ -141,7 +141,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo BOTON_CERRAR; ?></button>
         </div>
       </div>
     </div>

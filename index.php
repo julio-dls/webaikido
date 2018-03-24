@@ -1,3 +1,21 @@
+
+<?php
+  include_once ('inc/conexion.php');
+  include_once ('inc/contadorVisitas.php');
+  include_once ('inc/sendEmail.php');
+
+  if (isset($_GET['idioma']) && !empty($_GET['idioma'])) {
+    $idioma = strtolower($_GET['idioma']);
+  } else { $idioma='es'; }
+
+  include_once ("inc/". $idioma ."_traduccion.php");
+
+  $vistas = new contadorVisitas($con);
+  $vistas->contarVisitas();
+
+  if (!empty($_POST['formContacto'])) { $EnviarEmail = new SendEmail($con); $EnviarEmail->sendMail($_POST); }
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,21 +34,6 @@
   <link rel="stylesheet" href="css/normalize.css">
 </head>
 
-<?php
-  include_once ('inc/conexion.php');
-  include_once ('inc/contadorVisitas.php');
-  include_once ('inc/sendEmail.php');
-
-  $vistas = new contadorVisitas($con);
-  $vistas->contarVisitas();
-
-  if (!empty($_POST['formContacto'])) {
-    $EnviarEmail = new SendEmail($con);
-    $EnviarEmail->sendMail($_POST);
-  }
-
-?>
-
 <body>
 
   <!-- ============ MENU ============ -->
@@ -41,7 +44,7 @@
   <div id="top" class="starter_container bg">
     <div class="follow_container">
       <div class="col-md-6 col-md-offset-3">
-        <h2 class="white second-title">"El progreso llega a aquellos que se adiestran ininterrumpidamente". <br>Morihei Ueshiba</h2>
+          <h2 class="white second-title"><?php echo SUB_TITULO; ?></h2>
         <hr>
         <a class="btn btn-danger boton_personalizado" href="#bienvenidos" data-toggle="tooltip" data-placement="right" title="Bajar">
           <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -56,14 +59,11 @@
   <section class="description_content" id="bienvenidos">
     <div class="text-content container">
       <div>
-        <h1 class="my-4 text-center text-lg-left">Acerca de Iwama Ryu Art.</h1>
+        <h1 class="my-4 text-center text-lg-left"><?php echo TITULO_SOBRE_AIKIDO; ?></h1>
       </div>
       <div class="col-md-6">
         <div>
-          <p class="desc-text"> ¡Bienvenidos!!<br>
-          Iwama Ryu Art es una página de arte independiente. Lo que usted verá a continuación son ilustraciones referidas al aikido y en particular a la escuela de Iwama Ryu. Mi practica de aikido en Iwama, Japón, fue en dic. 2012. ¡Mi estadía fue maravillosa!, casi diría mágica y mi agradecimiento es tan grande por lo vivido allí, que necesité expresarme de algún modo. De estos sentimientos nace IWAMA RYU ART, ilustraciones de los practicantes de la escuela de los diferentes países, a quienes  muchos, no los conozco, pero que el aikido me los acerca como Familia Iwama. Todos los dibujos están a su disposición, agradeciendo que mencione el origen de las mismas. ¡De a poco iré sumando más aikidokas, a los que algún día, los conoceré en persona, compartiendo Keiko!
-          Soy Arquitecto, ilustrador y animador 2d tradicional. Partico aikido en Aiki Shuren Dojo Buenos Aires- Argentina.
-          <br>¡Espero que sea de su agrado!!  gracias por su vista!
+          <p class="desc-text"> <?php echo SOBRE_AIKIDO; ?>
           <tenetur class="lorem"></tenetur>
           </p>
         </div>
@@ -94,8 +94,8 @@
       </div>
       <div class="col-md-8 col-md-offset-2 col-sm-8 col-xs-12 text-center">
       <hr>
-        <button type="button" id="btnModal" class="btn btn-danger btn-sm " data-dismiss="modal">Volver</button>
-        <a id="btn-modal-galeria" href="" id="btnModal" class="btn btn-danger btn-sm ">Galeria</a>
+        <button type="button" id="btnModal" class="btn btn-danger btn-sm " data-dismiss="modal"><?php echo BOTON_VOLVER; ?></button>
+        <a id="btn-modal-galeria" href="" id="btnModal" class="btn btn-danger btn-sm "><?php echo BOTON_GALERIA; ?></a>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
   <!-- ============ VIDEOS ============= -->
   <section>
     <div id="videos" class="videos background_content">
-      <h1><span>Videos</span></h1>
+      <h1><span><?php echo TITULO_VIDEO; ?></span></h1>
     </div>
     <div class="container">
       <?php
@@ -132,15 +132,15 @@
         </div>
 
           <div class="col-md-6 desc-text">
-          <h3>Project titulo</h3>
           <blockquote>
-            <p class="desc-text"> &quot;Tu corazón está lleno de semillas fértiles esperando brotar. Del mismo modo que una flor de loto surge del lodo para florecer en todo su esplendor, la interacción de la respiración cósmica hace florecer el espíritu para que dé fruto en este mundo.&quot; <br><cite> Morihei Ueshiba</cite></p>
+            <h3><?php echo SEGUNDO_TITULO_VIDEOS; ?></h3>
+            <p class="desc-text"> <?php echo VIDEO_FRASE; ?></p>
           </blockquote>
         </div>
       </div>
       <!-- /.row -->
 
-      <h2 class="text-center">Video Recientes</h2>
+      <h2 class="text-center"><?php echo SUBTITULO_VIDEOS; ?></h2>
       <div class="row" id="videosDos">
 
         <?php
@@ -165,13 +165,12 @@
       <form  action="index.php#videosDos" method="post">
         <input type="hidden" name="autoincremental" value="<?=$indice+4?>">
         <?php if ($numeroTotal > $indice): ?>
-          <button type="submit" class="btn btn-default btn-lg btn-block btn-ver-mas-menos">Ver Mas ...</button>
+          <button type="submit" class="btn btn-default btn-lg btn-block btn-ver-mas-menos"><?php echo BOTON_VER_MAS; ?></button>
         <?php else: ?>
           <input type="hidden" name="autoincremental" value="<?= 4 + ($indice-$indice)?>">
-          <button type="submit" class="btn btn-default btn-lg btn-block btn-ver-mas-menos">Ver Menos ...</button>
+          <button type="submit" class="btn btn-default btn-lg btn-block btn-ver-mas-menos"><?php echo BOTON_VER_MENOS; ?></button>
         <?php endif; ?>
       </form>
-      </div>
       </div>
     </div>
   </section>
@@ -180,13 +179,13 @@
   <!-- ============ PROYECTOS  ============= -->
   <section id="proyectos" class=" description_content">
     <div class="bread  background_content text-center">
-      <h1><span>Proyecto</span></h1>
+      <h1><span><?php echo TITULO_PROYECTO; ?></span></h1>
     </div>
     <div class="text-content container">
       <div class="col-md-12 text-center">
         <h1>¨ Uchideshi ¨</h1>
         <div class="text-fondo-gris">
-          <p class="desc-text">Uchideshi es el titulo del cortometraje de dibujos animados que está en camino. Dado que el proceso es largo, quise ir compartiendo con ustedes la evolucion del proyecto. Proximamente subiré las pruebas de video y test de animacion.</p>
+          <p class="desc-text"><?php echo TEXTO_PROYECTO; ?></p>
         </div>
       </div>
     </div>
@@ -204,7 +203,7 @@
             $active="active";
             foreach ($totalImgPro as $rows) {
 
-            $path = 'Web_Aikido/images/proyectoCortometraje/'.$rows['id']; //'images/proyectoCortometraje/'.$rows['id']; //
+            $path ='Web_Aikido/images/proyectoCortometraje/'.$rows['id']; // 'images/proyectoCortometraje/'.$rows['id']; //
             trim($path);
             $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
             if($directorio = opendir($carpeta)){
@@ -250,16 +249,16 @@
   <!-- ============ FORM CONTACTO ============ -->
   <section class="description_content">
     <div id="contacts" class="contact background_content">
-      <h1><span>Contacto</span></h1>
+      <h1><span><?php echo TITULO_CONTACTO; ?></span></h1>
     </div>
     <div class="text-content container">
       <div class="col-md-6">
         <!-- <h1>Lorem ipsum dolor sit amet!</h1> -->
-        <p class="desc-text ">¡Gracias por su Visita!<br>Si usted necesita algún archivo especial o algún formato particular o necesita algo de otros temas: espero su consulta. Su solicitud será atendida a la brevedad. <br>¡Gracias por comunicarse!</p>
+        <p class="desc-text "><?php echo TEXTO_CONTACTO; ?></p>
       </div>
       <div class="col-md-6">
-        <ul class="image_box_story2">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+           <ul class="image_box_story2">
             <div class="carousel-inner" role="listbox">
 
             <?php
@@ -272,7 +271,7 @@
                 if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
 
                     <div class="item <?=$active?> ">
-                        <img class="img-responsive img-slide-contacto" src="images/contacto/<?=utf8_encode($archivo)?>" alt="...">
+                        <img class="img-responsive img-slide-contacto" src="Web_Aikido/images/contacto/<?=utf8_encode($archivo)?>" alt="...">
                     </div>
               <?php
                 $active="";
@@ -292,16 +291,16 @@
             <div class="contact-form">
               <form id="#" method="POST" action="index.php">
                 <div class="col-md-6 ">
-                  <input type="text" name="nombreContacto" id="name" required="required" class="form" placeholder="Name" />
-                  <input type="email" name="emailContacto" id="email" required="required" class="form" placeholder="Email" />
-                  <input type="text" name="subjectContacto" id="subject" required="required" class="form" placeholder="Subject" />
+                  <input type="text" name="nombreContacto" id="name" required="required" class="form" placeholder="<?php echo INPUT_NOMBRE; ?>" />
+                  <input type="email" name="emailContacto" id="email" required="required" class="form" placeholder="<?php echo INPUT_EMAIL; ?>" />
+                  <input type="text" name="subjectContacto" id="subject" required="required" class="form" placeholder="<?php echo INPUT_ASUSNTO; ?>" />
                   <input type="hidden" name="formContacto" value="Enviado">
                 </div>
                 <div class="col-md-6">
-                  <textarea name="messageContacto" id="#" class="form textarea" placeholder="Message"></textarea>
+                  <textarea name="messageContacto" id="#" class="form textarea" placeholder="<?php echo INPUT_MENSAJE; ?>"></textarea>
                 </div>
                 <div class="relative fullwidth col-xs-12">
-                  <button type="submit" id="#" name="submit" class="form-btn">Send Message</button>
+                  <button type="submit" id="#" name="submit" class="form-btn"><?php echo BTN_ENVIAR; ?></button>
                 </div>
                 <div class="clear"></div>
               </form>
@@ -309,6 +308,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- FIN FORM CONTTACTO -->
   </section>
@@ -321,7 +321,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4 text-center">
         <p class="sub-footer-text text-center">&copy; Iwama Ryu Art 2018, Theme by <a href="#">DeveloperWebMJ</a></p>
-        <p class="sub-footer-text text-center">Adaptado: <a href="#">M & J Developers-Web</a></p>
+        <p class="sub-footer-text text-center">Adaptado: <a href="#">DevelopersWebMJ</a></p>
         <p class="sub-footer-text text-center">Email: <a href="#">developerwebmj@gmail.com</a></p>
       </div>
       <div class="col-md-4"></div>
@@ -334,8 +334,9 @@
   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
   <script src="js/ui/selectoresYotros.js"></script>
-  <script type="text/javascript" src="js/ui/getTime.js" ></script>
+  <!-- <script type="text/javascript" src="js/ui/getTime.js" ></script> -->
 
 </body>
 
+</html>
 </html>
