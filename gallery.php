@@ -8,20 +8,30 @@
   <!-- ==== Page Content ==== -->
   <div class="container">
     <div class="col-xs-12">
-      <?php if(isset($_GET['categoria'])){
-        $tituloGaleria = $_GET['categoria'];
-        $titulo = str_replace('_',' ',$tituloGaleria);
-        $titulo = str_replace('-',' ',$titulo);
-        $titulo = strtoupper($titulo);
-        ?><h1 class="text-center"><?=utf8_encode($titulo)?></h1><?php
-      } else {
-        ?><h1 class="text-center">Galeria Imagenes</h1><?php
+      <?php if(isset($_GET['categoria'])) {
+              if (isset($_SESSION['idioma']) && !empty($_SESSION['idioma'])) {
+                $idioma = strtolower($_SESSION['idioma']);
+                $sql = ("SELECT `ingles` FROM `categoria` WHERE español like '%".$_GET['categoria']."%'");
+                $traducido = $con->query($sql)->fetch();
+                $tituloGaleria = $traducido[0];
+                $titulo = str_replace('_',' ',$tituloGaleria);
+                $titulo = str_replace('-',' ',$titulo);
+                $titulo = strtoupper($titulo);
+                ?><h1 class="text-center"><?=utf8_encode($titulo)?></h1><?php
+              } else {
+                $tituloGaleria = $_GET['categoria'];
+                $titulo = str_replace('_',' ',$tituloGaleria);
+                $titulo = str_replace('-',' ',$titulo);
+                $titulo = strtoupper($titulo);
+                ?><h1 class="text-center"><?=utf8_encode($titulo)?></h1><?php
+              }
       } ?>
       <hr>
     </div>
 
     <div class="grid">
     <?php
+
     $limite = 40;
 
     if(isset($_GET['page'])){
@@ -108,9 +118,8 @@
       </div>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-xs-12">
         <label id="label-modal" or="#"></label>
-         <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal"><?php echo BOTON_VOLVER; ?>
+          <button type="button" id="btnModal" class="btn btn-danger btn-xs btn-block" data-dismiss="modal"><?php echo BOTON_VOLVER; ?></button>
       </div>
-    </div>
     </div>
   </div>
 
@@ -121,6 +130,10 @@
     <a class="btn btn-danger btn-buscar" data-toggle="modal" data-target="#boton-buscar">
       <i class="fa fa-search" aria-hidden="true"></i></a>
   </div>
+  <!-- ============ BOTON IR AL ARRIBA ============ -->
+  <!-- <div>
+    <a href="<?=$_SESSION['idioma']=='es'?'?categoria='.$_GET['categoria'].'&idioma=en':'?categoria='.$_GET['categoria'].'&idioma=es';?>" class="btn btn-danger btn-idioma" data-toggle="tooltip" data-placement="right" title="Subir"></a>
+  </div> -->
 
   <div class="modal fade" id="boton-buscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-sm" role="document">

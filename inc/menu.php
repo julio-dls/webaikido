@@ -1,7 +1,8 @@
 <?php
-  if (isset($_GET['idioma']) && !empty($_GET['idioma'])) { $idioma = strtolower($_GET['idioma']); } else { $idioma='es'; }
-  include_once ("inc/". $idioma ."_traduccion.php");
- ?>
+session_start();
+// include_once ('inc/controlador_traduccion.php');
+include_once ("inc/". $_SESSION['idioma'] ."_traduccion.php");
+?>
 
 <body>
 
@@ -19,7 +20,7 @@
 
           <ul class="nav-titulo-icon">
             <li><a class="navbar-brand" href="index.php">Iwama Ryu Art</a></li>
-            <li><img class="icon-personalizado" src="images/logo/logoIwama.jpg" alt="logo"></li>
+            <li><img class="icon-personalizado" src="images/logo/logoIwama.png" alt="logo"></li>
             <li><a class="heart" href=""></a></li>
           </ul>
 
@@ -35,7 +36,7 @@
               <ul class="dropdown-menu dropdown-menu-left">
                 <li><a href="gallery.php?categoria=manos"><?php echo SUBMENU_MANOS; ?></a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="gallery.php?categoria=individual"><?php echo SUBMENU_SOLO; ?></a></li>
+                <li><a href="gallery.php?categoria=solo"><?php echo SUBMENU_SOLO; ?></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="gallery.php?categoria=parejas"><?php echo SUBMENU_PAREJAS; ?></a></li>
                 <li role="separator" class="divider"></li>

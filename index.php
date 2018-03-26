@@ -3,12 +3,7 @@
   include_once ('inc/conexion.php');
   include_once ('inc/contadorVisitas.php');
   include_once ('inc/sendEmail.php');
-
-  if (isset($_GET['idioma']) && !empty($_GET['idioma'])) {
-    $idioma = strtolower($_GET['idioma']);
-  } else { $idioma='es'; }
-
-  include_once ("inc/". $idioma ."_traduccion.php");
+  include_once ('inc/controlador_traduccion.php');
 
   $vistas = new contadorVisitas($con);
   $vistas->contarVisitas();
@@ -34,7 +29,7 @@
   <link rel="stylesheet" href="css/normalize.css">
 </head>
 
-<body>
+<body onload="enroqueBandera()">
 
   <!-- ============ MENU ============ -->
   <?php include_once ('inc/menuHome.php'); ?>
@@ -101,18 +96,6 @@
   </div>
   <!-- ============= FIN MODAL SOBRE AIKIDO ============= -->
 
-  <!-- ============= SIDEBAR DE REDES SOCIALES ============= -->
-
-  <?php include_once ('inc/sidebar.php'); ?>
-
-  <!-- ============= FIN SIDEBAR DE REDES SOCIALES ============= -->
-
-  <!-- ============ BOTON IR AL ARRIBA ============ -->
-  <div>
-    <a href="#" class="btn btn-danger btn-subir" data-toggle="tooltip" data-placement="right" title="Subir"><i class="fa fa-home"></i></a>
-  </div>
-  <!-- ============ FIN BOTON IR ARRIBA ============ -->
-
   <!-- ============ VIDEOS ============= -->
   <section>
     <div id="videos" class="videos background_content">
@@ -142,7 +125,6 @@
 
       <h2 class="text-center"><?php echo SUBTITULO_VIDEOS; ?></h2>
       <div class="row" id="videosDos">
-
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
@@ -271,7 +253,7 @@
                 if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
 
                     <div class="item <?=$active?> ">
-                        <img class="img-responsive img-slide-contacto" src="Web_Aikido/images/contacto/<?=utf8_encode($archivo)?>" alt="...">
+                        <img class="img-responsive img-slide-contacto" src="images/contacto/<?=utf8_encode($archivo)?>" alt="...">
                     </div>
               <?php
                 $active="";
@@ -328,15 +310,46 @@
     </div>
   </footer>
   <!-- ============ FIN FOOTER  ============= -->
+
+  <!-- ============= SIDEBAR DE REDES SOCIALES ============= -->
+
+  <?php include_once ('inc/sidebar.php'); ?>
+
+  <!-- ============= FIN SIDEBAR DE REDES SOCIALES ============= -->
+
+  <!-- ============ BOTON IR AL ARRIBA ============ -->
+  <div>
+    <a href="<?=$_SESSION['idioma']=='es'?'?idioma=en':'?idioma=es';?>" class="btn btn-danger btn-idioma" id="btn-idioma" data-toggle="tooltip" data-placement="right" title="Subir"></a>
+  </div>
+  <div>
+    <a href="#" class="btn btn-danger btn-subir" data-toggle="tooltip" data-placement="right" title="Subir"><i class="fa fa-home"></i></a>
+  </div>
+  <!-- ============ FIN BOTON IR ARRIBA ============ -->
+
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/slide-multi-item.js"></script>
+  <!-- <script type="text/javascript" src="js/slide-multi-item.js"></script> -->
   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
   <script src="js/ui/selectoresYotros.js"></script>
-  <!-- <script type="text/javascript" src="js/ui/getTime.js" ></script> -->
+  <script type="text/javascript">
+  // BOTON IDIOMA
+  function enroqueBandera() {
+      var imagenes = new Array(['images/Home/española.png'],['images/Home/inglesa.png']);
 
+      if ('<?php echo $_SESSION['idioma'] ?>' == 'es') {
+        var imagenIdioma = 'images/Home/española.png';
+      } else if ('<?php echo $_SESSION['idioma'] ?>' == 'en') {
+        var imagenIdioma = 'images/Home/inglesa.png';
+      } else {
+        var imagenIdioma = 'images/Home/española.png';
+      }
+      var elemento = document.getElementById('btn-idioma');
+      elemento.style.background = 'url("' + imagenIdioma + '") center';
+      elemento.style.backgroundRepeat = 'no-reptea';
+  }
+  // FIN BOTON IDIOMA
+  </script>
 </body>
 
-</html>
 </html>

@@ -56,6 +56,11 @@ $(document).ready(function() {
     } else {
       $('.btn-buscar').slideUp(300);
     }
+    if ($(this).scrollTop() > 0) {
+      $('.btn-idioma').slideDown(300);
+    } else {
+      $('.btn-idioma').slideUp(300);
+    }
   });
 
   // http://www.anerbarrena.com/jquery-mousemove-4814/
