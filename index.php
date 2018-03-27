@@ -12,7 +12,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?=$_SESSION['idioma']?>">
 
 <head>
   <meta charset="UTF-8">
@@ -64,21 +64,21 @@
         </div>
       </div>
 
-        <div class="col-md-6">
-          <div class="img-section">
-            <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 4';
-            $imagenesUltimas = $con->query($sql);
-            $contador=0;
-            foreach ($imagenesUltimas as $rows):
-              $contador++;?>
-            <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
-            <?php if ($contador == 2): ?>
-            <div class="img-section-space"></div>
-            <?php endif;
-            endforeach; ?>
-          </div>
+      <div class="col-md-6">
+        <div class="img-section">
+          <?php $sql = 'SELECT `id`,`categoria` FROM `imagenes` WHERE categoria!="moldes" and categoria!="tarjetas" and categoria!="varios" ORDER BY 1 DESC LIMIT 4';
+          $imagenesUltimas = $con->query($sql);
+          $contador=0;
+          foreach ($imagenesUltimas as $rows):
+            $contador++;?>
+          <img class="img-rounded selectorImg" id="image-1" data-categoria="gallery.php?categoria=<?=$rows['categoria']?>" data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/img_0_small.jpg" width="250">
+          <?php if ($contador == 2): ?>
+          <div class="img-section-space"></div>
+          <?php endif;
+          endforeach; ?>
         </div>
       </div>
+    </div>
   </section>
 
   <!-- ============= MODAL SOBRE AIKIDO ============= -->
@@ -114,21 +114,20 @@
           <?php } ?>
         </div>
 
-          <div class="col-md-6 desc-text">
+        <div class="col-md-6 desc-text">
           <blockquote>
             <h3><?php echo SEGUNDO_TITULO_VIDEOS; ?></h3>
             <p class="desc-text"> <?php echo VIDEO_FRASE; ?></p>
           </blockquote>
         </div>
       </div>
-      <!-- /.row -->
 
       <h2 class="text-center"><?php echo SUBTITULO_VIDEOS; ?></h2>
       <div class="row" id="videosDos">
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
-
+        sleep(5);
         $VideosObj = new VideosClass($con);
         $videosSecundario = $VideosObj->MostrarMas($indice);
 

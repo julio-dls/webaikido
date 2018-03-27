@@ -65,9 +65,9 @@ include_once ("inc/". $_SESSION['idioma'] ."_traduccion.php");
             </li>
             <li><a class="navactive color_animation" href="gallery.php?categoria=kamidana"><?php echo MENU_KAMIDANAS; ?></a></li>
             <li><a class="navactive color_animation " href="gallery.php?categoria=hanmi"><?php echo MENU_HANMI; ?></a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#videos"><?php echo MENU_VIDEOS; ?></a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#proyectos"><?php echo MENU_PROYECTO; ?></a></li>
-            <li><a class="navactive color_animation scroll-lento" href="#contacts"><?php echo MENU_CONTACTO; ?></a></li>
+            <li><a class="navactive color_animation" href="index.php#videos"><?php echo MENU_VIDEOS; ?></a></li>
+            <li><a class="navactive color_animation" href="index.php#proyectos"><?php echo MENU_PROYECTO; ?></a></li>
+            <li><a class="navactive color_animation" href="index.php#contacts"><?php echo MENU_CONTACTO; ?></a></li>
           </ul>
         </div>
         <!-- FIN DE MENU -->

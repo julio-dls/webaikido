@@ -52,11 +52,7 @@ p cite {
 @font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoonacfe.eot?-yinaf8');
-  src: url('../fonts/icomoond41d.eot?#iefix-yinaf8')
-      format('embedded-opentype'), url('../fonts/icomoonacfe.woff?-yinaf8')
-      format('woff'), url('../fonts/icomoonacfe.ttf?-yinaf8')
-      format('truetype'), url('../fonts/icomoonacfe.svg?-yinaf8#icomoon')
-      format('svg');
+  src: url('../fonts/icomoond41d.eot?#iefix-yinaf8') format('embedded-opentype'), url('../fonts/icomoonacfe.woff?-yinaf8') format('woff'), url('../fonts/icomoonacfe.ttf?-yinaf8') format('truetype'), url('../fonts/icomoonacfe.svg?-yinaf8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-family: SouthernAire_Personal_Use_Only;
@@ -1115,6 +1111,9 @@ MEDIA QUERIE DESKTOP
   }
   .modal {
     top: 8% !important;
+  }
+  modal img {
+    width: 100% !important;
   }
   .btn-subir {
     width: 30px !important;
