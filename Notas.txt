@@ -26,3 +26,10 @@ http://armandof.cubava.cu/2015/08/13/aumentar-el-tamano-de-subida-de-archivos-en
     </table>
   </div>
 </div>
+/*IMPRESION*/
+/* http://desarrolloweb.dlsi.ua.es/libros/html-css/como-crear-una-hoja-de-estilo-para-impresion */
+/* https://escss.blogspot.com.ar/2012/05/estilos-css-para-imprimir-la-regla-page.html */
+/* http://jsfiddle.net/mturjak/2wk6Q/1949/ */
+/* https://stackoverflow.com/questions/3341485/how-to-make-a-html-page-in-a4-paper-size-pages */
+/* http://www.tamanosdepapel.com/a-tamanos-en-pixeles.htm */
+/* https://stackoverflow.com/questions/10937154/css-scale-an-element-with-100-width */

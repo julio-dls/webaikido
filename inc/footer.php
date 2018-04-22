@@ -4,6 +4,9 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
         <?php
+        if (!isset($cantidad)) {
+          $cantidad=0;
+        }
         $cat = '';
         if(isset($_GET['categoria'])){ $cat .= '&categoria='.$_GET['categoria']; } ?>
         <ul class="pagination">

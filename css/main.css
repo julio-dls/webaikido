@@ -218,7 +218,7 @@ INTRO CONTAINER
 =========================*/
 
 .starter_container {
-  background: url('../images/Home/fondo_entradaWeb1.gif') no-repeat center center;
+  /* background: url('../images/Home/mariposa4.jpg') no-repeat center center; */
   height: 100%;
   background-size: cover;
   text-align: center;
@@ -294,8 +294,8 @@ INTRO CONTAINER
   height: 18px !important;
   border: 1px solid #fff;
   /* #9d9275 */
-  margin-top: 21px;
-  margin-left: 21px;
+  margin-top: 13px;
+  margin-left: 28px;
 }
 
 .follow_container {
@@ -362,7 +362,7 @@ INTRO CONTAINER
 }
 
 .videos.background_content {
-  background: url('../images/fondos_intermedio/banners_intermedios1.jpg') no-repeat center center;
+  background: url('../images/fondos_intermedio/banners_intermedios1.png') no-repeat center center;
   background-size: contain;
   z-index: -1;
   filter: grayscale(60%);
@@ -377,14 +377,14 @@ iframe {
 }
 
 .contact.background_content {
-  background: url('../images/fondos_intermedio/banners_intermedios3.jpg') no-repeat center center;
+  background: url('../images/fondos_intermedio/banners_intermedios3.png') no-repeat center center;
   background-size: contain;
   z-index: -1;
   filter: grayscale(60%);
 }
 
 .bread.background_content {
-  background: url('../images/fondos_intermedio/banners_intermedios4.jpg') no-repeat center center;
+  background: url('../images/fondos_intermedio/banners_intermedios4.png') no-repeat center center;
   background-size: contain;
   z-index: -1;
   filter: grayscale(60%);
@@ -412,12 +412,9 @@ iframe {
   margin: auto;
 }
 
-#btnModal {
-  /*margin-top: 10px !important;
-  color: #66563 !important;  */
-}
-
 .modal {
+  /* top: none !important;
+  transform: translateY(0) !important; */
   z-index: 3000 !important;
 }
 
@@ -426,7 +423,7 @@ iframe {
   height: auto !important;
   z-index: 3000;
   margin-left: auto !important;
-  max-height: 700px !important;
+  max-height: 650px !important;
 }
 
 #imagen-modal-centrada {

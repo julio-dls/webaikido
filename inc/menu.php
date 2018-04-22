@@ -1,6 +1,9 @@
 <?php
 session_start();
 // include_once ('inc/controlador_traduccion.php');
+if (!isset($_SESSION['idioma'])) {
+  $_SESSION['idioma'] = "es" ;
+}
 include_once ("inc/". $_SESSION['idioma'] ."_traduccion.php");
 ?>
 

@@ -127,7 +127,6 @@
         <?php
         $indice;
         $indice = isset($_POST['autoincremental']) ? $_POST['autoincremental'] : 4;
-        sleep(5);
         $VideosObj = new VideosClass($con);
         $videosSecundario = $VideosObj->MostrarMas($indice);
 
@@ -249,7 +248,7 @@
             if($directorio = opendir($carpeta)){
               $active="active";
               while(($archivo = readdir($directorio)) !== false) {
-                if($archivo != '.' && $archivo != '..' && stristr($archivo,'.jpg') !== false){ ?>
+                if($archivo != '.' && $archivo != '..'){ ?>
 
                     <div class="item <?=$active?> ">
                         <img class="img-responsive img-slide-contacto" src="images/contacto/<?=utf8_encode($archivo)?>" alt="...">
@@ -327,19 +326,18 @@
 
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="js/slide-multi-item.js"></script> -->
-  <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
   <script src="js/ui/selectoresYotros.js"></script>
+  <script type="text/javascript" src="js/ui/getTime.js"></script>
   <script type="text/javascript">
   // BOTON IDIOMA
   function enroqueBandera() {
       var imagenes = new Array(['images/Home/española.png'],['images/Home/inglesa.png']);
 
       if ('<?php echo $_SESSION['idioma'] ?>' == 'es') {
-        var imagenIdioma = 'images/Home/española.png';
-      } else if ('<?php echo $_SESSION['idioma'] ?>' == 'en') {
         var imagenIdioma = 'images/Home/inglesa.png';
+      } else if ('<?php echo $_SESSION['idioma'] ?>' == 'en') {
+        var imagenIdioma = 'images/Home/española.png';
       } else {
         var imagenIdioma = 'images/Home/española.png';
       }

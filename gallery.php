@@ -39,72 +39,74 @@
     } else {
       $pagina = 0;
     }
-
-    $sql = 'SELECT `id`, `nombre`, `categoria` FROM `imagenes` WHERE 1 ';
-    $sqlTatalFilas = 'SELECT count(1) as total FROM `imagenes` WHERE 1 ';
-
-    if (isset($_GET['formCategria']) && !empty($_GET['formCategria'])) {
-      $search = new Search($con);
-      $sql .= $search->BuscarPorNombre($_GET);
-      $sqlTatalFilas .= $search->TotalFilasBuscarPorNombre ($_GET);
-    } else
     if(isset($_GET['categoria'])) {
-      $categoria = $_GET['categoria'];
-      $sql .= 'and categoria="'.$categoria.'" ';
-      $sqlTatalFilas .= 'and categoria="'.$categoria.'" ';
-    }
-    $tatalFilas = $con->query($sqlTatalFilas)->fetch();
-    $cantidad = $tatalFilas['total'];
 
-    $sql .= ' ORDER BY 1 DESC LIMIT '.$limite.' OFFSET '.($pagina*$limite);
+      $sql = 'SELECT `id`, `nombre`, `categoria` FROM `imagenes` WHERE 1 ';
+      $sqlTatalFilas = 'SELECT count(1) as total FROM `imagenes` WHERE 1 ';
 
-    $galleriaImg = $con->query($sql);
-    if(!empty($galleriaImg)){
-    $indice=0;
-    foreach ($galleriaImg as $rows) {
+      if (isset($_GET['formCategria']) && !empty($_GET['formCategria'])) {
+        $search = new Search($con);
+        $sql .= $search->BuscarPorNombre($_GET);
+        $sqlTatalFilas .= $search->TotalFilasBuscarPorNombre ($_GET);
+      } else
+      if(isset($_GET['categoria'])) {
+        $categoria = $_GET['categoria'];
+        $sql .= 'and categoria="'.$categoria.'" ';
+        $sqlTatalFilas .= 'and categoria="'.$categoria.'" ';
+      }
+      $tatalFilas = $con->query($sqlTatalFilas)->fetch();
+      $cantidad = $tatalFilas['total'];
 
-      $path = 'Web_Aikido/images/'.$rows['id']; //'images/'.$rows['id']; //
-      trim($path);
-      $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
+      $sql .= ' ORDER BY 1 DESC LIMIT '.$limite.' OFFSET '.($pagina*$limite);
 
-      if($directorio = opendir($carpeta)) {
-        while(($archivo = readdir($directorio)) !== false) {
-          if($archivo != '.' && $archivo != '..' && stristr($archivo,'_small') !== false) {
-            $indice++;
-            list($width, $height, $type, $attr) = getimagesize("images/".$rows['id']."/".str_replace('small','big',$archivo));
-            $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
-              <div class="grid-item">
-                <div class="thumbnail">
-                  <div id="img-repo<?=$indice?>">
-                    <a title="Image 1" href="#">
-                      <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
-                      data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>">
-                    </a>
-                  </div>
+      $galleriaImg = $con->query($sql);
+      if(!empty($galleriaImg)){
+      $indice=0;
+      foreach ($galleriaImg as $rows) {
 
-                  <div class="caption col-sx-3">
-                    <p>
-                      <?php $funcionesUltimes = new FuncionesUtiles(); ?>
-                      <h3><?=$funcionesUltimes->eliminar_tildes($rows['nombre'])?></h3>
-                    </p>
-                    <p>
-                      <?php if (($rows['categoria'] != 'aikidokas')): ?>
-                      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"
-                      class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
-                        <i class="fa fa-heart" aria-hidden="true"></i></a>
-                      <?php endif; ?>
-                      <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir" onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>')"><?php echo BOTON_IMPRIMIR; ?></a>
-                    </p>
+        $path = 'Web_Aikido/images/'.$rows['id']; //'images/'.$rows['id']; //
+        trim($path);
+        $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/' .$path;
+
+        if($directorio = opendir($carpeta)) {
+          while(($archivo = readdir($directorio)) !== false) {
+            if($archivo != '.' && $archivo != '..' && stristr($archivo,'_small') !== false) {
+              $indice++;
+              list($width, $height, $type, $attr) = getimagesize("images/".$rows['id']."/".str_replace('small','big',$archivo));
+              $atributos = "Ancho: ".$width."px - Alto: ".$height."px"; ?>
+                <div class="grid-item">
+                  <div class="thumbnail">
+                    <div id="img-repo<?=$indice?>">
+                      <a title="Image 1" href="#">
+                        <img data-medidas="<?=$atributos?>" class="thumb img-responsive selectorImg" id="image-1"
+                        data-toggle="modal" data-target=".bd-example-modal-lg" src="images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>">
+                      </a>
+                    </div>
+
+                    <div class="caption col-sx-3">
+                      <p>
+                        <?php $funcionesUltimes = new FuncionesUtiles(); ?>
+                        <h3><?=$funcionesUltimes->eliminar_tildes($rows['nombre'])?></h3>
+                      </p>
+                      <p>
+                        <?php if (($rows['categoria'] != 'aikidokas')): ?>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=95RJ53TE8DTAL"
+                        class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="right" title="Hacer una Donacion">
+                          <i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <?php endif; ?>
+                        <a class="btn btn-sm btn-sm btn-success" role="button" id="btn-imprimir" onclick="printDiv('images/<?=$rows['id']?>/<?=utf8_encode($archivo)?>');"><?php echo BOTON_IMPRIMIR; ?></a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            <?php
+              <?php
+              }
             }
+            closedir($directorio);
           }
-          closedir($directorio);
         }
       }
-    }?>
+    } ?>
     </div>
 
   </div>
@@ -130,10 +132,6 @@
     <a class="btn btn-danger btn-buscar" data-toggle="modal" data-target="#boton-buscar">
       <i class="fa fa-search" aria-hidden="true"></i></a>
   </div>
-  <!-- ============ BOTON IR AL ARRIBA ============ -->
-  <!-- <div>
-    <a href="<?=$_SESSION['idioma']=='es'?'?categoria='.$_GET['categoria'].'&idioma=en':'?categoria='.$_GET['categoria'].'&idioma=es';?>" class="btn btn-danger btn-idioma" data-toggle="tooltip" data-placement="right" title="Subir"></a>
-  </div> -->
 
   <div class="modal fade" id="boton-buscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-sm" role="document">

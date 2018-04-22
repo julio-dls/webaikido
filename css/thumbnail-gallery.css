@@ -47,7 +47,6 @@ body {
 
 .modal img {
   width: auto !important;
-  height: 100% !important;
   z-index: 3000;
   margin-left: auto !important;
   max-height: 700px !important;
@@ -58,11 +57,6 @@ body {
   left: 50%;
   transform: translate(-50%, 0%);
 }
-
-.modal {
-  margin-left: auto !important;
-}
-
 
 #btnModal {
   margin-top: 10px !important;

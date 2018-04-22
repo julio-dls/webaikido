@@ -1,25 +1,12 @@
-/* http://desarrolloweb.dlsi.ua.es/libros/html-css/como-crear-una-hoja-de-estilo-para-impresion */
-
-/* https://escss.blogspot.com.ar/2012/05/estilos-css-para-imprimir-la-regla-page.html */
-
-/* http://jsfiddle.net/mturjak/2wk6Q/1949/ */
-
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 #images-print img {
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-
-@page {
-  /* size: A4; */
-  margin: auto;
-  page-break-inside: avoid !important;
+  /* 32% = 1100
+  -webkit-transform: scale(.9);
+  -webkit-transform-origin: 50% 0; */
+  position: absolute;
+  max-width: auto;
+  /* max-height: 26cm; */
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
 }
